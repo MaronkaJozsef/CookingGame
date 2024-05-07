@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcn30hjtlfa5o"]
+
+[ext_resource type="PackedScene" uid="uid://di1clk40hdso0" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn" id="1_sera8"]
+[ext_resource type="Resource" uid="uid://c7l4rhvfk6h24" path="res://DataResources/KitchenObjectRES/Bread.tres" id="2_gxyw8"]
+
+[node name="ContainerCounter_Bread" instance=ExtResource("1_sera8")]
+kitchenObjectRES = ExtResource("2_gxyw8")
+
+[editable path="Selected/Counter_solid"]
+[editable path="Selected/Counter_hole"]

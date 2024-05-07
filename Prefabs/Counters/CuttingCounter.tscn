@@ -1,0 +1,99 @@
+[gd_scene load_steps=18 format=3 uid="uid://b61srmf2ipx3x"]
+
+[ext_resource type="PackedScene" uid="uid://brjv1eeruvg0c" path="res://Prefabs/Counters/_BaseCounter.tscn" id="1_xlb36"]
+[ext_resource type="Script" path="res://Scripts/Counters/CuttingCounter.gd" id="2_17hnw"]
+[ext_resource type="Resource" uid="uid://biml5eietg3f3" path="res://DataResources/CuttingRecipeRES/Cabbage-CabbageSlices.tres" id="3_1oo3h"]
+[ext_resource type="PackedScene" uid="uid://cbrihi8amb7ae" path="res://Assets/_Assets/PrefabsVisuals/CountersVisuals/CuttingCounter_Visual.prefab.scn" id="3_iul78"]
+[ext_resource type="Script" path="res://Scripts/Counters/CuttingCounterVisual.gd" id="4_axv77"]
+[ext_resource type="Script" path="res://Scripts/SelectedCounterVisual.gd" id="4_dterd"]
+[ext_resource type="Resource" uid="uid://bx7k2vvlpb7np" path="res://DataResources/CuttingRecipeRES/CheeseBlock-CheeseSlices.tres" id="4_ob67p"]
+[ext_resource type="Resource" uid="uid://fkdfnsy1a0os" path="res://DataResources/CuttingRecipeRES/Tomato-TomatoSlices.tres" id="5_covyv"]
+[ext_resource type="ArrayMesh" uid="uid://jra0l1xblw2d" path="res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh" id="5_xvana"]
+[ext_resource type="Material" uid="uid://bsweb1ym4sko4" path="res://Assets/_Assets/Materials/CounterSelected.material" id="6_me3g3"]
+[ext_resource type="PackedScene" uid="uid://cbwh30b0gqgjw" path="res://Assets/_Assets/Meshes/Chopping Board.gltf" id="7_mlhy6"]
+[ext_resource type="Script" path="res://Scripts/UI/ProgressBarUI.gd" id="12_n8bcn"]
+[ext_resource type="Script" path="res://Scripts/Custom/CuttingCounterSound.gd" id="13_7doig"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oplqe"]
+viewport_path = NodePath("Progress/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg6c1"]
+content_margin_top = 5.0
+bg_color = Color(0, 0, 0, 0.627451)
+corner_detail = 10
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ercwd"]
+bg_color = Color(0.882353, 0.772549, 0, 1)
+
+[sub_resource type="Theme" id="Theme_5krw3"]
+ProgressBar/font_sizes/font_size = 50
+ProgressBar/styles/background = SubResource("StyleBoxFlat_mg6c1")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_ercwd")
+
+[node name="CuttingCounter" instance=ExtResource("1_xlb36")]
+script = ExtResource("2_17hnw")
+CuttingRecipeRESArray = Array[Resource("res://Scripts/DataResources/CuttingRecipeRES.gd")]([ExtResource("3_1oo3h"), ExtResource("4_ob67p"), ExtResource("5_covyv")])
+
+[node name="CuttingCounter_Visual" parent="." index="2" node_paths=PackedStringArray("cuttingCounter") instance=ExtResource("3_iul78")]
+script = ExtResource("4_axv77")
+cuttingCounter = NodePath("..")
+
+[node name="Select" type="Node3D" parent="." index="3" node_paths=PackedStringArray("counter", "visualGameObjects")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("4_dterd")
+counter = NodePath("..")
+visualGameObjects = [NodePath("KitchenCounter"), NodePath("Chopping Board")]
+
+[node name="KitchenCounter" type="Node3D" parent="Select" index="0"]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+visible = false
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Select/KitchenCounter" index="0"]
+gi_mode = 2
+mesh = ExtResource("5_xvana")
+surface_material_override/0 = ExtResource("6_me3g3")
+
+[node name="Chopping Board" parent="Select" index="1" instance=ExtResource("7_mlhy6")]
+transform = Transform3D(1.82, 0, 0, 0, 1.82, 0, 0, 0, 1.82, 0, 1.291, 0)
+visible = false
+
+[node name="Cube_005" parent="Select/Chopping Board" index="0"]
+surface_material_override/0 = ExtResource("6_me3g3")
+
+[node name="Progress" type="Node3D" parent="." index="4" node_paths=PackedStringArray("counter", "progressBar")]
+script = ExtResource("12_n8bcn")
+counter = NodePath("..")
+progressBar = NodePath("SubViewport/ProgressBar")
+
+[node name="Sprite3D" type="Sprite3D" parent="Progress" index="0"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.75183, 0)
+layers = 2
+billboard = 1
+no_depth_test = true
+texture = SubResource("ViewportTexture_oplqe")
+
+[node name="SubViewport" type="SubViewport" parent="Progress" index="1"]
+transparent_bg = true
+use_occlusion_culling = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Progress/SubViewport" index="0"]
+visible = false
+anchors_preset = -1
+anchor_top = 0.429012
+anchor_right = 1.0
+anchor_bottom = 0.574074
+offset_top = -0.654327
+offset_bottom = -0.654327
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5krw3")
+step = 1.0
+value = 30.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer3D" parent="." index="5"]
+script = ExtResource("13_7doig")
+
+[editable path="Select/Chopping Board"]

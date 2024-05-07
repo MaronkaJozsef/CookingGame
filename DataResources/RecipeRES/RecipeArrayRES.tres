@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeArrayRES" load_steps=6 format=3 uid="uid://dqly8unhuwecj"]
+
+[ext_resource type="Script" path="res://Scripts/DataResources/RecipeArrayRES.gd" id="1_1yu31"]
+[ext_resource type="Resource" uid="uid://jkbmemx6he07" path="res://DataResources/RecipeRES/Burger.tres" id="1_d2qwl"]
+[ext_resource type="Resource" uid="uid://c1vgdyr1fjfha" path="res://DataResources/RecipeRES/Cheeseburger.tres" id="2_nxeln"]
+[ext_resource type="Resource" uid="uid://n6k2sgh1ho7h" path="res://DataResources/RecipeRES/Megaburger.tres" id="3_1s0q3"]
+[ext_resource type="Resource" uid="uid://cnts52isanc3a" path="res://DataResources/RecipeRES/Salad.tres" id="4_705ds"]
+
+[resource]
+script = ExtResource("1_1yu31")
+recipeRESArray = Array[Resource("res://Scripts/DataResources/RecipeRES.gd")]([ExtResource("1_d2qwl"), ExtResource("2_nxeln"), ExtResource("3_1s0q3"), ExtResource("4_705ds")])

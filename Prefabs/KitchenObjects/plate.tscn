@@ -1,0 +1,90 @@
+[gd_scene load_steps=19 format=3 uid="uid://boowgawxpibxu"]
+
+[ext_resource type="Script" path="res://Scripts/PlateKitchenObject.gd" id="1_y4j6j"]
+[ext_resource type="Resource" uid="uid://c7l4rhvfk6h24" path="res://DataResources/KitchenObjectRES/Bread.tres" id="2_km6kx"]
+[ext_resource type="Resource" uid="uid://blkkwmqbwjok5" path="res://DataResources/KitchenObjectRES/CabbageSlices.tres" id="3_0nx2v"]
+[ext_resource type="PackedScene" uid="uid://vbclenvmh5jb" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Plate_Visual.prefab.scn" id="3_41wba"]
+[ext_resource type="PackedScene" uid="uid://b2w68i62dlvpk" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Bread_Visual.prefab.scn" id="3_87w26"]
+[ext_resource type="Resource" uid="uid://b8pykw1shybib" path="res://DataResources/KitchenObjectRES/CheeseSlices.tres" id="4_233m6"]
+[ext_resource type="Resource" uid="uid://by5p647582xyj" path="res://DataResources/KitchenObjectRES/MeatPattyCooked.tres" id="5_l2j2j"]
+[ext_resource type="Resource" uid="uid://dgf0h0esuh1y6" path="res://DataResources/KitchenObjectRES/MeatPattyBurned.tres" id="6_v0fvv"]
+[ext_resource type="Resource" uid="uid://bg7ja7idhmwng" path="res://DataResources/KitchenObjectRES/TomatoSlices.tres" id="7_kpfw4"]
+[ext_resource type="Resource" uid="uid://cl5gi3ptcmb8g" path="res://DataResources/KitchenObjectRES/Plate.tres" id="8_020iu"]
+[ext_resource type="Script" path="res://Scripts/PlateCompleteVisual.gd" id="9_mid3h"]
+[ext_resource type="PackedScene" uid="uid://8c4n8xlb33xb" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyCooked_Visual.prefab.scn" id="11_hwdqi"]
+[ext_resource type="PackedScene" uid="uid://cqt47op8cuvca" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/TomatoSlices_Visual.prefab.scn" id="12_x2lxc"]
+[ext_resource type="PackedScene" uid="uid://bev81n81qyp2a" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CheeseSlices_Visual.prefab.scn" id="13_0bpoy"]
+[ext_resource type="PackedScene" uid="uid://dh5vvwnyr2a5" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CabbageSliced_Visual.prefab.scn" id="14_u6qmb"]
+[ext_resource type="PackedScene" uid="uid://otbmhubw6w78" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyBurned_Visual.prefab.scn" id="15_66ycl"]
+[ext_resource type="PackedScene" uid="uid://c8tia1hssnk2u" path="res://Prefabs/UI/plateUI.tscn" id="16_1o4h8"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tec2m"]
+viewport_path = NodePath("UI/SubViewport")
+
+[node name="Plate" type="Node3D"]
+script = ExtResource("1_y4j6j")
+validKitchenObjectRESArray = Array[Resource("res://Scripts/DataResources/KitchenObjectRES.gd")]([ExtResource("2_km6kx"), ExtResource("3_0nx2v"), ExtResource("4_233m6"), ExtResource("5_l2j2j"), ExtResource("6_v0fvv"), ExtResource("7_kpfw4")])
+kitchenObjectRES = ExtResource("8_020iu")
+
+[node name="Plate_Visual" parent="." instance=ExtResource("3_41wba")]
+
+[node name="PlateCompleteVisual" type="Node3D" parent="." node_paths=PackedStringArray("plateKitchenObject", "kitchenObjectNodeArray")]
+script = ExtResource("9_mid3h")
+plateKitchenObject = NodePath("..")
+kitchenObjectRESArray = Array[Resource("res://Scripts/DataResources/KitchenObjectRES.gd")]([ExtResource("2_km6kx"), ExtResource("5_l2j2j"), ExtResource("7_kpfw4"), ExtResource("4_233m6"), ExtResource("3_0nx2v"), ExtResource("6_v0fvv")])
+kitchenObjectNodeArray = [NodePath("Bread"), NodePath("MeatPattyCooked"), NodePath("TomatoSlices"), NodePath("CheeseSlices"), NodePath("CabbageSliced"), NodePath("MeatPattyBurned")]
+
+[node name="Bread" parent="PlateCompleteVisual" instance=ExtResource("3_87w26")]
+
+[node name="MeatPattyCooked" parent="PlateCompleteVisual" instance=ExtResource("11_hwdqi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166, 0)
+
+[node name="TomatoSlices" parent="PlateCompleteVisual" instance=ExtResource("12_x2lxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.272, 0)
+
+[node name="CheeseSlices" parent="PlateCompleteVisual" instance=ExtResource("13_0bpoy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
+
+[node name="CabbageSliced" parent="PlateCompleteVisual" instance=ExtResource("14_u6qmb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29, 0)
+
+[node name="MeatPattyBurned" parent="PlateCompleteVisual" instance=ExtResource("15_66ycl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166, 0)
+
+[node name="UI" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="UI"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.32281, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_tec2m")
+
+[node name="SubViewport" type="SubViewport" parent="UI"]
+transparent_bg = true
+size = Vector2i(776, 472)
+
+[node name="PlateUI" parent="UI/SubViewport" node_paths=PackedStringArray("plateKitchenObject") instance=ExtResource("16_1o4h8")]
+offset_right = 264.0
+offset_bottom = 234.0
+plateKitchenObject = NodePath("../../..")
+
+[editable path="PlateCompleteVisual/Bread"]
+[editable path="PlateCompleteVisual/Bread/Bread bottom"]
+[editable path="PlateCompleteVisual/Bread/Bread top"]
+[editable path="PlateCompleteVisual/MeatPattyCooked"]
+[editable path="PlateCompleteVisual/MeatPattyCooked/Cooked meat patty"]
+[editable path="PlateCompleteVisual/TomatoSlices"]
+[editable path="PlateCompleteVisual/TomatoSlices/Tomato slice"]
+[editable path="PlateCompleteVisual/TomatoSlices/Tomato slice (1)"]
+[editable path="PlateCompleteVisual/TomatoSlices/Tomato slice (2)"]
+[editable path="PlateCompleteVisual/CheeseSlices"]
+[editable path="PlateCompleteVisual/CheeseSlices/Cheese slice"]
+[editable path="PlateCompleteVisual/CheeseSlices/Cheese slice (1)"]
+[editable path="PlateCompleteVisual/CheeseSlices/Cheese slice (2)"]
+[editable path="PlateCompleteVisual/CabbageSliced"]
+[editable path="PlateCompleteVisual/CabbageSliced/Lattuce slice_shaped"]
+[editable path="PlateCompleteVisual/CabbageSliced/Lattuce slice_shaped (1)"]
+[editable path="PlateCompleteVisual/CabbageSliced/Lattuce slice_shaped (2)"]
+[editable path="PlateCompleteVisual/CabbageSliced/Lattuce slice_shaped (3)"]
+[editable path="PlateCompleteVisual/CabbageSliced/Lattuce slice_shaped (4)"]
+[editable path="PlateCompleteVisual/MeatPattyBurned"]
+[editable path="PlateCompleteVisual/MeatPattyBurned/Burned meat patty"]

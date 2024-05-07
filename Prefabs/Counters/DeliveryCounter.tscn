@@ -1,0 +1,306 @@
+[gd_scene load_steps=22 format=3 uid="uid://cw51rj30mn1fu"]
+
+[ext_resource type="PackedScene" uid="uid://brjv1eeruvg0c" path="res://Prefabs/Counters/_BaseCounter.tscn" id="1_sgrpt"]
+[ext_resource type="Script" path="res://Scripts/Counters/DeliveryCounter.gd" id="2_fk1pc"]
+[ext_resource type="PackedScene" uid="uid://bclbpgrw4lf6r" path="res://Assets/_Assets/PrefabsVisuals/CountersVisuals/DeliveryCounter_Visual.prefab.scn" id="2_fynat"]
+[ext_resource type="Script" path="res://Scripts/SelectedCounterVisual.gd" id="3_86u7l"]
+[ext_resource type="ArrayMesh" uid="uid://jra0l1xblw2d" path="res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh" id="4_2dxu4"]
+[ext_resource type="Material" uid="uid://bsweb1ym4sko4" path="res://Assets/_Assets/Materials/CounterSelected.material" id="5_3xev5"]
+[ext_resource type="Shader" uid="uid://b8sic5up2h4al" path="res://Shaders/MovingVisual.tres" id="7_shpbe"]
+[ext_resource type="Texture2D" uid="uid://ce2cpkrcaiqrr" path="res://Assets/_Assets/Textures/Arrow.png" id="8_1t0fo"]
+[ext_resource type="Script" path="res://Scripts/Custom/DeliveryCounterSound.gd" id="9_c4of0"]
+[ext_resource type="Script" path="res://Scripts/UI/DeliveryResultUI.gd" id="10_3yevk"]
+[ext_resource type="FontFile" uid="uid://xd6qagim3b2n" path="res://Assets/Fonts/Roboto/Roboto-Bold.ttf" id="11_oy3nh"]
+[ext_resource type="Texture2D" uid="uid://cpuhe1vkrpd84" path="res://Assets/_Assets/Textures/Cross.png" id="12_7grv3"]
+[ext_resource type="Texture2D" uid="uid://cuwyg7s7uhbqh" path="res://Assets/_Assets/Textures/Tick_Border.png" id="12_dec6f"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sm1xp"]
+size = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4pivh"]
+render_priority = 0
+shader = ExtResource("7_shpbe")
+shader_parameter/Speed = Vector2(-1, 0)
+shader_parameter/BaseMap = ExtResource("8_1t0fo")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8w5fq"]
+viewport_path = NodePath("DeliveryResultUI/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kewqy"]
+bg_color = Color(0.321569, 0.678431, 0.215686, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="Animation" id="Animation_a15bh"]
+resource_name = "Fail"
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/ShadowMargin:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.166667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.261799, 0.261799, 0.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/ShadowMargin:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.166667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.6, 0.6), Vector2(1.3, 1.3), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/ShadowMargin:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.833333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SubViewport/ShadowMargin/BackgroundPanel:theme_override_styles/panel:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.670588, 0.0980392, 0.0980392, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c64yf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/ShadowMargin:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/ShadowMargin:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/ShadowMargin:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SubViewport/ShadowMargin/BackgroundPanel:theme_override_styles/panel:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.321569, 0.678431, 0.215686, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pm3qw"]
+resource_name = "Success"
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/ShadowMargin:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.166667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.261799, 0.261799, 0.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/ShadowMargin:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.166667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.6, 0.6), Vector2(1.3, 1.3), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/ShadowMargin:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.833333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SubViewport/ShadowMargin/BackgroundPanel:theme_override_styles/panel:bg_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.321569, 0.678431, 0.215686, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfi08"]
+_data = {
+"Fail": SubResource("Animation_a15bh"),
+"RESET": SubResource("Animation_c64yf"),
+"Success": SubResource("Animation_pm3qw")
+}
+
+[node name="DeliveryCounter" instance=ExtResource("1_sgrpt")]
+script = ExtResource("2_fk1pc")
+
+[node name="DeliveryCounter_Visual" parent="." index="2" instance=ExtResource("2_fynat")]
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("counter", "visualGameObjects")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("3_86u7l")
+counter = NodePath("..")
+visualGameObjects = [NodePath("KitchenCounter")]
+
+[node name="KitchenCounter" type="Node3D" parent="Selected" index="0"]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+visible = false
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/KitchenCounter" index="0"]
+gi_mode = 2
+mesh = ExtResource("4_2dxu4")
+surface_material_override/0 = ExtResource("5_3xev5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(-5.24537e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24537e-08, 0, 1.274, 0)
+mesh = SubResource("PlaneMesh_sm1xp")
+surface_material_override/0 = SubResource("ShaderMaterial_4pivh")
+
+[node name="AudioStreamPlayer3D" parent="." index="5"]
+attenuation_model = 0
+script = ExtResource("9_c4of0")
+
+[node name="DeliveryResultUI" type="Sprite3D" parent="." index="6" node_paths=PackedStringArray("backgroundPanel", "iconTexture", "messageLabel", "animationPlayer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.78866, 1.15059)
+billboard = 1
+no_depth_test = true
+texture = SubResource("ViewportTexture_8w5fq")
+script = ExtResource("10_3yevk")
+backgroundPanel = NodePath("SubViewport/ShadowMargin/BackgroundPanel")
+iconTexture = NodePath("SubViewport/ShadowMargin/BackgroundPanel/BorderMargin/Content/TextureRect")
+messageLabel = NodePath("SubViewport/ShadowMargin/BackgroundPanel/BorderMargin/Content/MessageLabel")
+successTexture = ExtResource("12_dec6f")
+failedTexture = ExtResource("12_7grv3")
+animationPlayer = NodePath("AnimationPlayer")
+
+[node name="SubViewport" type="SubViewport" parent="DeliveryResultUI" index="0"]
+transparent_bg = true
+size = Vector2i(880, 880)
+
+[node name="ShadowMargin" type="MarginContainer" parent="DeliveryResultUI/SubViewport" index="0"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -90.0
+offset_right = 220.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(220, 90)
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BackgroundPanel" type="Panel" parent="DeliveryResultUI/SubViewport/ShadowMargin" index="0"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kewqy")
+
+[node name="BorderMargin" type="MarginContainer" parent="DeliveryResultUI/SubViewport/ShadowMargin/BackgroundPanel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="HBoxContainer" parent="DeliveryResultUI/SubViewport/ShadowMargin/BackgroundPanel/BorderMargin" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="MessageLabel" type="Label" parent="DeliveryResultUI/SubViewport/ShadowMargin/BackgroundPanel/BorderMargin/Content" index="0"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_oy3nh")
+theme_override_font_sizes/font_size = 50
+text = "Delivery Success"
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="DeliveryResultUI/SubViewport/ShadowMargin/BackgroundPanel/BorderMargin/Content" index="1"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("12_dec6f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DeliveryResultUI" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_wfi08")
+}

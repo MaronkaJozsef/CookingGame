@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="KitchenObjectRES" load_steps=3 format=3 uid="uid://c07qr341pyo11"]
+
+[ext_resource type="Script" path="res://Scripts/DataResources/KitchenObjectRES.gd" id="1_tpaiv"]
+[ext_resource type="Texture2D" uid="uid://xjqhldehrjun" path="res://Assets/_Assets/Textures/Icons/Cabbage.png" id="2_8my8i"]
+
+[resource]
+script = ExtResource("1_tpaiv")
+prefabPath = "res://prefabs/KitchenObjects/cabbage.tscn"
+sprite = ExtResource("2_8my8i")
+name = "Cabbage"

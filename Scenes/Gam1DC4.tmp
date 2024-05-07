@@ -1,0 +1,712 @@
+[gd_scene load_steps=42 format=3 uid="uid://cu0rauubbyy8b"]
+
+[ext_resource type="Material" uid="uid://bk7hjb3lcrpk7" path="res://Assets/_Assets/Materials/Floor.material" id="1_28a1l"]
+[ext_resource type="PackedScene" uid="uid://bww8dfuhi4lx6" path="res://prefabs/player.tscn" id="3_tf10d"]
+[ext_resource type="PackedScene" uid="uid://b6hllj3y4jpdh" path="res://prefabs/Counters/ClearCounter.tscn" id="4_siy15"]
+[ext_resource type="PackedScene" uid="uid://bcn30hjtlfa5o" path="res://prefabs/Counters/ContainerCounter/ContainerCounter_Bread.tscn" id="5_7g4cq"]
+[ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="6_1trl2"]
+[ext_resource type="PackedScene" uid="uid://lys1f21hs6lj" path="res://prefabs/Counters/ContainerCounter/ContainerCounter_Cabbage.tscn" id="6_n0sh5"]
+[ext_resource type="PackedScene" uid="uid://co8o4atqqr2ir" path="res://prefabs/Counters/ContainerCounter/ContainerCounter_CheeseBlock.tscn" id="7_w200k"]
+[ext_resource type="PackedScene" uid="uid://dof07220t08qs" path="res://prefabs/Counters/ContainerCounter/ContainerCounter_MeatPattyUncooked.tscn" id="8_mtxqy"]
+[ext_resource type="PackedScene" uid="uid://b61srmf2ipx3x" path="res://prefabs/Counters/CuttingCounter.tscn" id="9_ehuv4"]
+[ext_resource type="PackedScene" uid="uid://bdy21pklt1b8t" path="res://prefabs/Counters/ContainerCounter/ContainerCounter_Tomato.tscn" id="9_xcd0k"]
+[ext_resource type="PackedScene" uid="uid://clvgdhxe4px3w" path="res://prefabs/Counters/TrashCounter.tscn" id="10_m6845"]
+[ext_resource type="PackedScene" uid="uid://cmvrmqdx6o1vb" path="res://prefabs/Counters/StoveCounter.tscn" id="11_i1777"]
+[ext_resource type="PackedScene" uid="uid://cs3vpt6j5bene" path="res://prefabs/Counters/PlatesCounter.tscn" id="12_iahlq"]
+[ext_resource type="PackedScene" uid="uid://cw51rj30mn1fu" path="res://prefabs/Counters/DeliveryCounter.tscn" id="13_pyin7"]
+[ext_resource type="Script" path="res://Scripts/DliveryManager.gd" id="15_fjnhd"]
+[ext_resource type="Resource" uid="uid://dqly8unhuwecj" path="res://DataResources/RecipeRES/RecipeArrayRES.tres" id="16_odtd8"]
+[ext_resource type="Script" path="res://Scripts/UI/DeliveryManagerUI.gd" id="17_cbb8y"]
+[ext_resource type="PackedScene" uid="uid://cpvc24b7scoil" path="res://prefabs/UI/recipeTemplate.tscn" id="18_2d0u7"]
+[ext_resource type="FontFile" uid="uid://xd6qagim3b2n" path="res://Assets/Fonts/Roboto/Roboto-Bold.ttf" id="19_l6un6"]
+[ext_resource type="Script" path="res://Scripts/UI/GameStartCountdownUI.gd" id="19_r782w"]
+[ext_resource type="AudioStream" uid="uid://bykr8itofc2dr" path="res://Assets/_Assets/Sounds/Music/Music.wav" id="19_rf7k1"]
+[ext_resource type="Script" path="res://Scripts/KitchenGameManager.gd" id="20_xcyg4"]
+[ext_resource type="Texture2D" uid="uid://bctwxwrc480qw" path="res://Assets/Circle.png" id="21_7cg51"]
+[ext_resource type="Script" path="res://Scripts/GameOverUI.gd" id="21_coaqy"]
+[ext_resource type="Script" path="res://Scripts/GamePlayingClockUI.gd" id="21_dwbt1"]
+[ext_resource type="Script" path="res://Scripts/PauseMenuUI.gd" id="24_s55th"]
+[ext_resource type="Script" path="res://Scripts/OptionsUI.gd" id="25_dojak"]
+[ext_resource type="Script" path="res://Scripts/MusicManager.gd" id="26_80mnl"]
+[ext_resource type="Script" path="res://Scripts/SoundManager.gd" id="28_jsqa8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cchro"]
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6vygh"]
+size = Vector3(20.0662, 1, 19.9734)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5ins1"]
+
+[sub_resource type="Sky" id="Sky_fe1rc"]
+sky_material = SubResource("ProceduralSkyMaterial_5ins1")
+
+[sub_resource type="Environment" id="Environment_740si"]
+background_mode = 2
+sky = SubResource("Sky_fe1rc")
+tonemap_mode = 1
+ssao_enabled = true
+glow_enabled = true
+glow_strength = 0.8
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[sub_resource type="FontVariation" id="FontVariation_6cqsc"]
+base_font = ExtResource("19_l6un6")
+variation_embolden = 0.2
+
+[sub_resource type="Theme" id="Theme_5v74b"]
+Label/colors/font_outline_color = Color(0.160784, 0.52549, 0.94902, 1)
+Label/constants/outline_size = 50
+Label/fonts/font = SubResource("FontVariation_6cqsc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rj3j"]
+bg_color = Color(0, 0, 0, 0.745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odbmo"]
+bg_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.8, 0.8, 0.176471)
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n35yi"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05dud"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dxon"]
+bg_color = Color(0, 0, 0, 0.941176)
+
+[node name="MainScene" type="Node3D"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+
+[node name="Floor" type="MeshInstance3D" parent="World"]
+material_override = ExtResource("1_28a1l")
+mesh = SubResource("PlaneMesh_cchro")
+skeleton = NodePath("../..")
+
+[node name="floorCollider" type="StaticBody3D" parent="World/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/floorCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00222778, -0.522294, -0.0298767)
+shape = SubResource("BoxShape3D_6vygh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 4, 4, 1)
+light_color = Color(0.560784, 0.521569, 0.478431, 1)
+light_energy = 2.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_740si")
+
+[node name="PostProcess" type="CanvasLayer" parent="World"]
+script = ExtResource("6_1trl2")
+Vignette = true
+VignetteIntensity = 0.2
+VignetteOpacity = 0.3
+
+[node name="Counters" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -5)
+
+[node name="ClearCounter" parent="Counters" instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0)
+
+[node name="ClearCounter2" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter4" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter3" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 6)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter7" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 6)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter8" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 3)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter9" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 3)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter10" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 0)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ContainerCounter_Bread" parent="Counters" instance=ExtResource("5_7g4cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="ContainerCounter_Cabbage" parent="Counters" instance=ExtResource("6_n0sh5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 6)
+
+[node name="ContainerCounter_CheeseBlock" parent="Counters" instance=ExtResource("7_w200k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 4.5)
+
+[node name="ContainerCounter_MeatPattyUncooked" parent="Counters" instance=ExtResource("8_mtxqy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 0, 1.5)
+
+[node name="ContainerCounter_Tomatoe2" parent="Counters" instance=ExtResource("9_xcd0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="CuttingCounter" parent="Counters" instance=ExtResource("9_ehuv4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.5, 0, 6)
+
+[node name="TrashCounter" parent="Counters" instance=ExtResource("10_m6845")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 6)
+
+[node name="StoveCounter" parent="Counters" instance=ExtResource("11_i1777")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 0, 6)
+
+[node name="PlatesCounter" parent="Counters" instance=ExtResource("12_iahlq")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 4.5)
+
+[node name="DeliveryCounter" parent="Counters" instance=ExtResource("13_pyin7")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 1.5)
+
+[node name="Player" parent="." instance=ExtResource("3_tf10d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.32308)
+
+[node name="DliveryManager" type="Node3D" parent="."]
+script = ExtResource("15_fjnhd")
+recipeArrayRES = ExtResource("16_odtd8")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DeliveryManagerUI" type="Control" parent="UI" node_paths=PackedStringArray("container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_cbb8y")
+container = NodePath("Container")
+recipeTemplate = ExtResource("18_2d0u7")
+
+[node name="LabelMargin" type="MarginContainer" parent="UI/DeliveryManagerUI"]
+layout_mode = 2
+offset_right = 342.0
+offset_bottom = 50.0
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="UI/DeliveryManagerUI/LabelMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "RECIPES WAITING..."
+
+[node name="Container" type="VBoxContainer" parent="UI/DeliveryManagerUI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 73.0
+offset_right = 260.0
+offset_bottom = 173.0
+theme_override_constants/separation = 30
+
+[node name="GameStartCountdownUI" type="CenterContainer" parent="UI" node_paths=PackedStringArray("countdownText")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19_r782w")
+countdownText = NodePath("CountdownText")
+
+[node name="CountdownText" type="Label" parent="UI/GameStartCountdownUI"]
+layout_mode = 2
+theme = SubResource("Theme_5v74b")
+theme_override_font_sizes/font_size = 200
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GamePlayingClockUI" type="CenterContainer" parent="UI" node_paths=PackedStringArray("timerProgressBar")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_top = 10.0
+offset_right = -11.0
+offset_bottom = 125.0
+grow_horizontal = 0
+script = ExtResource("21_dwbt1")
+timerProgressBar = NodePath("TextureProgressBar")
+
+[node name="shadowHack" type="MarginContainer" parent="UI/GamePlayingClockUI"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="shadow" type="TextureRect" parent="UI/GamePlayingClockUI/shadowHack"]
+self_modulate = Color(0, 0, 0, 0.360784)
+custom_minimum_size = Vector2(106, 106)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="borderHack" type="TextureRect" parent="UI/GamePlayingClockUI"]
+self_modulate = Color(0, 0, 0, 0.945098)
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UI/GamePlayingClockUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("21_7cg51")
+texture_progress = ExtResource("21_7cg51")
+tint_under = Color(0.294118, 0.294118, 0.294118, 1)
+tint_progress = Color(0.113725, 0.321569, 0.729412, 1)
+
+[node name="GameOverUI" type="Control" parent="UI" node_paths=PackedStringArray("recipesDeliveredText")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("21_coaqy")
+recipesDeliveredText = NodePath("RecipesDeliveredText")
+
+[node name="Background" type="ColorRect" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.847059)
+
+[node name="GameOverText" type="Label" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -304.0
+offset_right = 251.0
+offset_bottom = -198.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.992157, 0, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 90
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelRecipesDeliveredText" type="Label" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -134.5
+offset_right = 170.0
+offset_bottom = -79.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 30
+text = "Recipes Delivered"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="RecipesDeliveredText" type="Label" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -100.0
+offset_right = 49.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 170
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PauseMenuUI" type="Panel" parent="UI" node_paths=PackedStringArray("resumeButton", "optionsButton", "mainMenuButton")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rj3j")
+script = ExtResource("24_s55th")
+resumeButton = NodePath("ResumeButton")
+optionsButton = NodePath("OptionsButton")
+mainMenuButton = NodePath("MainMenuButton")
+
+[node name="PauseText" type="Label" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -194.0
+offset_right = 130.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.921569, 0.65098, 0.137255, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 70
+text = "Paused"
+uppercase = true
+
+[node name="MainMenuButton" type="Button" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 161.5
+offset_right = 152.0
+offset_bottom = 238.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "MAIN MENU"
+
+[node name="OptionsButton" type="Button" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 66.0
+offset_right = 152.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "OPTIONS"
+
+[node name="ResumeButton" type="Button" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -30.5
+offset_right = 152.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "RESUME"
+
+[node name="OptionsUI" type="Panel" parent="UI" node_paths=PackedStringArray("soundFXButton", "musciButton", "closeButton", "moveUpButton", "moveDownButton", "moveLeftButton", "moveRightButton", "moveInteractButton", "moveInteractAltButton", "pauseButton")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6dxon")
+script = ExtResource("25_dojak")
+soundFXButton = NodePath("VBoxContainer/SoundFXButton")
+musciButton = NodePath("VBoxContainer/MusciButton")
+closeButton = NodePath("VBoxContainer/CloseButton")
+moveUpButton = NodePath("VBoxContainer/InputMap/VBoxContainer/MoveUpContainer/MoveUpButton")
+moveDownButton = NodePath("VBoxContainer/InputMap/VBoxContainer/MoveDownContainer/MoveDownButton")
+moveLeftButton = NodePath("VBoxContainer/InputMap/VBoxContainer/MoveLeftContainer/MoveLeftButton")
+moveRightButton = NodePath("VBoxContainer/InputMap/VBoxContainer/MoveRightContainer/MoveRightButton")
+moveInteractButton = NodePath("VBoxContainer/InputMap/VBoxContainer/InteractContainer/InteractButton")
+moveInteractAltButton = NodePath("VBoxContainer/InputMap/VBoxContainer/InteractAltContainer/InteractAltButton")
+pauseButton = NodePath("VBoxContainer/InputMap/VBoxContainer/PauseContainer/PauseButton")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/OptionsUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -110.5
+offset_right = 127.0
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="OptionsText" type="Label" parent="UI/OptionsUI/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 60
+text = "OPTIONS"
+
+[node name="Spacer" type="Control" parent="UI/OptionsUI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SoundFXButton" type="Button" parent="UI/OptionsUI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "Sound Effects: 5"
+
+[node name="MusciButton" type="Button" parent="UI/OptionsUI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "Music: 5"
+
+[node name="InputMap" type="MarginContainer" parent="UI/OptionsUI/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap"]
+layout_mode = 2
+
+[node name="MoveUpContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="MoveUpText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveUpContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Up"
+
+[node name="MoveUpButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveUpContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="MoveDownContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="MoveDownText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveDownContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Down"
+
+[node name="MoveDownButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveDownContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="MoveLeftContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="MoveLeftText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveLeftContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Left"
+
+[node name="MoveLeftButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveLeftContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="MoveRightContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="MoveRightText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveRightContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Right"
+
+[node name="MoveRightButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/MoveRightContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="InteractContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="InteractText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/InteractContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Interact"
+
+[node name="InteractButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/InteractContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="InteractAltContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="InteractAltText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/InteractAltContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Interact Alt"
+
+[node name="InteractAltButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/InteractAltContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="PauseContainer" type="HBoxContainer" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer"]
+layout_mode = 2
+
+[node name="PauseText" type="Label" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/PauseContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Pause"
+
+[node name="PauseButton" type="Button" parent="UI/OptionsUI/VBoxContainer/InputMap/VBoxContainer/PauseContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="CloseButton" type="Button" parent="UI/OptionsUI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "CLOSE"
+
+[node name="MusicManager" type="Node3D" parent="." node_paths=PackedStringArray("audioStreamPlayer")]
+script = ExtResource("26_80mnl")
+audioStreamPlayer = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("19_rf7k1")
+volume_db = -5.0
+autoplay = true
+
+[node name="KitchenGameManager" type="Node3D" parent="."]
+script = ExtResource("20_xcyg4")
+
+[node name="SoundManager" type="Node3D" parent="."]
+script = ExtResource("28_jsqa8")

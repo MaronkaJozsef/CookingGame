@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://clvgdhxe4px3w"]
+
+[ext_resource type="PackedScene" uid="uid://brjv1eeruvg0c" path="res://Prefabs/Counters/_BaseCounter.tscn" id="1_tspuk"]
+[ext_resource type="Script" path="res://Scripts/Counters/TrashCounter.gd" id="2_y0kvo"]
+[ext_resource type="PackedScene" uid="uid://bvqcvc1idaibf" path="res://Assets/_Assets/PrefabsVisuals/CountersVisuals/TrashCounter_Visual.prefab.scn" id="3_i4ck5"]
+[ext_resource type="Script" path="res://Scripts/SelectedCounterVisual.gd" id="4_aqm5e"]
+[ext_resource type="PackedScene" uid="uid://dpsnie20ccdei" path="res://Assets/_Assets/Meshes/Trash bin.gltf" id="5_l2b06"]
+[ext_resource type="Material" uid="uid://bsweb1ym4sko4" path="res://Assets/_Assets/Materials/CounterSelected.material" id="6_is2ym"]
+[ext_resource type="Script" path="res://Scripts/Custom/TrashCounterSound.gd" id="7_aangm"]
+
+[node name="TrashCounter" instance=ExtResource("1_tspuk")]
+script = ExtResource("2_y0kvo")
+
+[node name="TrashCounter_Visual" parent="." index="2" instance=ExtResource("3_i4ck5")]
+
+[node name="Select" type="Node3D" parent="." index="3" node_paths=PackedStringArray("counter", "visualGameObjects")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("4_aqm5e")
+counter = NodePath("..")
+visualGameObjects = [NodePath("Trash bin")]
+
+[node name="Trash bin" parent="Select" index="0" instance=ExtResource("5_l2b06")]
+transform = Transform3D(2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 0, 0, 0)
+visible = false
+
+[node name="trash bin" parent="Select/Trash bin" index="0"]
+surface_material_override/0 = ExtResource("6_is2ym")
+
+[node name="AudioStreamPlayer3D" parent="." index="4"]
+script = ExtResource("7_aangm")
+
+[editable path="Select/Trash bin"]

@@ -1,0 +1,598 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715109261
+icon.png::CompressedTexture2D::2112752541237074545::1711316291::1711316292::1::::<><>::
+icon.svg::CompressedTexture2D::8600256881442082092::1711109963::1711109978::1::::<><>::
+LICENSE.txt::TextFile::-1::1711152867::0::1::::<><>::
+README.md::TextFile::-1::1711316288::0::1::::<><>::
+unidot_asset_database.res::Resource::4572308837593626183::1711155032::0::1::::<><>::res://addons/unidot_importer/asset_database.gd<>res://addons/unidot_importer/asset_meta.gd
+::res://addons/::1714019043
+::res://addons/phantom_camera/::1714019052
+plugin.cfg::TextFile::-1::1714019052::0::1::::<><>::
+plugin.gd::GDScript::-1::1714019052::0::1::::<>EditorPlugin<>::
+::res://addons/phantom_camera/assets/::1714019044
+PhantomCameraBtnPrimaryDefault.png::CompressedTexture2D::5081567352117042767::1714019044::1714019044::1::::<><>::
+PhantomCameraBtnPrimaryHover.png::CompressedTexture2D::1097276340276520798::1714019044::1714019044::1::::<><>::
+::res://addons/phantom_camera/examples/::1714019048
+credits.txt::TextFile::-1::1714019044::0::1::::<><>::
+::res://addons/phantom_camera/examples/example_scenes/::1714019045
+::res://addons/phantom_camera/examples/example_scenes/2D/::1714019045
+2DExampleScene.tscn::PackedScene::8396109236837500942::1714019044::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+2DFollowFramedExampleScene.tscn::PackedScene::4041101467758950601::1714019044::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres
+2DFollowGroupExampleScene.tscn::PackedScene::3615519047096694654::1714019044::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+2DFollowPathExampleScene.tscn::PackedScene::1090052207262972448::1714019044::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>uid://cecrnq0wnkexh::::res://addons/phantom_camera/examples/resources/tween/ItemFocusPhantomCamera2DTween.tres<>uid://cllveybboaqk5::::res://addons/phantom_camera/examples/resources/tween/InventoryPhantomCamera2DTween.tres
+2DLimitExampleScene.tscn::PackedScene::1601450723493897600::1714019044::0::1::::<><>::res://addons/phantom_camera/examples/scripts/2D/2d_room_limit_tween.gd<>uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd
+2DTweeningExampleScene.tscn::PackedScene::5875330861835730161::1714019045::0::1::::<><>::uid://c77npili4pel4::::res://addons/phantom_camera/examples/textures/2D/level_spritesheet.png<>uid://dg7rhrymsrrrm::::res://addons/phantom_camera/examples/ui/UIInventory.tscn<>uid://iq5xd1ob1res::::res://addons/phantom_camera/examples/ui/UISign.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://euybd2w0bax::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera2DTween.tres<>res://addons/phantom_camera/examples/scripts/2D/PlayerCharacterBody2D.gd<>uid://cwep0on2tthn7::::res://addons/phantom_camera/examples/textures/2D/PhantomCamera2DSprite.png<>res://addons/phantom_camera/examples/scripts/2D/2D_trigger_area.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+::res://addons/phantom_camera/examples/example_scenes/3D/::1714019045
+3DExampleScene.tscn::PackedScene::5389709161117818686::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/examples/scripts/3D/NPC.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://cptfoggk2ok67::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera3DTween.tres<>res://addons/phantom_camera/examples/scripts/3D/3D_trigger_area.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://c1v786g5agaw5::::res://addons/phantom_camera/examples/resources/tween/FixedCameraTween.tres
+3DFollowFramedExampleScene.tscn::PackedScene::6831697141640160960::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DFollowGluedExampleScene.tscn::PackedScene::8760621557405770743::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DFollowGroupExampleScene.tscn::PackedScene::7240303035488103663::1714019045::0::1::::<><>::uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd
+3DFollowPathExampleScene.tscn::PackedScene::8823052630826975221::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/examples/scripts/3D/path_follow.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+3DFollowSimpleExampleScene.tscn::PackedScene::3803289718966625666::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/scripts/resources/camera_3D_resource.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DFollowThirdPersonExampleScene.tscn::PackedScene::2053817529390837519::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/scripts/resources/camera_3D_resource.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller_third_person.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+3DLookAtExampleScene.tscn::PackedScene::2612475775293339696::1714019045::0::1::::<><>::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+3DTweeningExampleScene.tscn::PackedScene::2154332734917685671::1714019045::0::1::::<><>::uid://cixlwqycoox8h::::res://addons/phantom_camera/examples/models/3DPrototypeCubeDark.tscn<>res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd<>res://addons/phantom_camera/examples/scripts/3D/player_controller.gd<>uid://cptfoggk2ok67::::res://addons/phantom_camera/examples/resources/tween/PlayerPhantomCamera3DTween.tres<>res://addons/phantom_camera/examples/scripts/3D/3D_trigger_area.gd<>res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+::res://addons/phantom_camera/examples/models/::1714019046
+3DPrototypeCubeDark.tscn::PackedScene::5382540856779240661::1714019046::0::1::::<><>::uid://c7ja4woxol8yc::::res://addons/phantom_camera/examples/textures/3D/CheckerPatternDark.png
+::res://addons/phantom_camera/examples/resources/::1714019046
+::res://addons/phantom_camera/examples/resources/tween/::1714019046
+FixedCameraTween.tres::Resource/Resource::6643106748633668090::1714019046::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+InventoryPhantomCamera2DTween.tres::Resource/Resource::5568910264892302066::1714019046::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+ItemFocusPhantomCamera2DTween.tres::Resource/Resource::5058781781655307589::1714019046::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+PlayerPhantomCamera2DTween.tres::Resource/Resource::9514768340188899::1714019046::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+PlayerPhantomCamera3DTween.tres::Resource/Resource::5865226110262250054::1714019046::0::1::::<><>::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+::res://addons/phantom_camera/examples/scripts/::1714019046
+::res://addons/phantom_camera/examples/scripts/2D/::1714019046
+2d_room_limit_tween.gd::GDScript::-1::1714019046::0::1::::<>Node2D<>::
+2D_trigger_area.gd::GDScript::-1::1714019046::0::1::::<>Area2D<>::
+PlayerCharacterBody2D.gd::GDScript::-1::1714019046::0::1::::<>CharacterBody2D<>::
+::res://addons/phantom_camera/examples/scripts/3D/::1714019047
+3D_trigger_area.gd::GDScript::-1::1714019046::0::1::::<>Area3D<>::
+NPC.gd::GDScript::-1::1714019047::0::1::::<>Node3D<>::
+path_follow.gd::GDScript::-1::1714019047::0::1::::<>Node<>::
+player_controller.gd::GDScript::-1::1714019047::0::1::::<>CharacterBody3D<>::
+player_controller_third_person.gd::GDScript::-1::1714019047::0::1::::<><>::
+::res://addons/phantom_camera/examples/textures/::1714019048
+::res://addons/phantom_camera/examples/textures/2D/::1714019056
+inventory_container.png::CompressedTexture2D::4637741338914361246::1714019047::1714019056::1::::<><>::
+level_spritesheet.png::CompressedTexture2D::7085760997330170155::1714019047::1714019056::1::::<><>::
+PhantomCamera2DSprite.png::CompressedTexture2D::6326209594840534622::1714019047::1714019056::1::::<><>::
+sign_prompt.png::CompressedTexture2D::3188285415853117228::1714019048::1714019056::1::::<><>::
+::res://addons/phantom_camera/examples/textures/3D/::1714019056
+CheckerPatternDark.png::CompressedTexture2D::7037516729818178126::1714019048::1714019056::1::::<><>::
+::res://addons/phantom_camera/examples/ui/::1714019048
+UIInventory.tscn::PackedScene::7647500821014000442::1714019048::0::1::::<><>::uid://b7cs6me43ufh3::::res://addons/phantom_camera/examples/textures/2D/inventory_container.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+UISign.tscn::PackedScene::596403574585461246::1714019048::0::1::::<><>::uid://bloouh2jtndx1::::res://addons/phantom_camera/examples/textures/2D/sign_prompt.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf
+::res://addons/phantom_camera/fonts/::1714019048
+Nunito-Black.ttf::FontFile::6833869716374227054::1714019048::1714019048::1::::<><>::
+Nunito-Regular.ttf::FontFile::8643449995156224464::1714019048::1714019048::1::::<><>::
+::res://addons/phantom_camera/gizmos/::1714019049
+CustomGizmo.gd::GDScript::-1::1714019049::0::1::::CustomPluginGizmo<>EditorNode3DGizmoPlugin<>::
+phantom_camera_gizmo_plugin_3D.gd::GDScript::-1::1714019049::0::1::::<>CustomPluginGizmo<>::
+::res://addons/phantom_camera/icons/::1714019056
+Chevron.svg::CompressedTexture2D::1745133219077516325::1714019049::1714019049::1::::<><>::
+PhantomCameraGizmoIcon2D.svg::CompressedTexture2D::4629927649471389476::1714019049::1714019056::1::::<><>::
+PhantomCameraGizmoIcon3D.svg::CompressedTexture2D::1466881276638961705::1714019049::1714019056::1::::<><>::
+PhantomCameraGizmoIcon.svg::CompressedTexture2D::1247439452673462146::1714019049::1714019049::1::::<><>::
+PhantomCameraGlowLogo.png::CompressedTexture2D::5427785683244604059::1714019050::1714019050::1::::<><>::
+PhantomCameraHostIcon.svg::CompressedTexture2D::1569278523430150114::1714019050::1714019050::1::::<><>::
+PhantomCameraIcon2D.svg::CompressedTexture2D::7158192983046750063::1714019050::1714019050::1::::<><>::
+PhantomCameraIcon3D.svg::CompressedTexture2D::5118178094743450707::1714019050::1714019050::1::::<><>::
+PhantomCameraIcon.svg::CompressedTexture2D::4500271091572974045::1714019050::1714019050::1::::<><>::
+phantom_camera_logo.png::CompressedTexture2D::4966186125554950581::1714019051::1714019051::1::::<><>::
+Pin.svg::CompressedTexture2D::3711434493768362550::1714019050::1714019051::1::::<><>::
+::res://addons/phantom_camera/icons/misc/::1714019051
+PriorityOverride.svg::CompressedTexture2D::8912176182624502929::1714019051::1714019051::1::::<><>::
+::res://addons/phantom_camera/icons/viewfinder/::1714019052
+Camera2DIcon.svg::CompressedTexture2D::4941179596290591277::1714019051::1714019051::1::::<><>::
+Camera3DIcon.svg::CompressedTexture2D::7877918109027130005::1714019051::1714019051::1::::<><>::
+SceneTypesIcon.svg::CompressedTexture2D::7928082713000371025::1714019051::1714019052::1::::<><>::
+::res://addons/phantom_camera/inspector/::1714019052
+phantom_camera_inspector_plugin.gd::GDScript::-1::1714019052::0::1::::<>EditorInspectorPlugin<>::
+::res://addons/phantom_camera/panel/::1714019052
+editor.gd::GDScript::-1::1714019052::0::1::::<>VBoxContainer<>::
+editor.tscn::PackedScene::5130828868618714074::1714019052::0::1::::<><>::res://addons/phantom_camera/panel/editor.gd<>uid://cuqkqsp3ikv5u::::res://addons/phantom_camera/panel/updater/UpdateButton.tscn<>uid://dbkr3d716wtx0::::res://addons/phantom_camera/panel/viewfinder/viewfinder_panel.tscn
+::res://addons/phantom_camera/panel/updater/::1714019052
+download_update_panel.tscn::PackedScene::4343775578160032417::1714019052::0::1::::<><>::res://addons/phantom_camera/scripts/panel/updater/download_update_panel.gd<>uid://cc0wmici0eic8::::res://addons/phantom_camera/icons/phantom_camera_logo.png<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://censw3w53gldn::::res://addons/phantom_camera/assets/PhantomCameraBtnPrimaryDefault.png
+UpdateButton.tscn::PackedScene::6210284996717618932::1714019052::0::1::::<><>::uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>res://addons/phantom_camera/scripts/panel/updater/update_button.gd<>uid://b25fl4usw0nlp::::res://addons/phantom_camera/panel/updater/download_update_panel.tscn
+::res://addons/phantom_camera/panel/viewfinder/::1714019052
+deadzone_style_box.tres::StyleBoxFlat::8214081647515075988::1714019052::0::1::::<><>::
+viewfinder_panel.tscn::PackedScene::7251177071591726931::1714019052::0::1::::<><>::res://addons/phantom_camera/scripts/panel/viewfinder/viewfinder.gd<>uid://dpa7yvxlq043a::::res://addons/phantom_camera/panel/viewfinder/deadzone_style_box.tres<>uid://c4mm3of2mc8o5::::res://addons/phantom_camera/fonts/Nunito-Black.ttf<>uid://b671h5enwiljg::::res://addons/phantom_camera/icons/PhantomCameraGizmoIcon2D.svg<>uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://dy8eifa6aw2en::::res://addons/phantom_camera/icons/misc/PriorityOverride.svg
+::res://addons/phantom_camera/scripts/::1714019053
+group_names.gd::GDScript::-1::1714019052::0::1::::<>RefCounted<>::
+::res://addons/phantom_camera/scripts/panel/::1714019053
+::res://addons/phantom_camera/scripts/panel/updater/::1714019053
+download_update_panel.gd::GDScript::-1::1714019053::0::1::::<>Control<>::
+updater_constants.gd::GDScript::-1::1714019053::0::1::::<>RefCounted<>::
+update_button.gd::GDScript::-1::1714019053::0::1::::<>Button<>::
+::res://addons/phantom_camera/scripts/panel/viewfinder/::1714019053
+viewfinder.gd::GDScript::-1::1714019053::0::1::::<>Control<>::
+::res://addons/phantom_camera/scripts/phantom_camera/::1714019053
+phantom_camera_2D.gd::GDScript::-1::1714019053::0::1::::PhantomCamera2D<>Node2D<>res://addons/phantom_camera/icons/PhantomCameraIcon2D.svg::
+phantom_camera_3D.gd::GDScript::-1::1714019053::0::1::::PhantomCamera3D<>Node3D<>res://addons/phantom_camera/icons/PhantomCameraIcon3D.svg::
+phantom_camera_constants.gd::GDScript::-1::1714019053::0::1::::<>RefCounted<>::
+phantom_camera_properties.gd::GDScript::-1::1714019053::0::1::::<>RefCounted<>::
+::res://addons/phantom_camera/scripts/phantom_camera_host/::1714019053
+phantom_camera_host.gd::GDScript::-1::1714019053::0::1::::PhantomCameraHost<>Node<>res://addons/phantom_camera/icons/PhantomCameraHostIcon.svg::
+::res://addons/phantom_camera/scripts/resources/::1714019054
+camera_3D_resource.gd::GDScript::-1::1714019053::0::1::::Camera3DResource<>Resource<>::
+tween_resource.gd::GDScript::-1::1714019054::0::1::::PhantomCameraTween<>Resource<>::
+::res://addons/post_processing/::1711316290
+plugin.cfg::TextFile::-1::1711316290::0::1::::<><>::
+plugin.gd::GDScript::-1::1711316290::0::1::::<>EditorPlugin<>::
+::res://addons/post_processing/assets/::1713193822
+ascii.png::CompressedTexture2D::2141360773754192645::1711316288::1711316292::1::::<><>::
+lens_aura.png::CompressedTexture2D::1973845580059734251::1711316288::1713193822::1::::<><>::
+lens_divine.png::CompressedTexture2D::7673707833710087908::1711316288::1711316292::1::::<><>::
+lens_flare.gd::GDScript::-1::1711316288::0::1::::<>CanvasLayer<>::
+::res://addons/post_processing/node/::1711316292
+post_process.gd::GDScript::-1::1711316290::0::1::::<>CanvasLayer<>::
+post_process.svg::CompressedTexture2D::7083733316557221807::1711316290::1711316292::1::::<><>::
+::res://addons/post_processing/node/children/::1711316289
+analog_monitor.tscn::PackedScene::6113914654972264438::1711316289::0::1::::<><>::res://addons/post_processing/shaders/analog_monitor.gdshader
+ascii.tscn::PackedScene::771190717667982951::1711316289::0::1::::<><>::res://addons/post_processing/shaders/ascii.gdshader<>uid://5rj5tlylm7bt::::res://addons/post_processing/assets/ascii.png
+bloom.tscn::PackedScene::8664505778992057278::1711316289::0::1::::<><>::res://addons/post_processing/shaders/bloom.gdshader
+blur.tscn::PackedScene::6425577764243116475::1711316289::0::1::::<><>::res://addons/post_processing/shaders/blur.gdshader
+ChromaticAberration.tscn::PackedScene::4961342803693938042::1711316288::0::1::::<><>::res://addons/post_processing/shaders/chromatic.gdshader
+circular_waves.tscn::PackedScene::4209190063248863122::1711316289::0::1::::<><>::res://addons/post_processing/shaders/circularwaves.gdshader
+fish_eye.tscn::PackedScene::6912869810897747453::1711316289::0::1::::<><>::res://addons/post_processing/shaders/fish_eye.gdshader
+glitch.tscn::PackedScene::8720789723906256751::1711316289::0::1::::<><>::res://addons/post_processing/shaders/glitch.gdshader
+grain.tscn::PackedScene::4292478084888169079::1711316289::0::1::::<><>::res://addons/post_processing/shaders/grain.gdshader
+kaleidoscope.gdshader::Shader::-1::1711316289::0::1::::<><>::
+outline.gdshader::Shader::-1::1711316289::0::1::::<><>::
+outline.tscn::PackedScene::6535530282075149803::1711316289::0::1::::<><>::res://addons/post_processing/node/children/outline.gdshader
+screen_shake.tscn::PackedScene::4655088095747071713::1711316289::0::1::::<><>::res://addons/post_processing/shaders/screen_shake.gdshader
+speed_lines.tscn::PackedScene::1559735154541049243::1711316289::0::1::::<><>::res://addons/post_processing/shaders/speed_lines.gdshader
+vignette.tscn::PackedScene::5992778862305601298::1711316289::0::1::::<><>::res://addons/post_processing/shaders/vignette.gdshader
+::res://addons/post_processing/shaders/::1711316291
+analog_monitor.gdshader::Shader::-1::1711316290::0::1::::<><>::
+ascii.gdshader::Shader::-1::1711316290::0::1::::<><>::
+bloom.gdshader::Shader::-1::1711316290::0::1::::<><>::
+blur.gdshader::Shader::-1::1711316290::0::1::::<><>::
+chromatic.gdshader::Shader::-1::1711316290::0::1::::<><>::
+circularwaves.gdshader::Shader::-1::1711316290::0::1::::<><>::
+CLREDIT.gdshaderinc::ShaderInclude::-1::1711316290::0::1::::<><>::
+fish_eye.gdshader::Shader::-1::1711316291::0::1::::<><>::
+glitch.gdshader::Shader::-1::1711316291::0::1::::<><>::
+grain.gdshader::Shader::-1::1711316291::0::1::::<><>::
+LensFlares.gdshader::Shader::-1::1711316290::0::1::::<><>::
+screen_shake.gdshader::Shader::-1::1711316291::0::1::::<><>::
+speed_lines.gdshader::Shader::-1::1711316291::0::1::::<><>::
+vignette.gdshader::Shader::-1::1711316291::0::1::::<><>::
+water.gdshader::Shader::-1::1711316291::0::1::::<><>::
+::res://addons/unidot_importer/::1711154495
+aligned_byte_buffer.gd::GDScript::-1::1711152869::0::1::::<>RefCounted<>::
+asset_adapter.gd::GDScript::-1::1711152869::0::1::::<>Resource<>::
+asset_database.gd::GDScript::-1::1711152869::0::1::::<>Resource<>::
+asset_meta.gd::GDScript::-1::1711152870::0::1::::<>Resource<>::
+bone_map_editor_plugin.gd::GDScript::-1::1711152870::0::1::::<>RefCounted<>::
+convert_scene.gd::GDScript::-1::1711152870::0::1::::<>Resource<>::
+import_worker.gd::GDScript::-1::1711152870::0::1::::<><>::
+LICENSE.txt::TextFile::-1::1711152869::0::1::::<><>::
+meta_worker.gd::GDScript::-1::1711152870::0::1::::<><>::
+monoscript.gd::GDScript::-1::1711152871::0::1::::<>RefCounted<>::
+object_adapter.gd::GDScript::-1::1711152871::0::1::::<>RefCounted<>::
+package_file.gd::GDScript::-1::1711152871::0::1::::<>Resource<>::
+package_import_dialog.gd::GDScript::-1::1711152871::0::1::::<>RefCounted<>::
+plugin.cfg::TextFile::-1::1711154495::0::1::::<><>::
+plugin.gd::GDScript::-1::1711152871::0::1::::<>EditorPlugin<>::
+post_import_model.gd::GDScript::-1::1711152871::0::1::::<>EditorScenePostImport<>::
+queue_lib.gd::GDScript::-1::1711152871::0::1::::<>RefCounted<>::
+raw_parsed_asset.gd::GDScript::-1::1711152871::0::1::::<>Resource<>::
+README.md::TextFile::-1::1711152869::0::1::::<><>::
+scene_node_state.gd::GDScript::-1::1711152872::0::1::::<>RefCounted<>::
+static_preload.gd::GDScript::-1::1711152872::0::1::::<>Resource<>::
+tarfile.gd::GDScript::-1::1711152872::0::1::::<>RefCounted<>::
+thread_worker.gd::GDScript::-1::1711152873::0::1::::<>RefCounted<>::
+unidot_example.jpg::::-1::1711152873::1711152873::1::::<><>::
+unidot_instructions.png::::-1::1711152873::1711152873::1::::<><>::
+unidot_utils.gd::GDScript::-1::1711152873::0::1::::<>RefCounted<>::
+vrm_integration.gd::GDScript::-1::1711152873::0::1::::<>RefCounted<>::
+yaml_parser.gd::GDScript::-1::1711152873::0::1::::<>RefCounted<>::
+::res://addons/unidot_importer/deresuteme/::1711152870
+decode.gd::GDScript::-1::1711152870::0::1::::<>RefCounted<>::
+::res://addons/unidot_importer/humanoid/::1711152870
+human_trait.gd::GDScript::-1::1711152870::0::1::::<>RefCounted<>::
+transform_util.gd::GDScript::-1::1711152870::0::1::::<>RefCounted<>::
+::res://addons/unidot_importer/runtime/::1711152872
+anim_tree.gd::GDScript::-1::1711152872::0::1::::<>AnimationTree<>::
+::res://addons/unidot_importer/skeleton_merge_tool/::1711152872
+LICENSE.md::TextFile::-1::1711152872::0::1::::<><>::
+merged_skeleton.gd::GDScript::-1::1711152872::0::1::::<>Skeleton3D<>::
+plugin.cfg::TextFile::-1::1711152872::0::1::::<><>::
+skeleton_merge_tool_plugin.gd::GDScript::-1::1711152872::0::1::::<>EditorPlugin<>::
+::res://addons/unidot_importer/test/::1711152873
+::res://Assets/::1713539395
+Circle.png::CompressedTexture2D::2567399577303305714::1713539378::1713539395::1::::<><>::
+::res://Assets/Fonts/::1713539394
+::res://Assets/Fonts/Roboto/::1713536448
+LICENSE.txt::TextFile::-1::1713536447::0::1::::<><>::
+Roboto-Black.ttf::FontFile::325276765832471719::1713536447::1713536448::1::::<><>::
+Roboto-BlackItalic.ttf::FontFile::5924907125146701946::1713536447::1713536448::1::::<><>::
+Roboto-Bold.ttf::FontFile::1622447346064611399::1713536447::1713536448::1::::<><>::
+Roboto-BoldItalic.ttf::FontFile::6527198015985306620::1713536447::1713536448::1::::<><>::
+Roboto-Italic.ttf::FontFile::6237369378621810834::1713536447::1713536448::1::::<><>::
+Roboto-Light.ttf::FontFile::5682873806321988000::1713536447::1713536448::1::::<><>::
+Roboto-LightItalic.ttf::FontFile::6128894955644809058::1713536447::1713536448::1::::<><>::
+Roboto-Medium.ttf::FontFile::1714702499785090712::1713536447::1713536448::1::::<><>::
+Roboto-MediumItalic.ttf::FontFile::4552274280789499885::1713536447::1713536448::1::::<><>::
+Roboto-Regular.ttf::FontFile::8185426047153470889::1713536447::1713536448::1::::<><>::
+Roboto-Thin.ttf::FontFile::8589344015535954813::1713536447::1713536448::1::::<><>::
+Roboto-ThinItalic.ttf::FontFile::7257952739075883124::1713536447::1713536448::1::::<><>::
+::res://Assets/_Assets/::1711154885
+KitchenChaos_COMPLETE_PROJECT.txt::TextFile::-1::1711154867::0::1::::<><>::
+::res://Assets/_Assets/Animations/::1713093748
+ContainerCounter.controller.res::AnimationNodeBlendTree::9221643176360823147::1711154911::0::1::::<><>::
+ContainerCounter.library.res::AnimationLibrary::2272057352817853616::1712930453::0::1::::<><>::
+ContainerCounterClosed.anim::Animation::908293342478612584::1712913596::0::1::::<><>::
+ContainerCounterOpenClose.anim::Animation::8607288572747922558::1712928620::0::1::::<><>::
+CuttingCounter.controller.res::AnimationNodeBlendTree::3162061801700848679::1711154911::0::1::::<><>::
+CuttingCounter.library.res::AnimationLibrary::9116288812823663733::1711154911::0::1::::<><>::uid://ds2ol7emjuuww::::res://Assets/_Assets/Animations/CuttingCounterIdle.anim<>uid://mf8vi3efjnsa::::res://Assets/_Assets/Animations/CuttingCounterCut.anim
+CuttingCounterCut.anim::Animation::854629638490101168::1713093748::0::1::::<><>::
+CuttingCounterIdle.anim::Animation::8479270805039668738::1713013430::0::1::::<><>::
+Idle.anim::Animation::5417409633187821663::1712072915::0::1::::<><>::
+Player.controller.res::AnimationNodeBlendTree::7410845470302004071::1711411338::0::1::::<><>::
+Player.library.res::AnimationLibrary::3478874557724855023::1711154911::0::1::::<><>::uid://cjgh7eu1hmkbf::::res://Assets/_Assets/Animations/Idle.anim<>uid://buxxuowmctn3u::::res://Assets/_Assets/Animations/Walk.anim
+Walk.anim::Animation::3839111221370109880::1712072292::0::1::::<><>::
+::res://Assets/_Assets/Materials/::1715093470
+Black.material::StandardMaterial3D::3613260249214162987::1711154892::0::1::::<><>::
+CounterSelected.material::StandardMaterial3D::3695482236799077889::1715093470::0::1::::<><>::
+Floor.material::StandardMaterial3D::3154810395578869048::1715093470::0::1::::<><>::uid://b6qn1gwgvxf7i::::res://Assets/_Assets/Textures/ButtonBackground.png
+PlayerBody.material::StandardMaterial3D::8509242687015501003::1711154893::0::1::::<><>::
+PlayerBody_Blue.material::StandardMaterial3D::5243663540921637459::1711154893::0::1::::<><>::
+PlayerBody_Green.material::StandardMaterial3D::5342864368693365542::1711154893::0::1::::<><>::
+PlayerBody_Red.material::StandardMaterial3D::8741746429782049464::1711154893::0::1::::<><>::
+PlayerMovingParticles.material::StandardMaterial3D::870427348690488958::1711154893::0::1::::<><>::
+StoveRedGlow.material::StandardMaterial3D::10477885944529080::1711154893::0::1::::<><>::
+StoveSizzlingParticles.material::StandardMaterial3D::2172879979719674234::1711154893::0::1::::<><>::
+Trail.material::StandardMaterial3D::948270075062385121::1711154893::0::1::::<><>::
+Wall.material::StandardMaterial3D::4235237074699641033::1715093470::0::1::::<><>::
+::res://Assets/_Assets/Meshes/::1711154911
+All models.gltf::PackedScene::2640966600458262359::1711154873::1711154910::1::::<><>::
+Bread bottom.gltf::PackedScene::4980963179922164605::1711154873::1711154910::1::::<><>::
+Bread top.gltf::PackedScene::9091250866648188037::1711154873::1711154910::1::::<><>::
+Burned meat patty.gltf::PackedScene::91683268289537043::1711154873::1711154910::1::::<><>::
+Cabbage slice_flat.gltf::PackedScene::5630511862792873580::1711154873::1711154910::1::::<><>::
+Cabbage slice_shaped.gltf::PackedScene::7553153222688066069::1711154873::1711154910::1::::<><>::
+Cabbage.gltf::PackedScene::5033575863130304438::1711154873::1711154910::1::::<><>::
+Cabbage.material::StandardMaterial3D::4568001979097362506::1711154893::0::1::::<><>::uid://c1ra6lksy7rls::::res://Assets/_Assets/Meshes/Textures/Lettuce_AlbedoTransparency.png<>uid://ccg5ni4vc6nyi::::res://Assets/_Assets/Meshes/Textures/Lettuce_Normal.png
+Cheese block.gltf::PackedScene::3367641224219761009::1711154873::1711154910::1::::<><>::
+Cheese slice.gltf::PackedScene::8558174855372042970::1711154873::1711154910::1::::<><>::
+Chopping Board.gltf::PackedScene::4888922858565349664::1711154873::1711154910::1::::<><>::
+Cooked meat patty.gltf::PackedScene::7522420883891196946::1711154878::1711154910::1::::<><>::
+Counter_hole.gltf::PackedScene::7090549754796039313::1711154878::1711154910::1::::<><>::
+Counter_solid.gltf::PackedScene::2350275389865539328::1711154878::1711154910::1::::<><>::
+Double doors.gltf::PackedScene::6423026603626990089::1711154878::1711154910::1::::<><>::
+Frying Pan.gltf::PackedScene::7043794284526717896::1711154878::1711154910::1::::<><>::
+Kitchen Counter.gltf::PackedScene::5820109338362831130::1711154878::1711154910::1::::<><>::
+Kitchen Counter_Blue.material::StandardMaterial3D::574896603526953948::1711154893::0::1::::<><>::uid://dii5v54lx1at6::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Blue_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+Knife.gltf::PackedScene::1208132106642796326::1711154878::1711154910::1::::<><>::
+Plate.gltf::PackedScene::8165283840741917617::1711154878::1711154910::1::::<><>::
+Single door.gltf::PackedScene::5006975076670804069::1711154878::1711154910::1::::<><>::
+Stove Counter.gltf::PackedScene::1927850668208326646::1711154879::1711154910::1::::<><>::
+Tomato slice.gltf::PackedScene::7294448768130877682::1711154884::1711154910::1::::<><>::
+Tomato.gltf::PackedScene::1729929105043614138::1711154884::1711154910::1::::<><>::
+Trash bin.gltf::PackedScene::8250057365421828396::1711154884::1711154910::1::::<><>::
+Uncooked meat patty.gltf::PackedScene::1899512343373079764::1711154884::1711154910::1::::<><>::
+::res://Assets/_Assets/Meshes/extracted/::1711315506
+All models.bread for burger top.mesh::ArrayMesh::5515559213458890978::1711154904::0::1::::<><>::uid://b8k7dbplkideh::::res://Assets/_Assets/Meshes/extracted/All models.Bread.material
+All models.bread for burget bottom.mesh::ArrayMesh::7477803808112677262::1711154904::0::1::::<><>::uid://b8k7dbplkideh::::res://Assets/_Assets/Meshes/extracted/All models.Bread.material
+All models.Bread.material::StandardMaterial3D::4725244678647896475::1711154904::0::1::::<><>::uid://c5c7sj34gn01l::::res://Assets/_Assets/Meshes/Textures/Bread_AlbedoTransparency.png<>uid://l42n2tye3nvk::::res://Assets/_Assets/Meshes/Textures/Bread_Normal.png
+All models.burned meat patty.mesh::ArrayMesh::6362265773215112638::1711154904::0::1::::<><>::uid://blm6g3a4uh0v4::::res://Assets/_Assets/Meshes/extracted/All models.Meat.material
+All models.cheese block.mesh::ArrayMesh::4485515140188709954::1711154904::0::1::::<><>::uid://bnxmi0ylnxrmu::::res://Assets/_Assets/Meshes/extracted/All models.Cheese.material
+All models.cheese slice.mesh::ArrayMesh::267418524661703867::1711154904::0::1::::<><>::uid://bnxmi0ylnxrmu::::res://Assets/_Assets/Meshes/extracted/All models.Cheese.material
+All models.Cheese.material::StandardMaterial3D::3347100580272479320::1711154904::0::1::::<><>::uid://dbyqi51uu8lds::::res://Assets/_Assets/Meshes/Textures/Cheese_AlbedoTransparency.png<>uid://bywifjh0dnv6v::::res://Assets/_Assets/Meshes/Textures/Cheese_Normal.png
+All models.Chopping board.material::StandardMaterial3D::5250516621151611138::1711154903::0::1::::<><>::uid://b7gtpgo2c205c::::res://Assets/_Assets/Meshes/Textures/Chopping board_AlbedoTransparency.png<>uid://bb7j3tw3hycxr::::res://Assets/_Assets/Meshes/Textures/Chopping board_Normal.png
+All models.Cooked meat patty.mesh::ArrayMesh::3452977922012858799::1711154904::0::1::::<><>::uid://blm6g3a4uh0v4::::res://Assets/_Assets/Meshes/extracted/All models.Meat.material
+All models.Cube.mesh::ArrayMesh::4244871823844170967::1711154903::0::1::::<><>::uid://8o6lwsj8koqm::::res://Assets/_Assets/Meshes/extracted/All models.Kitchen Counter.material
+All models.Cube_004.mesh::ArrayMesh::7190457712572493038::1711154903::0::1::::<><>::uid://d2jmfuecn8yr::::res://Assets/_Assets/Meshes/extracted/All models.Stove.material
+All models.Cube_005.mesh::ArrayMesh::2095292931034796282::1711154903::0::1::::<><>::uid://cg2nihlou7phy::::res://Assets/_Assets/Meshes/extracted/All models.Chopping board.material
+All models.Cylinder_003.mesh::ArrayMesh::5192330966968853375::1711154903::0::1::::<><>::uid://dprgdu73vknfo::::res://Assets/_Assets/Meshes/extracted/All models.Frying pan.material
+All models.Frying pan.material::StandardMaterial3D::8247559888008525964::1711154903::0::1::::<><>::uid://jxi14cpq0t7u::::res://Assets/_Assets/Meshes/Textures/Frying pan_AlbedoTransparency.png<>uid://drc2vok8lfxud::::res://Assets/_Assets/Meshes/Textures/Frying pan_Normal.png
+All models.Kitchen Counter.material::StandardMaterial3D::2347036182894230116::1711154903::0::1::::<><>::uid://2jbjc2el65k2::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+All models.Knife.material::StandardMaterial3D::4479487093823691301::1711154903::0::1::::<><>::uid://6xe01c0wvqat::::res://Assets/_Assets/Meshes/Textures/Knife_AlbedoTransparency.png<>uid://bopi7sv63lvfs::::res://Assets/_Assets/Meshes/Textures/Knife_Normal.png
+All models.Lettuce slice_flat.mesh::ArrayMesh::1039103892189236114::1711154904::0::1::::<><>::uid://bhm7a1x76og4::::res://Assets/_Assets/Meshes/extracted/All models.Lettuce.material
+All models.Lettuce slice_shaped.mesh::ArrayMesh::6337552031179496627::1711154904::0::1::::<><>::uid://bhm7a1x76og4::::res://Assets/_Assets/Meshes/extracted/All models.Lettuce.material
+All models.Lettuce.material::StandardMaterial3D::85425278488532217::1711154904::0::1::::<><>::uid://c1ra6lksy7rls::::res://Assets/_Assets/Meshes/Textures/Lettuce_AlbedoTransparency.png<>uid://ccg5ni4vc6nyi::::res://Assets/_Assets/Meshes/Textures/Lettuce_Normal.png
+All models.Lettuce.mesh::ArrayMesh::2601773590944924628::1711154904::0::1::::<><>::uid://bhm7a1x76og4::::res://Assets/_Assets/Meshes/extracted/All models.Lettuce.material
+All models.Meat.material::StandardMaterial3D::3185164910297827171::1711154904::0::1::::<><>::uid://bq8yjkffdvynj::::res://Assets/_Assets/Meshes/Textures/Meat_AlbedoTransparency.png<>uid://dvub63yr6uugp::::res://Assets/_Assets/Meshes/Textures/Meat_Normal.png
+All models.Plane_002.mesh::ArrayMesh::2786038633125702446::1711154903::0::1::::<><>::uid://b425q6wmu2ah6::::res://Assets/_Assets/Meshes/extracted/All models.Knife.material
+All models.Plate.material::StandardMaterial3D::8678325884697804664::1711154904::0::1::::<><>::uid://m2nraf86tqn8::::res://Assets/_Assets/Meshes/Textures/Plate_AlbedoTransparency.png<>uid://1odp66wsqivf::::res://Assets/_Assets/Meshes/Textures/Plate_Normal.png
+All models.plate.mesh::ArrayMesh::1217700529498069665::1711154904::0::1::::<><>::uid://dvv3024r258hg::::res://Assets/_Assets/Meshes/extracted/All models.Plate.material
+All models.Stove.material::StandardMaterial3D::266872906433271373::1711154903::0::1::::<><>::uid://2srecqy3cvdg::::res://Assets/_Assets/Meshes/Textures/Stove_AlbedoTransparency.png<>uid://cj11qldli2kc5::::res://Assets/_Assets/Meshes/Textures/Stove_Normal.png
+All models.Tomato slice.mesh::ArrayMesh::4694375262822554637::1711154904::0::1::::<><>::uid://8g6y43sv0buv::::res://Assets/_Assets/Meshes/extracted/All models.Tomato.material
+All models.Tomato.material::StandardMaterial3D::2330544759687468185::1711154904::0::1::::<><>::uid://c3xv3f1p38g0t::::res://Assets/_Assets/Meshes/Textures/Tomato_AlbedoTransparency.png<>uid://dq7bl2aj5skma::::res://Assets/_Assets/Meshes/Textures/Tomato_Normal.png
+All models.Tomato.mesh::ArrayMesh::4802580938528710146::1711154904::0::1::::<><>::uid://8g6y43sv0buv::::res://Assets/_Assets/Meshes/extracted/All models.Tomato.material
+All models.Trash bin.material::StandardMaterial3D::3154462130620549545::1711154903::0::1::::<><>::uid://bkov0t2yxcdhk::::res://Assets/_Assets/Meshes/Textures/Trash bin_AlbedoTransparency.png<>uid://cw52fv3swfdh::::res://Assets/_Assets/Meshes/Textures/Trash bin_Normal.png
+All models.trash bin.mesh::ArrayMesh::4332482973151965127::1711154903::0::1::::<><>::uid://bk7bsbftruhb2::::res://Assets/_Assets/Meshes/extracted/All models.Trash bin.material
+All models.Uncooked meat patty.mesh::ArrayMesh::8070354855210157160::1711154904::0::1::::<><>::uid://blm6g3a4uh0v4::::res://Assets/_Assets/Meshes/extracted/All models.Meat.material
+Bread bottom.bread for burget bottom.mesh::ArrayMesh::6750076552409150485::1711154908::0::1::::<><>::uid://noexleqp780w::::res://Assets/_Assets/Meshes/extracted/Bread bottom.Bread.material
+Bread bottom.Bread.material::StandardMaterial3D::941640781766514140::1711154907::0::1::::<><>::uid://c5c7sj34gn01l::::res://Assets/_Assets/Meshes/Textures/Bread_AlbedoTransparency.png<>uid://l42n2tye3nvk::::res://Assets/_Assets/Meshes/Textures/Bread_Normal.png
+Bread top.bread for burger top.mesh::ArrayMesh::5675702412264084011::1711154906::0::1::::<><>::uid://cm7bulhv6jqo4::::res://Assets/_Assets/Meshes/extracted/Bread top.Bread.material
+Bread top.Bread.material::StandardMaterial3D::5681264601609793489::1711154906::0::1::::<><>::uid://c5c7sj34gn01l::::res://Assets/_Assets/Meshes/Textures/Bread_AlbedoTransparency.png<>uid://l42n2tye3nvk::::res://Assets/_Assets/Meshes/Textures/Bread_Normal.png
+Burned meat patty.burned meat patty.mesh::ArrayMesh::221192002744789613::1711154907::0::1::::<><>::uid://chfe4njhf36f5::::res://Assets/_Assets/Meshes/extracted/Burned meat patty.Meat.material
+Burned meat patty.Meat.material::StandardMaterial3D::5274780514649693332::1711154907::0::1::::<><>::uid://bq8yjkffdvynj::::res://Assets/_Assets/Meshes/Textures/Meat_AlbedoTransparency.png<>uid://dvub63yr6uugp::::res://Assets/_Assets/Meshes/Textures/Meat_Normal.png
+Cabbage slice_flat.Lettuce slice_flat.mesh::ArrayMesh::8984165058784925485::1711154908::0::1::::<><>::uid://tfg7mp8smvb2::::res://Assets/_Assets/Meshes/extracted/Cabbage slice_flat.Lettuce.material
+Cabbage slice_flat.Lettuce.material::StandardMaterial3D::1344332020230656625::1711154908::0::1::::<><>::uid://c1ra6lksy7rls::::res://Assets/_Assets/Meshes/Textures/Lettuce_AlbedoTransparency.png<>uid://ccg5ni4vc6nyi::::res://Assets/_Assets/Meshes/Textures/Lettuce_Normal.png
+Cabbage slice_shaped.Lettuce slice_shaped.mesh::ArrayMesh::7616267085157724231::1711154909::0::1::::<><>::uid://cwpuy2kemyhl4::::res://Assets/_Assets/Meshes/extracted/Cabbage slice_shaped.Lettuce.material
+Cabbage slice_shaped.Lettuce.material::StandardMaterial3D::6349220226420085551::1711154909::0::1::::<><>::uid://c1ra6lksy7rls::::res://Assets/_Assets/Meshes/Textures/Lettuce_AlbedoTransparency.png<>uid://ccg5ni4vc6nyi::::res://Assets/_Assets/Meshes/Textures/Lettuce_Normal.png
+Cabbage.Lettuce.material::StandardMaterial3D::3256308703128203095::1711154905::0::1::::<><>::uid://c1ra6lksy7rls::::res://Assets/_Assets/Meshes/Textures/Lettuce_AlbedoTransparency.png<>uid://ccg5ni4vc6nyi::::res://Assets/_Assets/Meshes/Textures/Lettuce_Normal.png
+Cabbage.Lettuce.mesh::ArrayMesh::537908814511916406::1711154905::0::1::::<><>::uid://bmnm6tphnn61p::::res://Assets/_Assets/Meshes/extracted/Cabbage.Lettuce.material
+Cheese block.cheese block.mesh::ArrayMesh::5980415992912628528::1711154906::0::1::::<><>::uid://s8fj8ubeyfci::::res://Assets/_Assets/Meshes/extracted/Cheese block.Cheese.material
+Cheese block.Cheese.material::StandardMaterial3D::1331845072695904896::1711154906::0::1::::<><>::uid://dbyqi51uu8lds::::res://Assets/_Assets/Meshes/Textures/Cheese_AlbedoTransparency.png<>uid://bywifjh0dnv6v::::res://Assets/_Assets/Meshes/Textures/Cheese_Normal.png
+Cheese slice.cheese slice.mesh::ArrayMesh::8197647024302332552::1711154907::0::1::::<><>::uid://b3hh6jciua7iv::::res://Assets/_Assets/Meshes/extracted/Cheese slice.Cheese.material
+Cheese slice.Cheese.material::StandardMaterial3D::4366639804586850789::1711154907::0::1::::<><>::uid://dbyqi51uu8lds::::res://Assets/_Assets/Meshes/Textures/Cheese_AlbedoTransparency.png<>uid://bywifjh0dnv6v::::res://Assets/_Assets/Meshes/Textures/Cheese_Normal.png
+Chopping Board.Chopping board.material::StandardMaterial3D::6151125339098792638::1711154908::0::1::::<><>::uid://b7gtpgo2c205c::::res://Assets/_Assets/Meshes/Textures/Chopping board_AlbedoTransparency.png<>uid://bb7j3tw3hycxr::::res://Assets/_Assets/Meshes/Textures/Chopping board_Normal.png
+Chopping Board.Cube_005.mesh::ArrayMesh::3691621778137337244::1711154909::0::1::::<><>::uid://ctvweu2mmgqrm::::res://Assets/_Assets/Meshes/extracted/Chopping Board.Chopping board.material
+Cooked meat patty.Cooked meat patty.mesh::ArrayMesh::732221138871778578::1711154898::0::1::::<><>::uid://cmevgfqqx8wom::::res://Assets/_Assets/Meshes/extracted/Cooked meat patty.Meat.material
+Cooked meat patty.Meat.material::StandardMaterial3D::5624651061763001784::1711154898::0::1::::<><>::uid://bq8yjkffdvynj::::res://Assets/_Assets/Meshes/Textures/Meat_AlbedoTransparency.png<>uid://dvub63yr6uugp::::res://Assets/_Assets/Meshes/Textures/Meat_Normal.png
+Counter_hole.Counter_001.mesh::ArrayMesh::2333067910794868682::1711154900::0::1::::<><>::uid://c4vkmmc35spcl::::res://Assets/_Assets/Meshes/extracted/Counter_hole.Kitchen Counter.material
+Counter_hole.Kitchen Counter.material::StandardMaterial3D::6852298999861737339::1711154900::0::1::::<><>::uid://2jbjc2el65k2::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+Counter_solid.Counter_003.mesh::ArrayMesh::8138694200416472358::1711154902::0::1::::<><>::uid://b14ingropnax8::::res://Assets/_Assets/Meshes/extracted/Counter_solid.Kitchen Counter.material
+Counter_solid.Kitchen Counter.material::StandardMaterial3D::4271706866471000583::1711154902::0::1::::<><>::uid://2jbjc2el65k2::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+Double doors.Counter_002.mesh::ArrayMesh::4745005865518715893::1711154901::0::1::::<><>::uid://klosk0qipf8d::::res://Assets/_Assets/Meshes/extracted/Double doors.Kitchen Counter.material
+Double doors.Kitchen Counter.material::StandardMaterial3D::725479338455865777::1711154901::0::1::::<><>::uid://2jbjc2el65k2::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+Frying Pan.Cylinder_003.mesh::ArrayMesh::4606668027937737829::1711154899::0::1::::<><>::uid://bh77ecvxfj4ak::::res://Assets/_Assets/Meshes/extracted/Frying Pan.Frying pan.material
+Frying Pan.Frying pan.material::StandardMaterial3D::2945752902773063734::1711154899::0::1::::<><>::uid://jxi14cpq0t7u::::res://Assets/_Assets/Meshes/Textures/Frying pan_AlbedoTransparency.png<>uid://drc2vok8lfxud::::res://Assets/_Assets/Meshes/Textures/Frying pan_Normal.png
+Kitchen Counter.Counter.mesh::ArrayMesh::666839278377506233::1711315506::0::1::::<><>::uid://c7waxsldwcwjs::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Kitchen Counter.material
+Kitchen Counter.Kitchen Counter.material::StandardMaterial3D::7064342710231327276::1711154899::0::1::::<><>::uid://2jbjc2el65k2::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+Knife.Knife.material::StandardMaterial3D::5755159367737407581::1711154900::0::1::::<><>::uid://6xe01c0wvqat::::res://Assets/_Assets/Meshes/Textures/Knife_AlbedoTransparency.png<>uid://bopi7sv63lvfs::::res://Assets/_Assets/Meshes/Textures/Knife_Normal.png
+Knife.Plane_002.mesh::ArrayMesh::7147940396563982234::1711154901::0::1::::<><>::uid://cn83vs3wvwm02::::res://Assets/_Assets/Meshes/extracted/Knife.Knife.material
+Plate.Plate.material::StandardMaterial3D::8229625090895324578::1711154898::0::1::::<><>::uid://m2nraf86tqn8::::res://Assets/_Assets/Meshes/Textures/Plate_AlbedoTransparency.png<>uid://1odp66wsqivf::::res://Assets/_Assets/Meshes/Textures/Plate_Normal.png
+Plate.plate.mesh::ArrayMesh::6832325444931811602::1711154899::0::1::::<><>::uid://dpiqytwhuyhqg::::res://Assets/_Assets/Meshes/extracted/Plate.Plate.material
+Single door.Counter_004.mesh::ArrayMesh::3444727487877843346::1711154902::0::1::::<><>::uid://y5ooyj87uu4t::::res://Assets/_Assets/Meshes/extracted/Single door.Kitchen Counter.material
+Single door.Kitchen Counter.material::StandardMaterial3D::1747339894954554685::1711154901::0::1::::<><>::uid://2jbjc2el65k2::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png<>uid://ctecodq22sivr::::res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png
+Stove Counter.Cube_004.mesh::ArrayMesh::8990814084482213251::1711154897::0::1::::<><>::uid://bj1d6a4i1p1xi::::res://Assets/_Assets/Meshes/extracted/Stove Counter.Stove.material
+Stove Counter.Stove.material::StandardMaterial3D::3072031653828474454::1711154897::0::1::::<><>::uid://2srecqy3cvdg::::res://Assets/_Assets/Meshes/Textures/Stove_AlbedoTransparency.png<>uid://cj11qldli2kc5::::res://Assets/_Assets/Meshes/Textures/Stove_Normal.png
+Tomato slice.Tomato slice.mesh::ArrayMesh::2936403772665428212::1711154896::0::1::::<><>::uid://bky18c7ae32gw::::res://Assets/_Assets/Meshes/extracted/Tomato slice.Tomato.material
+Tomato slice.Tomato.material::StandardMaterial3D::3139491913668568046::1711154896::0::1::::<><>::uid://c3xv3f1p38g0t::::res://Assets/_Assets/Meshes/textures/Tomato_AlbedoTransparency.png<>uid://dq7bl2aj5skma::::res://Assets/_Assets/Meshes/textures/Tomato_Normal.png
+Tomato.Tomato.material::StandardMaterial3D::6987325792931688466::1711154895::0::1::::<><>::uid://c3xv3f1p38g0t::::res://Assets/_Assets/Meshes/textures/Tomato_AlbedoTransparency.png<>uid://dq7bl2aj5skma::::res://Assets/_Assets/Meshes/textures/Tomato_Normal.png
+Tomato.Tomato.mesh::ArrayMesh::617026589993159686::1711154895::0::1::::<><>::uid://c6syh8uofgr11::::res://Assets/_Assets/Meshes/extracted/Tomato.Tomato.material
+Trash bin.Trash bin.material::StandardMaterial3D::90412615074474429::1711154896::0::1::::<><>::uid://bkov0t2yxcdhk::::res://Assets/_Assets/Meshes/textures/Trash bin_AlbedoTransparency.png<>uid://cw52fv3swfdh::::res://Assets/_Assets/Meshes/textures/Trash bin_Normal.png
+Trash bin.trash bin.mesh::ArrayMesh::946803955483269812::1711154896::0::1::::<><>::uid://bj2c2o8aiar2::::res://Assets/_Assets/Meshes/extracted/Trash bin.Trash bin.material
+Uncooked meat patty.Meat.material::StandardMaterial3D::7687028885108149932::1711154897::0::1::::<><>::uid://bq8yjkffdvynj::::res://Assets/_Assets/Meshes/textures/Meat_AlbedoTransparency.png<>uid://dvub63yr6uugp::::res://Assets/_Assets/Meshes/textures/Meat_Normal.png
+Uncooked meat patty.Uncooked meat patty.mesh::ArrayMesh::1932031217200269006::1711154897::0::1::::<><>::uid://dhrwiircjdjc3::::res://Assets/_Assets/Meshes/extracted/Uncooked meat patty.Meat.material
+::res://Assets/_Assets/Meshes/Textures/::1711154890
+Bread_AlbedoTransparency.png::CompressedTexture2D::6884611037384969163::1711154878::1711154889::1::::<><>::
+Bread_MetallicSmoothness.png::CompressedTexture2D::1591561814152016307::1711154878::1711154889::1::::<><>::
+Bread_Normal.png::CompressedTexture2D::833608257590197480::1711154878::1711154889::1::::<><>::
+Cheese_AlbedoTransparency.png::CompressedTexture2D::7279983335852436972::1711154878::1711154889::1::::<><>::
+Cheese_MetallicSmoothness.png::CompressedTexture2D::9000210340141878733::1711154878::1711154889::1::::<><>::
+Cheese_Normal.png::CompressedTexture2D::4116864391171062655::1711154878::1711154889::1::::<><>::
+Chopping board_AlbedoTransparency.png::CompressedTexture2D::4646030694403515194::1711154878::1711154889::1::::<><>::
+Chopping board_MetallicSmoothness.png::CompressedTexture2D::3190010376145344425::1711154878::1711154889::1::::<><>::
+Chopping board_Normal.png::CompressedTexture2D::2523267103837124055::1711154878::1711154889::1::::<><>::
+Frying pan_AlbedoTransparency.png::CompressedTexture2D::679713974640006728::1711154878::1711154888::1::::<><>::
+Frying pan_MetallicSmoothness.png::CompressedTexture2D::604343609933237830::1711154878::1711154889::1::::<><>::
+Frying pan_Normal.png::CompressedTexture2D::8358278761199909247::1711154878::1711154888::1::::<><>::
+Kitchen Counter_AlbedoTransparency.png::CompressedTexture2D::1913755114105437263::1711154878::1711154888::1::::<><>::
+Kitchen Counter_Blue_AlbedoTransparency.png::CompressedTexture2D::7739148454702417541::1711154878::1711154888::1::::<><>::
+Kitchen Counter_MetallicSmoothness.png::CompressedTexture2D::6299075077893543265::1711154878::1711154888::1::::<><>::
+Kitchen Counter_Normal.png::CompressedTexture2D::6114833526175734043::1711154878::1711154888::1::::<><>::
+Knife_AlbedoTransparency.png::CompressedTexture2D::2223623723803908475::1711154878::1711154888::1::::<><>::
+Knife_MetallicSmoothness.png::CompressedTexture2D::4957198957135351300::1711154878::1711154888::1::::<><>::
+Knife_Normal.png::CompressedTexture2D::3400574021591107144::1711154878::1711154888::1::::<><>::
+Lettuce_AlbedoTransparency.png::CompressedTexture2D::6632901677461195276::1711154878::1711154888::1::::<><>::
+Lettuce_MetallicSmoothness.png::CompressedTexture2D::1272356149050885774::1711154878::1711154888::1::::<><>::
+Lettuce_Normal.png::CompressedTexture2D::4927450512234563172::1711154878::1711154889::1::::<><>::
+Meat_AlbedoTransparency.png::CompressedTexture2D::3579040460946694235::1711154878::1711154890::1::::<><>::
+Meat_MetallicSmoothness.png::CompressedTexture2D::7132253301833057568::1711154878::1711154890::1::::<><>::
+Meat_Normal.png::CompressedTexture2D::8674632907706745051::1711154878::1711154887::1::::<><>::
+Plate_AlbedoTransparency.png::CompressedTexture2D::898824011683933059::1711154878::1711154890::1::::<><>::
+Plate_MetallicSmoothness.png::CompressedTexture2D::2772066806987845812::1711154878::1711154890::1::::<><>::
+Plate_Normal.png::CompressedTexture2D::1854021838169615247::1711154878::1711154890::1::::<><>::
+Stove_AlbedoTransparency.png::CompressedTexture2D::1933297040744141328::1711154878::1711154890::1::::<><>::
+Stove_MetallicSmoothness.png::CompressedTexture2D::3863310719101086259::1711154878::1711154889::1::::<><>::
+Stove_Normal.png::CompressedTexture2D::5459822579151272194::1711154878::1711154887::1::::<><>::
+Tomato_AlbedoTransparency.png::CompressedTexture2D::6786935040173835685::1711154878::1711154887::1::::<><>::
+Tomato_MetallicSmoothness.png::CompressedTexture2D::3070767094623727451::1711154878::1711154887::1::::<><>::
+Tomato_Normal.png::CompressedTexture2D::8348425416723636688::1711154878::1711154887::1::::<><>::
+Trash bin_AlbedoTransparency.png::CompressedTexture2D::3118531151100620100::1711154878::1711154887::1::::<><>::
+Trash bin_MetallicSmoothness.png::CompressedTexture2D::3191347992862407294::1711154878::1711154887::1::::<><>::
+Trash bin_Normal.png::CompressedTexture2D::187664020438565905::1711154878::1711154887::1::::<><>::
+::res://Assets/_Assets/PrefabsVisuals/::1713907383
+PlateCompleteVisual.prefab.scn::PackedScene::4697707482462225159::1711154913::0::1::::<><>::uid://b2w68i62dlvpk::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Bread_Visual.prefab.scn<>uid://8c4n8xlb33xb::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyCooked_Visual.prefab.scn<>uid://cqt47op8cuvca::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/TomatoSlices_Visual.prefab.scn<>uid://bev81n81qyp2a::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CheeseSlices_Visual.prefab.scn<>uid://dh5vvwnyr2a5::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CabbageSliced_Visual.prefab.scn<>uid://otbmhubw6w78::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyBurned_Visual.prefab.scn
+PlayerMovingParticles.prefab.scn::PackedScene::3367638697074379467::1711154914::0::1::::<><>::
+PlayerVisual.prefab.scn::PackedScene::852876549086053793::1713907383::0::1::::<><>::uid://bptgs5nckbi6j::::res://Assets/_Assets/Animations/Player.library.res<>uid://dth68pk21s7fr::::res://Assets/_Assets/Materials/PlayerBody.material<>uid://brqj4r4va0g00::::res://Assets/_Assets/Materials/Black.material
+::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/::1713276061
+ClearCounter_Visual.prefab.scn::PackedScene::8667211796611363600::1711154911::0::1::::<><>::uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://c7waxsldwcwjs::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Kitchen Counter.material
+ContainerCounter_Visual.prefab.scn::PackedScene::4796743716340903923::1713033570::0::1::::<><>::uid://7mupni6niv01::::res://Assets/_Assets/Animations/ContainerCounter.library.res<>uid://8qqxsj3ejeiy::::res://Assets/_Assets/Meshes/Counter_solid.gltf<>uid://c8ayk3hcxhgy8::::res://Assets/_Assets/Meshes/Counter_hole.gltf<>uid://bpcwfnfq53qny::::res://Assets/_Assets/Meshes/extracted/Single door.Counter_004.mesh<>uid://cjcc33cfnl6bx::::res://Assets/_Assets/Textures/Icons/Tomato.png<>uid://brqj4r4va0g00::::res://Assets/_Assets/Materials/Black.material
+CuttingCounter_Visual.prefab.scn::PackedScene::4878623340524175884::1713104839::0::1::::<><>::uid://d2487eiaxxxov::::res://Assets/_Assets/Animations/CuttingCounter.library.res<>uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://c7waxsldwcwjs::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Kitchen Counter.material<>uid://cbwh30b0gqgjw::::res://Assets/_Assets/Meshes/Chopping Board.gltf<>uid://rhh02y8l0yx7::::res://Assets/_Assets/Meshes/Knife.gltf
+DeliveryCounter_Visual.prefab.scn::PackedScene::2549594372605711467::1711154911::0::1::::<><>::uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://igqp0kmvkrwm::::res://Assets/_Assets/Meshes/Kitchen Counter_Blue.material
+PlatesCounter_Visual.prefab.scn::PackedScene::3165379225936268155::1713276061::0::1::::<><>::uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://c7waxsldwcwjs::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Kitchen Counter.material<>uid://bu26eph4e4my3::::res://Assets/_Assets/Textures/CircleDashed.png
+StoveCounter_Visual.prefab.scn::PackedScene::8307088642952952296::1713194206::0::1::::<><>::uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://c7waxsldwcwjs::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Kitchen Counter.material<>uid://d1dhnn6m77wdf::::res://Assets/_Assets/Meshes/extracted/Stove Counter.Cube_004.mesh<>uid://bj1d6a4i1p1xi::::res://Assets/_Assets/Meshes/extracted/Stove Counter.Stove.material<>uid://c7mci60k4xlpw::::res://Assets/_Assets/Meshes/Frying Pan.gltf<>uid://3ee7ii2w44gd::::res://addons/post_processing/assets/lens_aura.png<>uid://fctmb3fp5jg::::res://Assets/_Assets/Materials/StoveRedGlow.material
+TrashCounter_Visual.prefab.scn::PackedScene::3893575525393390071::1711154912::0::1::::<><>::uid://dpsnie20ccdei::::res://Assets/_Assets/Meshes/Trash bin.gltf
+::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/::1711154913
+Bread_Visual.prefab.scn::PackedScene::4328877399790873092::1711154912::0::1::::<><>::uid://cc720avw23mnd::::res://Assets/_Assets/Meshes/Bread bottom.gltf<>uid://d2r4tq83setur::::res://Assets/_Assets/Meshes/Bread top.gltf
+CabbageSliced_Visual.prefab.scn::PackedScene::226877324246994482::1711154913::0::1::::<><>::uid://dfu2lhshi2xd2::::res://Assets/_Assets/Meshes/Cabbage slice_shaped.gltf
+Cabbage_Visual.prefab.scn::PackedScene::8553062246207737273::1711154913::0::1::::<><>::uid://cdyki2p0lojtm::::res://Assets/_Assets/Meshes/Cabbage.gltf<>uid://b6c1lb60sa0ok::::res://Assets/_Assets/Meshes/Cabbage.material
+CheeseBlock_Visual.prefab.scn::PackedScene::2908807151786933235::1711154913::0::1::::<><>::uid://bn8ktae0p7ckf::::res://Assets/_Assets/Meshes/Cheese block.gltf
+CheeseSlices_Visual.prefab.scn::PackedScene::2712578817469068050::1711154913::0::1::::<><>::uid://dt6v5ija4f7t3::::res://Assets/_Assets/Meshes/Cheese slice.gltf
+MeatPattyBurned_Visual.prefab.scn::PackedScene::1021949533414833457::1711154913::0::1::::<><>::uid://bkoalumkqqul::::res://Assets/_Assets/Meshes/Burned meat patty.gltf
+MeatPattyCooked_Visual.prefab.scn::PackedScene::2322146372977495311::1711154913::0::1::::<><>::uid://dff6f45m4wpru::::res://Assets/_Assets/Meshes/Cooked meat patty.gltf
+MeatPattyUncooked_Visual.prefab.scn::PackedScene::5518227295479967568::1711154913::0::1::::<><>::uid://2cexqse87xom::::res://Assets/_Assets/Meshes/Uncooked meat patty.gltf
+Plate_Visual.prefab.scn::PackedScene::1476171403017574659::1711154913::0::1::::<><>::uid://dollbc4ti4522::::res://Assets/_Assets/Meshes/Plate.gltf
+TomatoSlices_Visual.prefab.scn::PackedScene::5936904741118860472::1711154913::0::1::::<><>::uid://db6qrgllsglvm::::res://Assets/_Assets/Meshes/Tomato slice.gltf
+Tomato_Visual.prefab.scn::PackedScene::3080536934005462597::1711154913::0::1::::<><>::uid://yv8xdvtagup3::::res://Assets/_Assets/Meshes/Tomato.gltf
+::res://Assets/_Assets/Sounds/::1711154878
+::res://Assets/_Assets/Sounds/Music/::1713344716
+Music.wav::AudioStreamWAV::4092688278803340099::1711154878::1713344716::1::::<><>::
+::res://Assets/_Assets/Sounds/SFX/::1713354523
+SFX_chop01.wav::AudioStreamWAV::1763374738430650221::1711154878::1711154890::1::::<><>::
+SFX_chop02.wav::AudioStreamWAV::6866562339077383326::1711154878::1711154890::1::::<><>::
+SFX_chop03.wav::AudioStreamWAV::640914185189153939::1711154878::1711154890::1::::<><>::
+SFX_delivery_fail01.wav::AudioStreamWAV::2161686334708534199::1711154878::1711154890::1::::<><>::
+SFX_delivery_fail02.wav::AudioStreamWAV::5509297442146506954::1711154878::1711154890::1::::<><>::
+SFX_delivery_success01.wav::AudioStreamWAV::9186302408125781262::1711154878::1711154890::1::::<><>::
+SFX_delivery_success02.wav::AudioStreamWAV::5761234782452439372::1711154878::1711154890::1::::<><>::
+SFX_footstep01_01.wav::AudioStreamWAV::5237051799407494318::1711154878::1711154890::1::::<><>::
+SFX_footstep01_02.wav::AudioStreamWAV::2722711304206140717::1711154878::1711154890::1::::<><>::
+SFX_footstep02_01.wav::AudioStreamWAV::15795940300802719::1711154878::1711154890::1::::<><>::
+SFX_footstep02_02.wav::AudioStreamWAV::4889527904942838906::1711154878::1711154890::1::::<><>::
+SFX_object_drop01.wav::AudioStreamWAV::3960728214657215796::1711154878::1711154890::1::::<><>::
+SFX_object_drop02.wav::AudioStreamWAV::3220832519201429517::1711154878::1711154890::1::::<><>::
+SFX_object_drop03.wav::AudioStreamWAV::597089447354359919::1711154878::1711154890::1::::<><>::
+SFX_object_pickup01.wav::AudioStreamWAV::6182314208990033533::1711154878::1711154890::1::::<><>::
+SFX_object_pickup02.wav::AudioStreamWAV::1508053440214308236::1711154878::1711154890::1::::<><>::
+SFX_object_pickup03.wav::AudioStreamWAV::1133312821841598424::1711154878::1711154890::1::::<><>::
+SFX_pan_sizzle_loop.wav::AudioStreamWAV::3002072724676363393::1711154878::1713354523::1::::<><>::
+SFX_trash01.wav::AudioStreamWAV::35055926550014259::1711154878::1711154890::1::::<><>::
+SFX_trash02.wav::AudioStreamWAV::4222948455621287581::1711154878::1711154890::1::::<><>::
+SFX_warning01.wav::AudioStreamWAV::7977283600806169425::1711154878::1711154890::1::::<><>::
+SFX_warning02.wav::AudioStreamWAV::1715516924638279183::1711154878::1711154890::1::::<><>::
+::res://Assets/_Assets/Textures/::1711154888
+Arrow.png::CompressedTexture2D::5109483713778432851::1711154878::1711154887::1::::<><>::
+ButtonBackground.png::CompressedTexture2D::4596140981511937188::1711154878::1711154887::1::::<><>::
+CircleDashed.png::CompressedTexture2D::3847825925752752900::1711154878::1711154887::1::::<><>::
+Cross.png::CompressedTexture2D::5867395137688530835::1711154878::1711154887::1::::<><>::
+GradientVertical.png::CompressedTexture2D::7015588170807212378::1711154878::1711154887::1::::<><>::
+KitchenChaosLogo.png::CompressedTexture2D::8277926479003335858::1711154879::1711154888::1::::<><>::
+Tick_Border.png::CompressedTexture2D::6223504183360610595::1711154879::1711154887::1::::<><>::
+Tutorial.png::CompressedTexture2D::5639112956309153177::1711154879::1711154888::1::::<><>::
+Warning.png::CompressedTexture2D::1907994371488118496::1711154879::1711154888::1::::<><>::
+White_1x1.png::CompressedTexture2D::3590850494492358093::1711154879::1711154888::1::::<><>::
+::res://Assets/_Assets/Textures/Icons/::1711154888
+Bread.png::CompressedTexture2D::1457331588395225703::1711154878::1711154887::1::::<><>::
+Cabbage.png::CompressedTexture2D::1633907358485920657::1711154878::1711154887::1::::<><>::
+CabbageSlices.png::CompressedTexture2D::8674071352272620569::1711154878::1711154887::1::::<><>::
+CheeseBlock.png::CompressedTexture2D::2932365266046370119::1711154878::1711154887::1::::<><>::
+CheeseSlice.png::CompressedTexture2D::3347018421448395784::1711154878::1711154887::1::::<><>::
+MeatPattyBurned.png::CompressedTexture2D::7972453341575245764::1711154878::1711154887::1::::<><>::
+MeatPattyCooked.png::CompressedTexture2D::5575732347828824525::1711154878::1711154887::1::::<><>::
+MeatPattyUncooked.png::CompressedTexture2D::7305778717208626748::1711154878::1711154887::1::::<><>::
+Plate.png::CompressedTexture2D::6534163285368993360::1711154878::1711154887::1::::<><>::
+Tomato.png::CompressedTexture2D::5408842625839913725::1711154878::1711154887::1::::<><>::
+TomatoSlice.png::CompressedTexture2D::1762412497769163234::1711154878::1711154887::1::::<><>::
+::res://DataResources/::1715093470
+AudioStreamRefsRES.tres::Resource/AudioStreamRefsRES::3294750240501171687::1715093470::0::1::::<><>::uid://0egr3dp5t4of::::res://Assets/_Assets/Sounds/SFX/SFX_chop01.wav<>res://Scripts/DataResources/AudioStreamRefsRES.gd<>uid://c43hjp7pk413w::::res://Assets/_Assets/Sounds/SFX/SFX_chop02.wav<>uid://jep07au1vsad::::res://Assets/_Assets/Sounds/SFX/SFX_chop03.wav<>uid://52ewm1hf3yu6::::res://Assets/_Assets/Sounds/SFX/SFX_delivery_fail01.wav<>uid://ckq0laqxa1btq::::res://Assets/_Assets/Sounds/SFX/SFX_delivery_fail02.wav<>uid://d346b8wk0eaxq::::res://Assets/_Assets/Sounds/SFX/SFX_delivery_success01.wav<>uid://coc1xvt1xf37e::::res://Assets/_Assets/Sounds/SFX/SFX_delivery_success02.wav<>uid://cgu4qitb1xxxm::::res://Assets/_Assets/Sounds/SFX/SFX_footstep01_01.wav<>uid://be15wl67fbj06::::res://Assets/_Assets/Sounds/SFX/SFX_footstep01_02.wav<>uid://hwflkafkxqd::::res://Assets/_Assets/Sounds/SFX/SFX_footstep02_01.wav<>uid://cbwr2svdopxxy::::res://Assets/_Assets/Sounds/SFX/SFX_footstep02_02.wav<>uid://bwouu578cvwdo::::res://Assets/_Assets/Sounds/SFX/SFX_object_drop01.wav<>uid://bl5gv2ayn8dmr::::res://Assets/_Assets/Sounds/SFX/SFX_object_drop02.wav<>uid://irh8ghhij4el::::res://Assets/_Assets/Sounds/SFX/SFX_object_drop03.wav<>uid://cuc02un8xxbhd::::res://Assets/_Assets/Sounds/SFX/SFX_object_pickup01.wav<>uid://vqrojlbh5d7a::::res://Assets/_Assets/Sounds/SFX/SFX_object_pickup02.wav<>uid://qe8q5ch8uuds::::res://Assets/_Assets/Sounds/SFX/SFX_object_pickup03.wav<>uid://bi1hx1icf5apd::::res://Assets/_Assets/Sounds/SFX/SFX_pan_sizzle_loop.wav<>uid://q8mpc2wwu8r::::res://Assets/_Assets/Sounds/SFX/SFX_trash01.wav<>uid://b1fvlx04j48b6::::res://Assets/_Assets/Sounds/SFX/SFX_trash02.wav<>uid://dlwixv5m3dedd::::res://Assets/_Assets/Sounds/SFX/SFX_warning01.wav<>uid://ypakv7olq7p8::::res://Assets/_Assets/Sounds/SFX/SFX_warning02.wav
+InputEventActions.tres::Resource/InputEventActions::7526252317039995294::1715093470::0::1::::<><>::res://Scripts/DataResources/InputEventActions.gd
+::res://DataResources/BurningRecipeRES/::1714167043
+MeatPattyCooked-MeatPattyBurned.tres::Resource/Resource::8067900066398982313::1714167043::0::1::::<><>::uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres<>res://Scripts/DataResources/BurningRecipeRES.gd<>uid://dgf0h0esuh1y6::::res://DataResources/KitchenObjectRES/MeatPattyBurned.tres
+::res://DataResources/CuttingRecipeRES/::1714215675
+Cabbage-CabbageSlices.tres::Resource/Resource::2973425649242891798::1713123465::0::1::::<><>::uid://c07qr341pyo11::::res://DataResources/KitchenObjectRES/Cabbage.tres<>res://Scripts/DataResources/CuttingRecipeRES.gd<>uid://blkkwmqbwjok5::::res://DataResources/KitchenObjectRES/CabbageSlices.tres
+CheeseBlock-CheeseSlices.tres::Resource/Resource::4067480697812012769::1714215675::0::1::::<><>::uid://vvaq5aq2ry2x::::res://DataResources/KitchenObjectRES/CheeseBlock.tres<>res://Scripts/DataResources/CuttingRecipeRES.gd<>uid://b8pykw1shybib::::res://DataResources/KitchenObjectRES/CheeseSlices.tres
+Tomato-TomatoSlices.tres::Resource/Resource::371779787413839218::1713123465::0::1::::<><>::res://Scripts/DataResources/CuttingRecipeRES.gd<>uid://u5g1g3n3gsa::::res://DataResources/KitchenObjectRES/Tomato.tres<>uid://bg7ja7idhmwng::::res://DataResources/KitchenObjectRES/TomatoSlices.tres
+::res://DataResources/FryingRecipeRES/::1714167043
+MeatPattyUncooked-MeatPattyCooked.tres::Resource/Resource::5224712219653327474::1714167043::0::1::::<><>::res://Scripts/DataResources/FryingRecipeRES.gd<>uid://pfsyobd48ext::::res://DataResources/KitchenObjectRES/MeatPattyUncooked.tres<>uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres
+::res://DataResources/KitchenObjectRES/::1714215675
+Bread.tres::Resource/Resource::7043384070730618311::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://u07bkk840a20::::res://Assets/_Assets/Textures/Icons/Bread.png
+Cabbage.tres::Resource/Resource::6594625893503029750::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://xjqhldehrjun::::res://Assets/_Assets/Textures/Icons/Cabbage.png
+CabbageSlices.tres::Resource/Resource::3179788853717904882::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://dvt1xnghd8yxt::::res://Assets/_Assets/Textures/Icons/CabbageSlices.png
+CheeseBlock.tres::Resource/Resource::1517347798400662725::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://bh1pvlntlr8kx::::res://Assets/_Assets/Textures/Icons/CheeseBlock.png
+CheeseSlices.tres::Resource/Resource::4735094452331265157::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://bnxk50qmuc3jw::::res://Assets/_Assets/Textures/Icons/CheeseSlice.png
+MeatPattyBurned.tres::Resource/Resource::7592248747162133871::1713125677::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://dlt6e24f6roye::::res://Assets/_Assets/Textures/Icons/MeatPattyBurned.png
+MeatPattyCooked.tres::Resource/Resource::4133851952149366205::1713125511::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://clo6q5x0qxl5n::::res://Assets/_Assets/Textures/Icons/MeatPattyCooked.png
+MeatPattyUncooked.tres::Resource/Resource::1064291045312367401::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://dcc8dw7fut6jw::::res://Assets/_Assets/Textures/Icons/MeatPattyUncooked.png
+Plate.tres::Resource/Resource::5607230063026479500::1713210901::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://c0dgyke4v2nka::::res://Assets/_Assets/Textures/Icons/Plate.png
+Tomato.tres::Resource/Resource::43121155794221356::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://cjcc33cfnl6bx::::res://Assets/_Assets/Textures/Icons/Tomato.png
+TomatoSlices.tres::Resource/Resource::2874161979837904456::1713123465::0::1::::<><>::res://Scripts/DataResources/KitchenObjectRES.gd<>uid://0dyw84ejfuik::::res://Assets/_Assets/Textures/Icons/TomatoSlice.png
+::res://DataResources/RecipeRES/::1715093470
+Burger.tres::Resource/RecipeRES::652425746520289802::1715093470::0::1::::<><>::uid://c7l4rhvfk6h24::::res://DataResources/KitchenObjectRES/Bread.tres<>res://Scripts/DataResources/RecipeRES.gd<>uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres
+Cheeseburger.tres::Resource/RecipeRES::6641474182159053850::1715093470::0::1::::<><>::uid://c7l4rhvfk6h24::::res://DataResources/KitchenObjectRES/Bread.tres<>uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres<>res://Scripts/DataResources/RecipeRES.gd<>uid://b8pykw1shybib::::res://DataResources/KitchenObjectRES/CheeseSlices.tres
+Megaburger.tres::Resource/RecipeRES::977107019075585079::1715093470::0::1::::<><>::uid://c7l4rhvfk6h24::::res://DataResources/KitchenObjectRES/Bread.tres<>uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres<>res://Scripts/DataResources/RecipeRES.gd<>uid://bg7ja7idhmwng::::res://DataResources/KitchenObjectRES/TomatoSlices.tres<>uid://b8pykw1shybib::::res://DataResources/KitchenObjectRES/CheeseSlices.tres<>uid://blkkwmqbwjok5::::res://DataResources/KitchenObjectRES/CabbageSlices.tres
+RecipeArrayRES.tres::Resource/RecipeArrayRES::8306508914502839917::1715093470::0::1::::<><>::res://Scripts/DataResources/RecipeArrayRES.gd<>uid://jkbmemx6he07::::res://DataResources/RecipeRES/Burger.tres<>uid://c1vgdyr1fjfha::::res://DataResources/RecipeRES/Cheeseburger.tres<>uid://n6k2sgh1ho7h::::res://DataResources/RecipeRES/Megaburger.tres<>uid://cnts52isanc3a::::res://DataResources/RecipeRES/Salad.tres
+Salad.tres::Resource/RecipeRES::5725667423001943144::1715093470::0::1::::<><>::uid://bg7ja7idhmwng::::res://DataResources/KitchenObjectRES/TomatoSlices.tres<>uid://blkkwmqbwjok5::::res://DataResources/KitchenObjectRES/CabbageSlices.tres<>res://Scripts/DataResources/RecipeRES.gd
+::res://Prefabs/::1714223078
+player.tscn::PackedScene::3978000866304867617::1714223078::0::1::::<><>::res://Scripts/Player.gd<>res://Scripts/PlayerAnimator.gd<>res://Scripts/GameInput.gd<>uid://mfe0tq08elbd::::res://Assets/_Assets/PrefabsVisuals/PlayerVisual.prefab.scn<>uid://dfh1jnemfjiks::::res://DataResources/InputEventActions.tres<>uid://bptgs5nckbi6j::::res://Assets/_Assets/Animations/Player.library.res<>res://Scripts/PlayerSound.gd<>uid://bm7ab4xlpjrnr::::res://DataResources/AudioStreamRefsRES.tres<>res://Scripts/Custom/EmitOnMove.gd
+::res://Prefabs/Counters/::1715094556
+ClearCounter.tscn::PackedScene::4577413528498158401::1715027120::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/ClearCounter.gd<>uid://dvqpyhcie8uwm::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/ClearCounter_Visual.prefab.scn<>res://Scripts/SelectedCounterVisual.gd<>uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material
+CuttingCounter.tscn::PackedScene::4617072561686126787::1715027111::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/CuttingCounter.gd<>uid://biml5eietg3f3::::res://DataResources/CuttingRecipeRES/Cabbage-CabbageSlices.tres<>uid://cbrihi8amb7ae::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/CuttingCounter_Visual.prefab.scn<>res://Scripts/Counters/CuttingCounterVisual.gd<>res://Scripts/SelectedCounterVisual.gd<>uid://bx7k2vvlpb7np::::res://DataResources/CuttingRecipeRES/CheeseBlock-CheeseSlices.tres<>uid://fkdfnsy1a0os::::res://DataResources/CuttingRecipeRES/Tomato-TomatoSlices.tres<>uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material<>uid://cbwh30b0gqgjw::::res://Assets/_Assets/Meshes/Chopping Board.gltf<>res://Scripts/UI/ProgressBarUI.gd<>res://Scripts/Custom/CuttingCounterSound.gd
+DeliveryCounter.tscn::PackedScene::6380536777470156910::1715027126::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/DeliveryCounter.gd<>uid://bclbpgrw4lf6r::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/DeliveryCounter_Visual.prefab.scn<>res://Scripts/SelectedCounterVisual.gd<>uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material<>uid://b8sic5up2h4al::::res://Shaders/MovingVisual.tres<>uid://ce2cpkrcaiqrr::::res://Assets/_Assets/Textures/Arrow.png<>res://Scripts/Custom/DeliveryCounterSound.gd<>res://Scripts/UI/DeliveryResultUI.gd<>uid://xd6qagim3b2n::::res://Assets/Fonts/Roboto/Roboto-Bold.ttf<>uid://cpuhe1vkrpd84::::res://Assets/_Assets/Textures/Cross.png<>uid://cuwyg7s7uhbqh::::res://Assets/_Assets/Textures/Tick_Border.png
+PlatesCounter.tscn::PackedScene::6095346020022770838::1715027126::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/PlatesCounter.gd<>uid://bldlllnklwqn8::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/PlatesCounter_Visual.prefab.scn<>res://Scripts/SelectedCounterVisual.gd<>uid://cl5gi3ptcmb8g::::res://DataResources/KitchenObjectRES/Plate.tres<>uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>res://Scripts/Counters/PlatesCounterVisual.gd<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material<>uid://vbclenvmh5jb::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Plate_Visual.prefab.scn<>uid://bu26eph4e4my3::::res://Assets/_Assets/Textures/CircleDashed.png
+StoveCounter.tscn::PackedScene::5659513888376772403::1715094556::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/StoveCounter.gd<>uid://cgo5ino38tims::::res://DataResources/FryingRecipeRES/MeatPattyUncooked-MeatPattyCooked.tres<>uid://dqmash6ra88ho::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/StoveCounter_Visual.prefab.scn<>res://Scripts/SelectedCounterVisual.gd<>uid://dm7feuqevgkd2::::res://DataResources/BurningRecipeRES/MeatPattyCooked-MeatPattyBurned.tres<>uid://jra0l1xblw2d::::res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material<>res://Scripts/Counters/StoveCounterVisual.gd<>uid://d1dhnn6m77wdf::::res://Assets/_Assets/Meshes/extracted/Stove Counter.Cube_004.mesh<>uid://c7mci60k4xlpw::::res://Assets/_Assets/Meshes/Frying Pan.gltf<>res://Scripts/UI/ProgressBarUI.gd<>res://Scripts/Counters/StoveCounterSound.gd<>res://Scripts/UI/StoveBurnFlashingBarUI.gd<>uid://2ginhfb50hym::::res://Assets/_Assets/Textures/Warning.png<>res://Scripts/UI/StoveBurnWarningUI.gd
+TrashCounter.tscn::PackedScene::5588640642993192242::1715094177::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/TrashCounter.gd<>uid://bvqcvc1idaibf::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/TrashCounter_Visual.prefab.scn<>res://Scripts/SelectedCounterVisual.gd<>uid://dpsnie20ccdei::::res://Assets/_Assets/Meshes/Trash bin.gltf<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material<>res://Scripts/Custom/TrashCounterSound.gd
+_BaseCounter.tscn::PackedScene::3599532129888392948::1715026713::0::1::::<><>::res://Scripts/Counters/BaseCounter.gd<>res://Scripts/Custom/BaseCounterAudio.gd<>uid://bm7ab4xlpjrnr::::res://DataResources/AudioStreamRefsRES.tres
+::res://Prefabs/Counters/ContainerCounter/::1714999492
+ContainerCounter.tscn::PackedScene::7774588270685811877::1715027703::0::1::::<><>::uid://brjv1eeruvg0c::::res://Prefabs/Counters/_BaseCounter.tscn<>res://Scripts/Counters/ContainerCounter.gd<>uid://caltwyo0gaegx::::res://Assets/_Assets/PrefabsVisuals/CountersVisuals/ContainerCounter_Visual.prefab.scn<>res://Scripts/SelectedCounterVisual.gd<>res://Scripts/Counters/ContainerCounterVisua.gd<>uid://8qqxsj3ejeiy::::res://Assets/_Assets/Meshes/Counter_solid.gltf<>uid://bsweb1ym4sko4::::res://Assets/_Assets/Materials/CounterSelected.material<>uid://c8ayk3hcxhgy8::::res://Assets/_Assets/Meshes/Counter_hole.gltf<>uid://bpcwfnfq53qny::::res://Assets/_Assets/Meshes/extracted/Single door.Counter_004.mesh
+ContainerCounter_Bread.tscn::PackedScene::2555380384861887362::1714155060::0::1::::<><>::uid://di1clk40hdso0::::res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn<>uid://c7l4rhvfk6h24::::res://DataResources/KitchenObjectRES/Bread.tres
+ContainerCounter_Cabbage.tscn::PackedScene::822761988145003515::1714155060::0::1::::<><>::uid://di1clk40hdso0::::res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn<>uid://c07qr341pyo11::::res://DataResources/KitchenObjectRES/Cabbage.tres
+ContainerCounter_CheeseBlock.tscn::PackedScene::5824511500224932309::1714155060::0::1::::<><>::uid://di1clk40hdso0::::res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn<>uid://vvaq5aq2ry2x::::res://DataResources/KitchenObjectRES/CheeseBlock.tres
+ContainerCounter_MeatPattyUncooked.tscn::PackedScene::8153804282008644110::1714155060::0::1::::<><>::uid://di1clk40hdso0::::res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn<>uid://pfsyobd48ext::::res://DataResources/KitchenObjectRES/MeatPattyUncooked.tres
+ContainerCounter_Tomato.tscn::PackedScene::2648218873975355225::1714155060::0::1::::<><>::uid://di1clk40hdso0::::res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn<>uid://u5g1g3n3gsa::::res://DataResources/KitchenObjectRES/Tomato.tres
+::res://Prefabs/KitchenObjects/::1714223079
+bread.tscn::PackedScene::3724858450267936718::1714223078::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://c7l4rhvfk6h24::::res://DataResources/KitchenObjectRES/Bread.tres<>uid://b2w68i62dlvpk::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Bread_Visual.prefab.scn
+cabbage.tscn::PackedScene::4486164098657373661::1714223078::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://c07qr341pyo11::::res://DataResources/KitchenObjectRES/Cabbage.tres<>uid://dt4fxkr6ib554::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Cabbage_Visual.prefab.scn
+cabbageSlices.tscn::PackedScene::5825353941266996703::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://blkkwmqbwjok5::::res://DataResources/KitchenObjectRES/CabbageSlices.tres<>uid://dh5vvwnyr2a5::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CabbageSliced_Visual.prefab.scn
+cheeseBlock.tscn::PackedScene::6542474888784658791::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://vvaq5aq2ry2x::::res://DataResources/KitchenObjectRES/CheeseBlock.tres<>uid://bhpbvm5wu8b8f::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CheeseBlock_Visual.prefab.scn
+cheeseSlices.tscn::PackedScene::5929855953430230458::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://b8pykw1shybib::::res://DataResources/KitchenObjectRES/CheeseSlices.tres<>uid://bev81n81qyp2a::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CheeseSlices_Visual.prefab.scn
+meatPattyBurned.tscn::PackedScene::471930808601615293::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://dgf0h0esuh1y6::::res://DataResources/KitchenObjectRES/MeatPattyBurned.tres<>uid://otbmhubw6w78::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyBurned_Visual.prefab.scn
+meatPattyCooked.tscn::PackedScene::5290407626199025247::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres<>uid://8c4n8xlb33xb::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyCooked_Visual.prefab.scn
+meatPattyUncooked.tscn::PackedScene::1184350891072075547::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://pfsyobd48ext::::res://DataResources/KitchenObjectRES/MeatPattyUncooked.tres<>uid://ckvcnrk2adqii::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyUncooked_Visual.prefab.scn
+plate.tscn::PackedScene::3399312306837756214::1714223079::0::1::::<><>::res://Scripts/PlateKitchenObject.gd<>uid://c7l4rhvfk6h24::::res://DataResources/KitchenObjectRES/Bread.tres<>uid://blkkwmqbwjok5::::res://DataResources/KitchenObjectRES/CabbageSlices.tres<>uid://vbclenvmh5jb::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Plate_Visual.prefab.scn<>uid://b2w68i62dlvpk::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Bread_Visual.prefab.scn<>uid://b8pykw1shybib::::res://DataResources/KitchenObjectRES/CheeseSlices.tres<>uid://by5p647582xyj::::res://DataResources/KitchenObjectRES/MeatPattyCooked.tres<>uid://dgf0h0esuh1y6::::res://DataResources/KitchenObjectRES/MeatPattyBurned.tres<>uid://bg7ja7idhmwng::::res://DataResources/KitchenObjectRES/TomatoSlices.tres<>uid://cl5gi3ptcmb8g::::res://DataResources/KitchenObjectRES/Plate.tres<>res://Scripts/PlateCompleteVisual.gd<>uid://8c4n8xlb33xb::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyCooked_Visual.prefab.scn<>uid://cqt47op8cuvca::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/TomatoSlices_Visual.prefab.scn<>uid://bev81n81qyp2a::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CheeseSlices_Visual.prefab.scn<>uid://dh5vvwnyr2a5::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CabbageSliced_Visual.prefab.scn<>uid://otbmhubw6w78::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/MeatPattyBurned_Visual.prefab.scn<>uid://c8tia1hssnk2u::::res://Prefabs/UI/plateUI.tscn
+tomato.tscn::PackedScene::246697968613283289::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://bj5h81f7lhnv6::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Tomato_Visual.prefab.scn<>uid://u5g1g3n3gsa::::res://DataResources/KitchenObjectRES/Tomato.tres
+tomatoSlices.tscn::PackedScene::7442804066300096380::1714223079::0::1::::<><>::res://Scripts/KitchenObject.gd<>uid://bg7ja7idhmwng::::res://DataResources/KitchenObjectRES/TomatoSlices.tres<>uid://cqt47op8cuvca::::res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/TomatoSlices_Visual.prefab.scn
+::res://Prefabs/UI/::1715094556
+plateUI.tscn::PackedScene::7128783497973688026::1713299300::0::1::::<><>::res://Scripts/UI/PlateUI.gd<>uid://u07bkk840a20::::res://Assets/_Assets/Textures/Icons/Bread.png<>res://Scripts/UI/PlateIconsSingleUI.gd
+recipeTemplate.tscn::PackedScene::5869197131412949571::1715094556::0::1::::<><>::res://Scripts/UI/DeliveryManagerSingleUI.gd<>uid://u07bkk840a20::::res://Assets/_Assets/Textures/Icons/Bread.png
+::res://Scenes/::1715109101
+Game.tscn::PackedScene::6229260954286209203::1715109101::0::1::::<><>::uid://bk7hjb3lcrpk7::::res://Assets/_Assets/Materials/Floor.material<>uid://bww8dfuhi4lx6::::res://Prefabs/player.tscn<>uid://b6hllj3y4jpdh::::res://Prefabs/Counters/ClearCounter.tscn<>uid://bcn30hjtlfa5o::::res://Prefabs/Counters/ContainerCounter/ContainerCounter_Bread.tscn<>res://addons/post_processing/node/post_process.gd<>uid://lys1f21hs6lj::::res://Prefabs/Counters/ContainerCounter/ContainerCounter_Cabbage.tscn<>uid://co8o4atqqr2ir::::res://Prefabs/Counters/ContainerCounter/ContainerCounter_CheeseBlock.tscn<>uid://dof07220t08qs::::res://Prefabs/Counters/ContainerCounter/ContainerCounter_MeatPattyUncooked.tscn<>uid://b61srmf2ipx3x::::res://Prefabs/Counters/CuttingCounter.tscn<>uid://bdy21pklt1b8t::::res://Prefabs/Counters/ContainerCounter/ContainerCounter_Tomato.tscn<>uid://clvgdhxe4px3w::::res://Prefabs/Counters/TrashCounter.tscn<>uid://cmvrmqdx6o1vb::::res://Prefabs/Counters/StoveCounter.tscn<>uid://cs3vpt6j5bene::::res://Prefabs/Counters/PlatesCounter.tscn<>uid://cw51rj30mn1fu::::res://Prefabs/Counters/DeliveryCounter.tscn<>res://Scripts/DliveryManager.gd<>uid://dqly8unhuwecj::::res://DataResources/RecipeRES/RecipeArrayRES.tres<>res://Scripts/UI/DeliveryManagerUI.gd<>uid://cpvc24b7scoil::::res://Prefabs/UI/recipeTemplate.tscn<>uid://xd6qagim3b2n::::res://Assets/Fonts/Roboto/Roboto-Bold.ttf<>res://Scripts/UI/GameStartCountdownUI.gd<>uid://bykr8itofc2dr::::res://Assets/_Assets/Sounds/Music/Music.wav<>res://Scripts/KitchenGameManager.gd<>uid://bctwxwrc480qw::::res://Assets/Circle.png<>res://Scripts/Custom/UI/GameStartCountdownUISound.gd<>res://Scripts/GameOverUI.gd<>res://Scripts/GamePlayingClockUI.gd<>uid://bm7ab4xlpjrnr::::res://DataResources/AudioStreamRefsRES.tres<>uid://cmlvmpxe01vmn::::res://Assets/_Assets/Textures/Tutorial.png<>res://Scripts/PauseMenuUI.gd<>res://Scripts/UI/TutorialUI.gd<>res://Scripts/OptionsUI.gd<>res://Scripts/MusicManager.gd<>res://Scripts/SoundManager.gd<>uid://b1lt0avvnlmar::::res://Assets/_Assets/Materials/Wall.material<>uid://brqj4r4va0g00::::res://Assets/_Assets/Materials/Black.material
+Loading.tscn::PackedScene::5534641015191411217::1713900304::0::1::::<><>::uid://xd6qagim3b2n::::res://Assets/Fonts/Roboto/Roboto-Bold.ttf
+MainMenu.tscn::PackedScene::6690725580565980808::1715094555::0::1::::<><>::res://Scripts/UI/MainMenuUI.gd<>uid://xd6qagim3b2n::::res://Assets/Fonts/Roboto/Roboto-Bold.ttf<>uid://dp65ifc0a56t7::::res://Assets/_Assets/Textures/KitchenChaosLogo.png<>uid://bk7hjb3lcrpk7::::res://Assets/_Assets/Materials/Floor.material<>res://Scripts/Custom/MainMenuCameraShake.gd<>uid://bptgs5nckbi6j::::res://Assets/_Assets/Animations/Player.library.res<>res://addons/post_processing/node/post_process.gd<>uid://cgycmwrhc8qj0::::res://Assets/_Assets/Materials/PlayerBody_Blue.material<>uid://brqj4r4va0g00::::res://Assets/_Assets/Materials/Black.material<>uid://dth68pk21s7fr::::res://Assets/_Assets/Materials/PlayerBody.material<>uid://cieegwb5w5sly::::res://Assets/_Assets/Materials/PlayerBody_Green.material<>uid://dwstj0heet3i7::::res://Assets/_Assets/Materials/PlayerBody_Red.material
+::res://Scripts/::1715093469
+DliveryManager.gd::GDScript::-1::1714214443::0::1::::DeliveryManager<>Node3D<>::
+GameInput.gd::GDScript::-1::1714214658::0::1::::GameInput<>Node<>::
+GameOverUI.gd::GDScript::-1::1713806818::0::1::::<>Control<>::
+GamePlayingClockUI.gd::GDScript::-1::1714214750::0::1::::<>CenterContainer<>::
+KitchenGameManager.gd::GDScript::-1::1714214467::0::1::::KitchenGameManager<>Node3D<>::
+KitchenObject.gd::GDScript::-1::1714215548::0::1::::KitchenObject<>Node3D<>::
+Loader.gd::GDScript::-1::1714214598::0::1::::<>Node<>::
+MusicManager.gd::GDScript::-1::1714214458::0::1::::MusicManager<>Node3D<>::
+OptionsUI.gd::GDScript::-1::1714214452::0::1::::OptionsUI<>Panel<>::
+PauseMenuUI.gd::GDScript::-1::1714074824::0::1::::<>Panel<>::
+PlateCompleteVisual.gd::GDScript::-1::1713216040::0::1::::<>Node3D<>::
+PlateKitchenObject.gd::GDScript::-1::1714215893::0::1::::PlateKitchenObject<>KitchenObject<>::
+Player.gd::GDScript::-1::1715093510::0::1::::Player<>CharacterBody3D<>::
+PlayerAnimator.gd::GDScript::-1::1714214662::0::1::::<>Node<>::
+PlayerSound.gd::GDScript::-1::1713372185::0::1::::<>AudioPlayerBase<>::
+SelectedCounterVisual.gd::GDScript::-1::1715093469::0::1::::<>Node<>::
+SoundManager.gd::GDScript::-1::1714214474::0::1::::SoundManager<>Node3D<>::
+::res://Scripts/Counters/::1715094177
+BaseCounter.gd::GDScript::-1::1715093510::0::1::::BaseCounter<>StaticBody3D<>::
+ClearCounter.gd::GDScript::-1::1715000186::0::1::::ClearCounter<>BaseCounter<>::
+ContainerCounter.gd::GDScript::-1::1715000492::0::1::::ContainerCounter<>BaseCounter<>::
+ContainerCounterVisua.gd::GDScript::-1::1715093469::0::1::::<>Node3D<>::
+CuttingCounter.gd::GDScript::-1::1715093510::0::1::::CuttingCounter<>BaseCounter<>::
+CuttingCounterVisual.gd::GDScript::-1::1715001523::0::1::::<>Node3D<>::
+DeliveryCounter.gd::GDScript::-1::1715001617::0::1::::DeliveryCounter<>BaseCounter<>::
+PlatesCounter.gd::GDScript::-1::1715001803::0::1::::PlatesCounter<>BaseCounter<>::
+PlatesCounterVisual.gd::GDScript::-1::1715002085::0::1::::<>Node3D<>::
+StoveCounter.gd::GDScript::-1::1715093931::0::1::::StoveCounter<>BaseCounter<>::
+StoveCounterSound.gd::GDScript::-1::1715002213::0::1::::<>BaseCounterAudio<>::
+StoveCounterVisual.gd::GDScript::-1::1713188840::0::1::::<>Node3D<>::
+TrashCounter.gd::GDScript::-1::1715094152::0::1::::TrashCounter<>BaseCounter<>::
+::res://Scripts/Custom/::1715094177
+AudioPlayerBase.gd::GDScript::-1::1713974075::0::1::::AudioPlayerBase<>AudioStreamPlayer3D<>::
+BaseCounterAudio.gd::GDScript::-1::1713370604::0::1::::BaseCounterAudio<>AudioPlayerBase<>::
+CuttingCounterSound.gd::GDScript::-1::1713369118::0::1::::<>BaseCounterAudio<>::
+DeliveryCounterSound.gd::GDScript::-1::1713368815::0::1::::<>BaseCounterAudio<>::
+EmitOnMove.gd::GDScript::-1::1714214668::0::1::::<>GPUParticles3D<>::
+Groups.gd::GDScript::-1::1715093510::0::1::::Groups<>Node<>::
+MainMenuCameraShake.gd::GDScript::-1::1714233767::0::1::::<>Camera3D<>::
+TrashCounterSound.gd::GDScript::-1::1713371110::0::1::::<>BaseCounterAudio<>::
+::res://Scripts/Custom/UI/::1714166132
+GameStartCountdownUISound.gd::GDScript::-1::1714166132::0::1::::GameStartCountdownUISound<>AudioPlayerBase<>::
+::res://Scripts/DataResources/::1714044116
+AudioStreamRefsRES.gd::GDScript::-1::1713354264::0::1::::AudioStreamRefsRES<>Resource<>::
+BurningRecipeRES.gd::GDScript::-1::1713187511::0::1::::BurningRecipeRES<>Resource<>::
+CuttingRecipeRES.gd::GDScript::-1::1713183355::0::1::::CuttingRecipeRES<>Resource<>::
+FryingRecipeRES.gd::GDScript::-1::1713187550::0::1::::FryingRecipeRES<>Resource<>::
+InputEventActions.gd::GDScript::-1::1714044116::0::1::::InputEventActions<>Resource<>::
+KitchenObjectRES.gd::GDScript::-1::1712829901::0::1::::KitchenObjectRES<>Resource<>::
+RecipeArrayRES.gd::GDScript::-1::1713283446::0::1::::RecipeArrayRES<>Resource<>::
+RecipeRES.gd::GDScript::-1::1713282887::0::1::::RecipeRES<>Resource<>::
+::res://Scripts/UI/::1715002102
+DeliveryManagerSingleUI.gd::GDScript::-1::1715094539::0::1::::DeliveryManagerSingleUI<>PanelContainer<>::
+DeliveryManagerUI.gd::GDScript::-1::1713301435::0::1::::<>Control<>::
+DeliveryResultUI.gd::GDScript::-1::1714212329::0::1::::<>Sprite3D<>::
+GameStartCountdownUI.gd::GDScript::-1::1714148550::0::1::::<>Control<>::
+MainMenuUI.gd::GDScript::-1::1714074890::0::1::::<>Control<>::
+PlateIconsSingleUI.gd::GDScript::-1::1713267498::0::1::::PlateIconsSingleUI<>TextureRect<>::
+PlateUI.gd::GDScript::-1::1714215877::0::1::::<>Control<>::
+ProgressBarUI.gd::GDScript::-1::1715027376::0::1::::<>Node3D<>::
+StoveBurnFlashingBarUI.gd::GDScript::-1::1715002214::0::1::::<>ProgressBar<>::
+StoveBurnWarningUI.gd::GDScript::-1::1715002214::0::1::::<>Sprite3D<>::
+TutorialUI.gd::GDScript::-1::1714142339::0::1::::<>Panel<>::
+::res://Shaders/::1715093470
+MovingVisual.tres::VisualShader::4740302238165700935::1715093470::0::1::::<><>::
+::res://TMP/::1713808304
+control.tscn::PackedScene::3889002693728593623::1713808304::0::1::::<><>::uid://bctwxwrc480qw::::res://Assets/Circle.png

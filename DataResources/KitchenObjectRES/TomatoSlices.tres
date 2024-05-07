@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="KitchenObjectRES" load_steps=3 format=3 uid="uid://bg7ja7idhmwng"]
+
+[ext_resource type="Script" path="res://Scripts/DataResources/KitchenObjectRES.gd" id="1_a3s63"]
+[ext_resource type="Texture2D" uid="uid://0dyw84ejfuik" path="res://Assets/_Assets/Textures/Icons/TomatoSlice.png" id="2_cdkvn"]
+
+[resource]
+script = ExtResource("1_a3s63")
+prefabPath = "res://prefabs/KitchenObjects/tomatoSlices.tscn"
+sprite = ExtResource("2_cdkvn")
+name = "Tomato Slices"

@@ -1,0 +1,123 @@
+[gd_scene load_steps=20 format=3 uid="uid://bww8dfuhi4lx6"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_klwmk"]
+[ext_resource type="Script" path="res://Scripts/PlayerAnimator.gd" id="2_g5hul"]
+[ext_resource type="Script" path="res://Scripts/GameInput.gd" id="3_0ef0e"]
+[ext_resource type="PackedScene" uid="uid://mfe0tq08elbd" path="res://Assets/_Assets/PrefabsVisuals/PlayerVisual.prefab.scn" id="4_3sdnu"]
+[ext_resource type="Resource" uid="uid://dfh1jnemfjiks" path="res://DataResources/InputEventActions.tres" id="4_bumpx"]
+[ext_resource type="AnimationLibrary" uid="uid://bptgs5nckbi6j" path="res://Assets/_Assets/Animations/Player.library.res" id="4_g3sda"]
+[ext_resource type="Script" path="res://Scripts/PlayerSound.gd" id="6_rx7q6"]
+[ext_resource type="Resource" uid="uid://bm7ab4xlpjrnr" path="res://DataResources/AudioStreamRefsRES.tres" id="7_k6ap7"]
+[ext_resource type="Script" path="res://Scripts/Custom/EmitOnMove.gd" id="9_d1v75"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_umqf5"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wydlb"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_v0sy1"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_erkoy"]
+graph_offset = Vector2(-260.74, -24.7215)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_wydlb")
+nodes/Animation/position = Vector2(-80, 80)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_umqf5")
+"nodes/Animation 2/position" = Vector2(-80, 220)
+nodes/Walking/node = SubResource("AnimationNodeBlend2_v0sy1")
+nodes/Walking/position = Vector2(140, 140)
+node_connections = [&"Walking", 0, &"Animation", &"Walking", 1, &"Animation 2", &"output", 0, &"Walking"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nsvi6"]
+radius = 0.7
+
+[sub_resource type="Curve" id="Curve_mrsoi"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.43956), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1q0aq"]
+curve = SubResource("Curve_mrsoi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u1hr2"]
+direction = Vector3(0, 1, 0)
+spread = 10.0
+initial_velocity_min = 3.0
+initial_velocity_max = 5.0
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_1q0aq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnhgl"]
+disable_receive_shadows = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_uemc3"]
+material = SubResource("StandardMaterial3D_mnhgl")
+radius = 0.2
+height = 0.4
+radial_segments = 16
+rings = 8
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("input", "interactRay", "kitchenObjectHoldPoint")]
+collision_mask = 6
+floor_block_on_wall = false
+script = ExtResource("1_klwmk")
+MOVEMENT_SPEED = 300.0
+input = NodePath("Input")
+interactRay = NodePath("InteractRay")
+kitchenObjectHoldPoint = NodePath("KitchenObjectHoldPoint")
+
+[node name="InteractRay" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.713677, 0)
+target_position = Vector3(0, 0, 1.5)
+collision_mask = 2
+
+[node name="Animator" type="Node" parent="." node_paths=PackedStringArray("player", "animationTree")]
+script = ExtResource("2_g5hul")
+player = NodePath("..")
+animationTree = NodePath("../AnimationTree")
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource("3_0ef0e")
+inputEventActions = ExtResource("4_bumpx")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../PlayerVisual")
+libraries = {
+"": ExtResource("4_g3sda")
+}
+tree_root = SubResource("AnimationNodeBlendTree_erkoy")
+anim_player = NodePath("../PlayerVisual/AnimationPlayer")
+parameters/Walking/blend_amount = 0.0
+
+[node name="PlayerVisual" parent="." instance=ExtResource("4_3sdnu")]
+
+[node name="AnimationPlayer" parent="PlayerVisual" index="0"]
+autoplay = ""
+
+[node name="Head" parent="PlayerVisual" index="1"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.59276, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994195, 0)
+shape = SubResource("CapsuleShape3D_nsvi6")
+
+[node name="KitchenObjectHoldPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45347, 1)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." node_paths=PackedStringArray("player")]
+attenuation_model = 1
+script = ExtResource("6_rx7q6")
+player = NodePath("..")
+audioStreamRefsRES = ExtResource("7_k6ap7")
+
+[node name="DustParticle" type="GPUParticles3D" parent="."]
+cast_shadow = 0
+emitting = false
+amount = 12
+lifetime = 0.6
+fixed_fps = 70
+visibility_aabb = AABB(-4, -4, -5.03259, 8, 8, 8)
+process_material = SubResource("ParticleProcessMaterial_u1hr2")
+draw_pass_1 = SubResource("SphereMesh_uemc3")
+script = ExtResource("9_d1v75")
+
+[editable path="PlayerVisual"]

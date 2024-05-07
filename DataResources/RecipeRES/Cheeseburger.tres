@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeRES" load_steps=5 format=3 uid="uid://c1vgdyr1fjfha"]
+
+[ext_resource type="Resource" uid="uid://c7l4rhvfk6h24" path="res://DataResources/KitchenObjectRES/Bread.tres" id="1_2ho7n"]
+[ext_resource type="Resource" uid="uid://by5p647582xyj" path="res://DataResources/KitchenObjectRES/MeatPattyCooked.tres" id="2_7cayo"]
+[ext_resource type="Script" path="res://Scripts/DataResources/RecipeRES.gd" id="3_aytcd"]
+[ext_resource type="Resource" uid="uid://b8pykw1shybib" path="res://DataResources/KitchenObjectRES/CheeseSlices.tres" id="3_lsurn"]
+
+[resource]
+script = ExtResource("3_aytcd")
+recipeName = "Cheeseburger"
+kitchenObjectRESArray = Array[Resource("res://Scripts/DataResources/KitchenObjectRES.gd")]([ExtResource("1_2ho7n"), ExtResource("2_7cayo"), ExtResource("3_lsurn")])

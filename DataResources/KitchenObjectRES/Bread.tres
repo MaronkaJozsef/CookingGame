@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="KitchenObjectRES" load_steps=3 format=3 uid="uid://c7l4rhvfk6h24"]
+
+[ext_resource type="Script" path="res://Scripts/DataResources/KitchenObjectRES.gd" id="1_62bjp"]
+[ext_resource type="Texture2D" uid="uid://u07bkk840a20" path="res://Assets/_Assets/Textures/Icons/Bread.png" id="2_7k15h"]
+
+[resource]
+script = ExtResource("1_62bjp")
+prefabPath = "res://prefabs/KitchenObjects/bread.tscn"
+sprite = ExtResource("2_7k15h")
+name = "Bread"

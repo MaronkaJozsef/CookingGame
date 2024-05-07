@@ -1,0 +1,15 @@
+Node3D
+AnimationPlayer
+MarginContainer
+TextureRect
+Label
+HBoxContainer
+Panel
+SubViewport
+Sprite3D
+AudioStreamPlayer3D
+AudioStreamPlayer
+Control
+VBoxContainer
+CenterContainer
+GPUParticles3D

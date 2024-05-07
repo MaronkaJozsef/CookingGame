@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqqp4jshp202y"]
+
+[ext_resource type="Script" path="res://Scripts/KitchenObject.gd" id="1_nsw6d"]
+[ext_resource type="Resource" uid="uid://b8pykw1shybib" path="res://DataResources/KitchenObjectRES/CheeseSlices.tres" id="2_yjsfn"]
+[ext_resource type="PackedScene" uid="uid://bev81n81qyp2a" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/CheeseSlices_Visual.prefab.scn" id="3_1pi6p"]
+
+[node name="CheeseSlices" type="Node3D"]
+script = ExtResource("1_nsw6d")
+kitchenObjectRES = ExtResource("2_yjsfn")
+
+[node name="CheeseSlices_Visual" parent="." instance=ExtResource("3_1pi6p")]

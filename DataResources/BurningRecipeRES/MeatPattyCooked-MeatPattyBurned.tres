@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BurningRecipeRES" load_steps=4 format=3 uid="uid://dm7feuqevgkd2"]
+
+[ext_resource type="Resource" uid="uid://by5p647582xyj" path="res://DataResources/KitchenObjectRES/MeatPattyCooked.tres" id="1_gcsfa"]
+[ext_resource type="Script" path="res://Scripts/DataResources/BurningRecipeRES.gd" id="1_ortdv"]
+[ext_resource type="Resource" uid="uid://dgf0h0esuh1y6" path="res://DataResources/KitchenObjectRES/MeatPattyBurned.tres" id="2_tbx0i"]
+
+[resource]
+script = ExtResource("1_ortdv")
+burnTimerMax = 6.0
+input = ExtResource("1_gcsfa")
+output = ExtResource("2_tbx0i")

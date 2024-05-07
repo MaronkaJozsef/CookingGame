@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://di1clk40hdso0"]
+
+[ext_resource type="PackedScene" uid="uid://brjv1eeruvg0c" path="res://Prefabs/Counters/_BaseCounter.tscn" id="1_08qnx"]
+[ext_resource type="Script" path="res://Scripts/Counters/ContainerCounter.gd" id="2_rqbao"]
+[ext_resource type="PackedScene" uid="uid://caltwyo0gaegx" path="res://Assets/_Assets/PrefabsVisuals/CountersVisuals/ContainerCounter_Visual.prefab.scn" id="3_ticl6"]
+[ext_resource type="Script" path="res://Scripts/SelectedCounterVisual.gd" id="4_db2il"]
+[ext_resource type="Script" path="res://Scripts/Counters/ContainerCounterVisua.gd" id="4_kwpot"]
+[ext_resource type="PackedScene" uid="uid://8qqxsj3ejeiy" path="res://Assets/_Assets/Meshes/Counter_solid.gltf" id="5_lmasx"]
+[ext_resource type="Material" uid="uid://bsweb1ym4sko4" path="res://Assets/_Assets/Materials/CounterSelected.material" id="6_dbik5"]
+[ext_resource type="PackedScene" uid="uid://c8ayk3hcxhgy8" path="res://Assets/_Assets/Meshes/Counter_hole.gltf" id="7_jedno"]
+[ext_resource type="ArrayMesh" uid="uid://bpcwfnfq53qny" path="res://Assets/_Assets/Meshes/extracted/Single door.Counter_004.mesh" id="8_iyx40"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3xu5k"]
+resource_name = "Quad"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, 0, 1.00001, 1, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray(1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 2, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191)
+}]
+
+[node name="ContainerCounter" instance=ExtResource("1_08qnx")]
+script = ExtResource("2_rqbao")
+kitchenObjectRES = null
+
+[node name="ContainerCounter_Visual" parent="." index="2" node_paths=PackedStringArray("containerCounter") instance=ExtResource("3_ticl6")]
+script = ExtResource("4_kwpot")
+containerCounter = NodePath("..")
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("counter", "visualGameObjects")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("4_db2il")
+counter = NodePath("..")
+visualGameObjects = [NodePath("Counter_solid"), NodePath("Counter_hole"), NodePath("Lid"), NodePath("Black")]
+
+[node name="Counter_solid" parent="Selected" index="0" instance=ExtResource("5_lmasx")]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, -0.00601022, 0, 0)
+visible = false
+
+[node name="Counter_003" parent="Selected/Counter_solid" index="0"]
+surface_material_override/0 = ExtResource("6_dbik5")
+
+[node name="Counter_hole" parent="Selected" index="1" instance=ExtResource("7_jedno")]
+transform = Transform3D(1.65, 0, 0, 0, -6.99382e-08, 1.65, 0, -1.6, -7.21238e-08, 0.00900274, 0.68, 0.6302)
+visible = false
+
+[node name="Counter_001" parent="Selected/Counter_hole" index="0"]
+surface_material_override/0 = ExtResource("6_dbik5")
+
+[node name="Lid" type="Node3D" parent="Selected" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 1.30825, -0.443758)
+visible = false
+
+[node name="Counter_004" type="MeshInstance3D" parent="Selected/Lid" index="0"]
+transform = Transform3D(-1.18021e-07, 2.2, 9.61651e-08, 0, -9.61651e-08, 2.2, 2.7, 9.61651e-08, 4.20351e-15, 0, 0, 0)
+mesh = ExtResource("8_iyx40")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("6_dbik5")
+
+[node name="Black" type="Node3D" parent="Selected" index="3"]
+transform = Transform3D(-1.40465, -9.09459e-08, 3.82137e-15, 0, -4.5473e-08, -1, 1.22798e-07, -1.0403, 4.37114e-08, 0.003, 1.268, 0.0489)
+visible = false
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/Black" index="0"]
+gi_mode = 2
+mesh = SubResource("ArrayMesh_3xu5k")
+surface_material_override/0 = ExtResource("6_dbik5")
+
+[editable path="Selected/Counter_solid"]
+[editable path="Selected/Counter_hole"]

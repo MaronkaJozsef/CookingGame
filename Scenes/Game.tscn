@@ -1,0 +1,1695 @@
+[gd_scene load_steps=57 format=3 uid="uid://cu0rauubbyy8b"]
+
+[ext_resource type="Material" uid="uid://bk7hjb3lcrpk7" path="res://Assets/_Assets/Materials/Floor.material" id="1_28a1l"]
+[ext_resource type="PackedScene" uid="uid://bww8dfuhi4lx6" path="res://Prefabs/player.tscn" id="3_tf10d"]
+[ext_resource type="PackedScene" uid="uid://b6hllj3y4jpdh" path="res://Prefabs/Counters/ClearCounter.tscn" id="4_siy15"]
+[ext_resource type="PackedScene" uid="uid://bcn30hjtlfa5o" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter_Bread.tscn" id="5_7g4cq"]
+[ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="6_1trl2"]
+[ext_resource type="PackedScene" uid="uid://lys1f21hs6lj" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter_Cabbage.tscn" id="6_n0sh5"]
+[ext_resource type="PackedScene" uid="uid://co8o4atqqr2ir" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter_CheeseBlock.tscn" id="7_w200k"]
+[ext_resource type="PackedScene" uid="uid://dof07220t08qs" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter_MeatPattyUncooked.tscn" id="8_mtxqy"]
+[ext_resource type="PackedScene" uid="uid://b61srmf2ipx3x" path="res://Prefabs/Counters/CuttingCounter.tscn" id="9_ehuv4"]
+[ext_resource type="PackedScene" uid="uid://bdy21pklt1b8t" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter_Tomato.tscn" id="9_xcd0k"]
+[ext_resource type="PackedScene" uid="uid://clvgdhxe4px3w" path="res://Prefabs/Counters/TrashCounter.tscn" id="10_m6845"]
+[ext_resource type="PackedScene" uid="uid://cmvrmqdx6o1vb" path="res://Prefabs/Counters/StoveCounter.tscn" id="11_i1777"]
+[ext_resource type="PackedScene" uid="uid://cs3vpt6j5bene" path="res://Prefabs/Counters/PlatesCounter.tscn" id="12_iahlq"]
+[ext_resource type="PackedScene" uid="uid://cw51rj30mn1fu" path="res://Prefabs/Counters/DeliveryCounter.tscn" id="13_pyin7"]
+[ext_resource type="Script" path="res://Scripts/DliveryManager.gd" id="15_fjnhd"]
+[ext_resource type="Resource" uid="uid://dqly8unhuwecj" path="res://DataResources/RecipeRES/RecipeArrayRES.tres" id="16_odtd8"]
+[ext_resource type="Script" path="res://Scripts/UI/DeliveryManagerUI.gd" id="17_cbb8y"]
+[ext_resource type="PackedScene" uid="uid://cpvc24b7scoil" path="res://Prefabs/UI/recipeTemplate.tscn" id="18_2d0u7"]
+[ext_resource type="FontFile" uid="uid://xd6qagim3b2n" path="res://Assets/Fonts/Roboto/Roboto-Bold.ttf" id="19_l6un6"]
+[ext_resource type="Script" path="res://Scripts/UI/GameStartCountdownUI.gd" id="19_r782w"]
+[ext_resource type="AudioStream" uid="uid://bykr8itofc2dr" path="res://Assets/_Assets/Sounds/Music/Music.wav" id="19_rf7k1"]
+[ext_resource type="Script" path="res://Scripts/KitchenGameManager.gd" id="20_xcyg4"]
+[ext_resource type="Texture2D" uid="uid://bctwxwrc480qw" path="res://Assets/Circle.png" id="21_7cg51"]
+[ext_resource type="Script" path="res://Scripts/Custom/UI/GameStartCountdownUISound.gd" id="21_8atri"]
+[ext_resource type="Script" path="res://Scripts/GameOverUI.gd" id="21_coaqy"]
+[ext_resource type="Script" path="res://Scripts/GamePlayingClockUI.gd" id="21_dwbt1"]
+[ext_resource type="Resource" uid="uid://bm7ab4xlpjrnr" path="res://DataResources/AudioStreamRefsRES.tres" id="22_mfplk"]
+[ext_resource type="Texture2D" uid="uid://cmlvmpxe01vmn" path="res://Assets/_Assets/Textures/Tutorial.png" id="24_21hsy"]
+[ext_resource type="Script" path="res://Scripts/PauseMenuUI.gd" id="24_s55th"]
+[ext_resource type="Script" path="res://Scripts/UI/TutorialUI.gd" id="24_x7ha8"]
+[ext_resource type="Script" path="res://Scripts/OptionsUI.gd" id="25_dojak"]
+[ext_resource type="Script" path="res://Scripts/MusicManager.gd" id="26_80mnl"]
+[ext_resource type="Script" path="res://Scripts/SoundManager.gd" id="28_jsqa8"]
+[ext_resource type="Material" uid="uid://b1lt0avvnlmar" path="res://Assets/_Assets/Materials/Wall.material" id="30_h3soc"]
+[ext_resource type="Material" uid="uid://brqj4r4va0g00" path="res://Assets/_Assets/Materials/Black.material" id="31_fq3aa"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cchro"]
+size = Vector2(30, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6vygh"]
+size = Vector3(20.0662, 1, 19.9734)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5ins1"]
+
+[sub_resource type="Sky" id="Sky_fe1rc"]
+sky_material = SubResource("ProceduralSkyMaterial_5ins1")
+
+[sub_resource type="Environment" id="Environment_740si"]
+background_mode = 2
+sky = SubResource("Sky_fe1rc")
+tonemap_mode = 1
+ssao_enabled = true
+glow_enabled = true
+glow_strength = 0.8
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[sub_resource type="FontVariation" id="FontVariation_6cqsc"]
+base_font = ExtResource("19_l6un6")
+variation_embolden = 0.2
+
+[sub_resource type="Theme" id="Theme_h15x6"]
+Label/colors/font_outline_color = Color(0.160784, 0.52549, 0.94902, 1)
+Label/constants/outline_size = 50
+Label/fonts/font = SubResource("FontVariation_6cqsc")
+
+[sub_resource type="Animation" id="Animation_l3avg"]
+resource_name = "number_popup"
+length = 0.95
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.166667, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.6, 0.6), Vector2(1.3, 1.3), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.166667, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.23911, 0.296706, 0.0, 0.0]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:self_modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333, 0.95)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:self_modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333, 0.95)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:self_modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333, 0.95)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:self_modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.1, 0.00126338, 0.0833333, -0.00360203, 0, -0.1, 0.00290926, 0.15, 0.00525107),
+"times": PackedFloat32Array(0, 0.833333, 0.95)
+}
+
+[sub_resource type="Animation" id="Animation_1g7il"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:self_modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:self_modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:self_modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:self_modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kb0ub"]
+_data = {
+"NumberPopup": SubResource("Animation_l3avg"),
+"RESET": SubResource("Animation_1g7il")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aiuq6"]
+bg_color = Color(1, 1, 1, 0.717647)
+
+[sub_resource type="Theme" id="Theme_mkvc6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rj3j"]
+bg_color = Color(0, 0, 0, 0.745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odbmo"]
+bg_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.8, 0.8, 0.176471)
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n35yi"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05dud"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dxon"]
+bg_color = Color(0, 0, 0, 0.941176)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdkxu"]
+bg_color = Color(0, 0, 0, 0.886275)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m3ynn"]
+size = Vector3(0.25, 3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5mnx0"]
+size = Vector3(0.25, 3, 15.52)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pdtft"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(1, 6.28867e-08, -1.48152e-07, 6.28867e-08, 0.694658, 0.71934, 1.48152e-07, -0.71934, 0.694658, 0.789, 21.5, 20)
+fov = 20.0
+
+[node name="Floor" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034693, 0, -2.57418)
+material_override = ExtResource("1_28a1l")
+mesh = SubResource("PlaneMesh_cchro")
+skeleton = NodePath("../..")
+
+[node name="floorCollider" type="StaticBody3D" parent="World/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/floorCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00222778, -0.522294, -0.0298767)
+shape = SubResource("BoxShape3D_6vygh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.702819, -0.607139, 0.370713, -0.0367486, 0.489443, 0.871261, -0.710419, -0.625962, 0.321679, 4, 4, 4.77599)
+light_color = Color(0.560784, 0.521569, 0.478431, 1)
+light_energy = 2.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_740si")
+
+[node name="PostProcess" type="CanvasLayer" parent="World"]
+script = ExtResource("6_1trl2")
+Vignette = true
+VignetteIntensity = 0.2
+VignetteOpacity = 0.3
+
+[node name="Counters" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -5)
+
+[node name="ClearCounter" parent="Counters" instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 0.775988)
+
+[node name="ClearCounter2" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0.775988)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter19" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0.775988)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter3" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, 3.17865e-08, 0, 1, 0, -3.17865e-08, 0, -1, 1.5, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter5" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, 3.17865e-08, 0, 1, 0, -3.17865e-08, 0, -1, 3, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter6" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, 3.17865e-08, 0, 1, 0, -3.17865e-08, 0, -1, -1.5, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter7" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.5, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter13" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter11" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter12" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5, 0, 9.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter8" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.5, 0, 8.27599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter14" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.5, 0, 6.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter15" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.5, 0, 5.27599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter16" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.5, 0, 3.77599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter17" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.5, 0, 2.27599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter18" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -10.5, 0, 0.775988)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter9" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3, 0, 8.27599)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ClearCounter10" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("4_siy15")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -6, 0, 0.775988)
+counterTopPoint = NodePath("../ClearCounter/CouterTopPoint")
+
+[node name="ContainerCounter_Bread" parent="Counters" instance=ExtResource("5_7g4cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0.775988)
+
+[node name="ContainerCounter_Cabbage" parent="Counters" instance=ExtResource("6_n0sh5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 9.77599)
+
+[node name="ContainerCounter_CheeseBlock" parent="Counters" instance=ExtResource("7_w200k")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -4.5, 0, 0.775988)
+
+[node name="ContainerCounter_MeatPattyUncooked" parent="Counters" instance=ExtResource("8_mtxqy")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.5, 0, 0.775988)
+
+[node name="ContainerCounter_Tomatoe2" parent="Counters" instance=ExtResource("9_xcd0k")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.5, 0, 9.77599)
+
+[node name="CuttingCounter" parent="Counters" instance=ExtResource("9_ehuv4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 9.77599)
+
+[node name="CuttingCounter2" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("9_ehuv4")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -1.5, 0, 0.775988)
+counterTopPoint = NodePath("../CuttingCounter/CouterTopPoint")
+
+[node name="TrashCounter" parent="Counters" instance=ExtResource("10_m6845")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6.77599)
+
+[node name="StoveCounter" parent="Counters" instance=ExtResource("11_i1777")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, 0, 0.775988)
+
+[node name="StoveCounter2" parent="Counters" node_paths=PackedStringArray("counterTopPoint") instance=ExtResource("11_i1777")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 5.27599)
+counterTopPoint = NodePath("../StoveCounter/CouterTopPoint")
+
+[node name="PlatesCounter" parent="Counters" instance=ExtResource("12_iahlq")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3, 0, 3.77599)
+
+[node name="DeliveryCounter" parent="Counters" instance=ExtResource("13_pyin7")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3, 0, 2.27599)
+
+[node name="Player" parent="." instance=ExtResource("3_tf10d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35149, 0, 3.30965)
+
+[node name="DliveryManager" type="Node3D" parent="."]
+script = ExtResource("15_fjnhd")
+recipeArrayRES = ExtResource("16_odtd8")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DeliveryManagerUI" type="Control" parent="UI" node_paths=PackedStringArray("container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_cbb8y")
+container = NodePath("Container")
+recipeTemplate = ExtResource("18_2d0u7")
+
+[node name="LabelMargin" type="MarginContainer" parent="UI/DeliveryManagerUI"]
+layout_mode = 2
+offset_right = 342.0
+offset_bottom = 50.0
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="UI/DeliveryManagerUI/LabelMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "RECIPES WAITING..."
+
+[node name="Container" type="VBoxContainer" parent="UI/DeliveryManagerUI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 73.0
+offset_right = 260.0
+offset_bottom = 173.0
+theme_override_constants/separation = 30
+
+[node name="GameStartCountdownUI" type="Control" parent="UI" node_paths=PackedStringArray("countdownText", "animationPlayer", "gameStartCountdownUISound")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19_r782w")
+countdownText = NodePath("CountdownText")
+animationPlayer = NodePath("CountdownText/AnimationPlayer")
+gameStartCountdownUISound = NodePath("CountdownText/AudioStreamPlayer")
+
+[node name="CountdownText" type="Label" parent="UI/GameStartCountdownUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -118.0
+offset_right = 58.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(58, 118)
+theme = SubResource("Theme_h15x6")
+theme_override_font_sizes/font_size = 200
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/GameStartCountdownUI/CountdownText"]
+libraries = {
+"": SubResource("AnimationLibrary_kb0ub")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="UI/GameStartCountdownUI/CountdownText"]
+attenuation_model = 1
+script = ExtResource("21_8atri")
+audioStreamRefsRES = ExtResource("22_mfplk")
+
+[node name="GamePlayingClockUI" type="CenterContainer" parent="UI" node_paths=PackedStringArray("timerProgressBar")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_top = 10.0
+offset_right = -11.0
+offset_bottom = 125.0
+grow_horizontal = 0
+script = ExtResource("21_dwbt1")
+timerProgressBar = NodePath("TextureProgressBar")
+
+[node name="shadowHack" type="MarginContainer" parent="UI/GamePlayingClockUI"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="shadow" type="TextureRect" parent="UI/GamePlayingClockUI/shadowHack"]
+self_modulate = Color(0, 0, 0, 0.360784)
+custom_minimum_size = Vector2(106, 106)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="borderHack" type="TextureRect" parent="UI/GamePlayingClockUI"]
+self_modulate = Color(0, 0, 0, 0.945098)
+custom_minimum_size = Vector2(104, 104)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UI/GamePlayingClockUI"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("21_7cg51")
+texture_progress = ExtResource("21_7cg51")
+tint_under = Color(0.294118, 0.294118, 0.294118, 1)
+tint_progress = Color(0.113725, 0.321569, 0.729412, 1)
+
+[node name="GameOverUI" type="Control" parent="UI" node_paths=PackedStringArray("recipesDeliveredText")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("21_coaqy")
+recipesDeliveredText = NodePath("RecipesDeliveredText")
+
+[node name="Background" type="ColorRect" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.847059)
+
+[node name="GameOverText" type="Label" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -304.0
+offset_right = 251.0
+offset_bottom = -198.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.992157, 0, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 90
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelRecipesDeliveredText" type="Label" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -134.5
+offset_right = 170.0
+offset_bottom = -79.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 30
+text = "Recipes Delivered"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="RecipesDeliveredText" type="Label" parent="UI/GameOverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -100.0
+offset_right = 49.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 170
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TutorialUI" type="Panel" parent="UI" node_paths=PackedStringArray("keyMoveUpText", "keyMoveDownText", "keyMoveLeftText", "keyMoveRightText", "keyInteractText", "keyInteractAlternateText", "keyPauseText", "keyGamepadInteractText", "keyGamepadInteractAlternateText", "keyGamepadPauseText")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aiuq6")
+script = ExtResource("24_x7ha8")
+keyMoveUpText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveUp/Background/KeyMoveUpText")
+keyMoveDownText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveDown/Background/KeyMoveDownText")
+keyMoveLeftText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveLeft/Background/KeyMoveLeftText")
+keyMoveRightText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveRight/Background/KeyMoveRightText")
+keyInteractText = NodePath("KeyboardKeys/KeyInteract/Background/KeyInteractText")
+keyInteractAlternateText = NodePath("KeyboardKeys/KeyInteractAlternate/Background/KeyInteractAlternateText")
+keyPauseText = NodePath("KeyboardKeys/KeyPause/Background/KeyPauseText")
+keyGamepadInteractText = NodePath("GamepadKeys/KeyGamepadInteract/Background/KeyGamepadInteractText")
+keyGamepadInteractAlternateText = NodePath("GamepadKeys/KeyGamepadInteractAlternate/Background/KeyGamepadInteractAlternateText")
+keyGamepadPauseText = NodePath("GamepadKeys/KeyGamepadPause/Background/KeyGamepadPauseText")
+
+[node name="BackgroundImage" type="TextureRect" parent="UI/TutorialUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -419.0
+offset_top = -419.0
+offset_right = 419.0
+offset_bottom = 419.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_21hsy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyboardKeys" type="VBoxContainer" parent="UI/TutorialUI"]
+layout_mode = 0
+offset_left = 715.0
+offset_top = 391.0
+offset_right = 837.0
+offset_bottom = 431.0
+theme_override_constants/separation = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/TutorialUI/KeyboardKeys"]
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="KeyMoveUp" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyMoveUpText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -9.5
+offset_right = 0.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyMoveDown" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyMoveDownText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -9.5
+offset_right = 0.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+uppercase = true
+
+[node name="KeyMoveLeft" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyMoveLeftText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -9.5
+offset_right = 0.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyMoveRight" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyMoveRightText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -9.5
+offset_right = 0.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyInteract" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/KeyInteract"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyInteract/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyInteract"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyInteract"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyInteractText" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyInteract/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -9.5
+offset_right = 0.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyInteractAlternate" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyInteractAlternateText" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -9.5
+offset_right = 0.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyPause" type="CenterContainer" parent="UI/TutorialUI/KeyboardKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/KeyboardKeys/KeyPause"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyPause/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyPause"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/KeyboardKeys/KeyPause"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyPauseText" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyPause/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GamepadKeys" type="VBoxContainer" parent="UI/TutorialUI"]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 391.0
+offset_right = 1005.0
+offset_bottom = 522.0
+theme_override_constants/separation = 1
+
+[node name="KeyGamepadMove" type="CenterContainer" parent="UI/TutorialUI/GamepadKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyGamepadMoveText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 8
+text = "Left Stick"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyGamepadInteract" type="CenterContainer" parent="UI/TutorialUI/GamepadKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyGamepadInteractText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyGamepadInteractAlternate" type="CenterContainer" parent="UI/TutorialUI/GamepadKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyGamepadInteractAlternateText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="KeyGamepadPause" type="CenterContainer" parent="UI/TutorialUI/GamepadKeys"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="Shadow" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause/MarginContainer"]
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 0.596078)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme = SubResource("Theme_mkvc6")
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Border" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause"]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause"]
+self_modulate = Color(0.196078, 0.196078, 0.196078, 1)
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("21_7cg51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyGamepadPauseText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 16
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PauseMenuUI" type="Panel" parent="UI" node_paths=PackedStringArray("resumeButton", "optionsButton", "mainMenuButton")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rj3j")
+script = ExtResource("24_s55th")
+resumeButton = NodePath("ResumeButton")
+optionsButton = NodePath("OptionsButton")
+mainMenuButton = NodePath("MainMenuButton")
+
+[node name="PauseText" type="Label" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -194.0
+offset_right = 130.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.921569, 0.65098, 0.137255, 1)
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 70
+text = "Paused"
+uppercase = true
+
+[node name="MainMenuButton" type="Button" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 161.5
+offset_right = 152.0
+offset_bottom = 238.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "MAIN MENU"
+
+[node name="OptionsButton" type="Button" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 66.0
+offset_right = 152.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "OPTIONS"
+
+[node name="ResumeButton" type="Button" parent="UI/PauseMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -30.5
+offset_right = 152.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "RESUME"
+
+[node name="OptionsUI" type="Panel" parent="UI" node_paths=PackedStringArray("soundFXButton", "musciButton", "closeButton", "pressToRebindKeyPanel", "moveUpButton", "moveDownButton", "moveLeftButton", "moveRightButton", "interactButton", "interactAltButton", "pauseButton", "gamepadInteractButton", "gamepadInteractAltButton", "gamepadPauseButton")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6dxon")
+script = ExtResource("25_dojak")
+soundFXButton = NodePath("Content/SoundFXButton")
+musciButton = NodePath("Content/MusciButton")
+closeButton = NodePath("Content/CloseButton")
+pressToRebindKeyPanel = NodePath("PressToRebindKey")
+moveUpButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveUpButton")
+moveDownButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveDownButton")
+moveLeftButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveLeftButton")
+moveRightButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveRightButton")
+interactButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/InteractButton")
+interactAltButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/InteractAltButton")
+pauseButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/PauseButton")
+gamepadInteractButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadInteractButton")
+gamepadInteractAltButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadInteractAltButton")
+gamepadPauseButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadPauseButton")
+
+[node name="Content" type="VBoxContainer" parent="UI/OptionsUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -110.5
+offset_right = 127.0
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="OptionsText" type="Label" parent="UI/OptionsUI/Content"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 60
+text = "OPTIONS"
+
+[node name="Spacer" type="Control" parent="UI/OptionsUI/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SoundFXButton" type="Button" parent="UI/OptionsUI/Content"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "Sound Effects: 5"
+
+[node name="MusciButton" type="Button" parent="UI/OptionsUI/Content"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "Music: 5"
+
+[node name="InputMap" type="MarginContainer" parent="UI/OptionsUI/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/OptionsUI/Content/InputMap"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="UI/OptionsUI/Content/InputMap/HBoxContainer"]
+layout_mode = 2
+
+[node name="MoveUpText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Up"
+vertical_alignment = 1
+
+[node name="MoveDownText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Down"
+vertical_alignment = 1
+
+[node name="MoveLeftText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Left"
+vertical_alignment = 1
+
+[node name="MoveRightText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Move Right"
+vertical_alignment = 1
+
+[node name="InteractText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Interact"
+vertical_alignment = 1
+
+[node name="InteractAltText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Interact Alt"
+vertical_alignment = 1
+
+[node name="PauseText" type="Label" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+text = "Pause"
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="UI/OptionsUI/Content/InputMap/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="KeyboardButtons" type="VBoxContainer" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons"]
+layout_mode = 2
+
+[node name="MoveUpButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="MoveDownButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="MoveLeftButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="MoveRightButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="InteractButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="InteractAltButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="PauseButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "Escape"
+text_overrun_behavior = 1
+
+[node name="GamepadButtons" type="VBoxContainer" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/GamepadButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GamepadInteractButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/GamepadButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="GamepadInteractAltButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/GamepadButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "W"
+
+[node name="GamepadPauseButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/GamepadButtons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "Start"
+
+[node name="CloseButton" type="Button" parent="UI/OptionsUI/Content"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_odbmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
+text = "CLOSE"
+
+[node name="PressToRebindKey" type="Panel" parent="UI/OptionsUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xdkxu")
+
+[node name="Label" type="Label" parent="UI/OptionsUI/PressToRebindKey"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.5
+offset_top = -35.5
+offset_right = 332.5
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("19_l6un6")
+theme_override_font_sizes/font_size = 60
+text = "Press a keyto rebind"
+uppercase = true
+
+[node name="MusicManager" type="Node3D" parent="." node_paths=PackedStringArray("audioStreamPlayer")]
+script = ExtResource("26_80mnl")
+audioStreamPlayer = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("19_rf7k1")
+volume_db = -5.0
+autoplay = true
+
+[node name="KitchenGameManager" type="Node3D" parent="."]
+script = ExtResource("20_xcyg4")
+
+[node name="SoundManager" type="Node3D" parent="."]
+script = ExtResource("28_jsqa8")
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Wall" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 12.7001, 8.37638, 1.5, 1.41019)
+mesh = SubResource("BoxMesh_m3ynn")
+surface_material_override/0 = ExtResource("30_h3soc")
+
+[node name="Wall2" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 12.7001, -6.895, 1.5, 1.411)
+mesh = SubResource("BoxMesh_m3ynn")
+surface_material_override/0 = ExtResource("30_h3soc")
+
+[node name="Wall3" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.741425, 1.5, -5.06)
+mesh = SubResource("BoxMesh_5mnx0")
+surface_material_override/0 = ExtResource("30_h3soc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(5.91038, 0, 0, 0, 2.95207, 0, 0, 0, 12.7516, 11.4331, 1.56434, 1.13926)
+mesh = SubResource("BoxMesh_pdtft")
+surface_material_override/0 = ExtResource("31_fq3aa")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(5.91038, 0, 0, 0, 2.95207, 0, 0, 0, 12.7516, -9.91301, 1.4767, 1.17791)
+mesh = SubResource("BoxMesh_pdtft")
+surface_material_override/0 = ExtResource("31_fq3aa")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-2.58351e-07, 0, -27.4174, 0, 2.95207, 0, 5.91038, 0, -1.19845e-06, 0.730708, 1.50279, -8.12387)
+mesh = SubResource("BoxMesh_pdtft")
+surface_material_override/0 = ExtResource("31_fq3aa")

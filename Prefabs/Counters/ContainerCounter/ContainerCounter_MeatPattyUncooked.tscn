@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dof07220t08qs"]
+
+[ext_resource type="PackedScene" uid="uid://di1clk40hdso0" path="res://Prefabs/Counters/ContainerCounter/ContainerCounter.tscn" id="1_kv7q5"]
+[ext_resource type="Resource" uid="uid://pfsyobd48ext" path="res://DataResources/KitchenObjectRES/MeatPattyUncooked.tres" id="2_scihc"]
+
+[node name="ContainerCounter_MeatPattyUncooked" instance=ExtResource("1_kv7q5")]
+kitchenObjectRES = ExtResource("2_scihc")
+
+[editable path="Selected/Counter_solid"]
+[editable path="Selected/Counter_hole"]

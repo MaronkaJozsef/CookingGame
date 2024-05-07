@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="KitchenObjectRES" load_steps=3 format=3 uid="uid://pfsyobd48ext"]
+
+[ext_resource type="Script" path="res://Scripts/DataResources/KitchenObjectRES.gd" id="1_md7ci"]
+[ext_resource type="Texture2D" uid="uid://dcc8dw7fut6jw" path="res://Assets/_Assets/Textures/Icons/MeatPattyUncooked.png" id="2_jk61d"]
+
+[resource]
+script = ExtResource("1_md7ci")
+prefabPath = "res://prefabs/KitchenObjects/meatPattyUncooked.tscn"
+sprite = ExtResource("2_jk61d")
+name = "Meat Patty Uncooked"

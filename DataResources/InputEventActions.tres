@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="InputEventActions" load_steps=16 format=3 uid="uid://dfh1jnemfjiks"]
+
+[ext_resource type="Script" path="res://Scripts/DataResources/InputEventActions.gd" id="1_hk3jm"]
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_kqpjl"]
+device = -1
+axis = 1
+axis_value = -1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_0u8xt"]
+pressed = true
+keycode = 87
+physical_keycode = 87
+key_label = 87
+unicode = 119
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_cwjsu"]
+device = -1
+axis = 1
+axis_value = 1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_ivynk"]
+pressed = true
+keycode = 83
+physical_keycode = 83
+key_label = 83
+unicode = 115
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_p5pu7"]
+device = -1
+axis_value = -1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_ieecw"]
+pressed = true
+keycode = 65
+physical_keycode = 65
+key_label = 65
+unicode = 97
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_h51vb"]
+device = -1
+axis_value = 1.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_00eg3"]
+pressed = true
+keycode = 68
+physical_keycode = 68
+key_label = 68
+unicode = 100
+
+[sub_resource type="InputEventKey" id="InputEventKey_skiyg"]
+device = -1
+physical_keycode = 69
+unicode = 101
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_rfwy3"]
+pressed = true
+
+[sub_resource type="InputEventKey" id="InputEventKey_7xla7"]
+device = -1
+physical_keycode = 70
+unicode = 102
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_xyb83"]
+button_index = 2
+pressed = true
+
+[sub_resource type="InputEventKey" id="InputEventKey_4a1tk"]
+device = -1
+physical_keycode = 4194305
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_r611c"]
+button_index = 6
+pressed = true
+
+[resource]
+script = ExtResource("1_hk3jm")
+inputEventActions = [Array[InputEvent]([SubResource("InputEventJoypadMotion_kqpjl"), SubResource("InputEventKey_0u8xt")]), Array[InputEvent]([SubResource("InputEventJoypadMotion_cwjsu"), SubResource("InputEventKey_ivynk")]), Array[InputEvent]([SubResource("InputEventJoypadMotion_p5pu7"), SubResource("InputEventKey_ieecw")]), Array[InputEvent]([SubResource("InputEventJoypadMotion_h51vb"), SubResource("InputEventKey_00eg3")]), Array[InputEvent]([SubResource("InputEventKey_skiyg"), SubResource("InputEventJoypadButton_rfwy3")]), Array[InputEvent]([SubResource("InputEventKey_7xla7"), SubResource("InputEventJoypadButton_xyb83")]), Array[InputEvent]([SubResource("InputEventKey_4a1tk"), SubResource("InputEventJoypadButton_r611c")])]

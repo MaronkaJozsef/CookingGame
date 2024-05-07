@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CuttingRecipeRES" load_steps=4 format=3 uid="uid://bx7k2vvlpb7np"]
+
+[ext_resource type="Resource" uid="uid://vvaq5aq2ry2x" path="res://DataResources/KitchenObjectRES/CheeseBlock.tres" id="1_1k0q0"]
+[ext_resource type="Script" path="res://Scripts/DataResources/CuttingRecipeRES.gd" id="1_ahduh"]
+[ext_resource type="Resource" uid="uid://b8pykw1shybib" path="res://DataResources/KitchenObjectRES/CheeseSlices.tres" id="2_24j8m"]
+
+[resource]
+script = ExtResource("1_ahduh")
+cuttingProgressMax = 3
+input = ExtResource("1_1k0q0")
+output = ExtResource("2_24j8m")

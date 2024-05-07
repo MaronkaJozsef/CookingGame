@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://b46ep5frgw01v"]
+
+[ext_resource type="Script" path="res://Scripts/KitchenObject.gd" id="1_1dg6g"]
+[ext_resource type="Resource" uid="uid://c07qr341pyo11" path="res://DataResources/KitchenObjectRES/Cabbage.tres" id="2_xg5r7"]
+[ext_resource type="PackedScene" uid="uid://dt4fxkr6ib554" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Cabbage_Visual.prefab.scn" id="3_xd6l5"]
+
+[node name="Cabbage" type="Node3D"]
+script = ExtResource("1_1dg6g")
+kitchenObjectRES = ExtResource("2_xg5r7")
+
+[node name="Cabbage_Visual" parent="." instance=ExtResource("3_xd6l5")]

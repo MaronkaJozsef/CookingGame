@@ -1,0 +1,234 @@
+[gd_scene load_steps=28 format=3 uid="uid://cmvrmqdx6o1vb"]
+
+[ext_resource type="PackedScene" uid="uid://brjv1eeruvg0c" path="res://Prefabs/Counters/_BaseCounter.tscn" id="1_oy5k4"]
+[ext_resource type="Script" path="res://Scripts/Counters/StoveCounter.gd" id="2_mcuu5"]
+[ext_resource type="Resource" uid="uid://cgo5ino38tims" path="res://DataResources/FryingRecipeRES/MeatPattyUncooked-MeatPattyCooked.tres" id="3_8q5sf"]
+[ext_resource type="PackedScene" uid="uid://dqmash6ra88ho" path="res://Assets/_Assets/PrefabsVisuals/CountersVisuals/StoveCounter_Visual.prefab.scn" id="3_t067j"]
+[ext_resource type="Script" path="res://Scripts/SelectedCounterVisual.gd" id="4_5fxek"]
+[ext_resource type="Resource" uid="uid://dm7feuqevgkd2" path="res://DataResources/BurningRecipeRES/MeatPattyCooked-MeatPattyBurned.tres" id="4_pv27g"]
+[ext_resource type="ArrayMesh" uid="uid://jra0l1xblw2d" path="res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh" id="5_j4s8r"]
+[ext_resource type="Material" uid="uid://bsweb1ym4sko4" path="res://Assets/_Assets/Materials/CounterSelected.material" id="6_3endc"]
+[ext_resource type="Script" path="res://Scripts/Counters/StoveCounterVisual.gd" id="6_7mt8n"]
+[ext_resource type="ArrayMesh" uid="uid://d1dhnn6m77wdf" path="res://Assets/_Assets/Meshes/extracted/Stove Counter.Cube_004.mesh" id="7_by0s1"]
+[ext_resource type="PackedScene" uid="uid://c7mci60k4xlpw" path="res://Assets/_Assets/Meshes/Frying Pan.gltf" id="8_xr25x"]
+[ext_resource type="Script" path="res://Scripts/UI/ProgressBarUI.gd" id="12_etdfx"]
+[ext_resource type="Script" path="res://Scripts/Counters/StoveCounterSound.gd" id="13_0tk5l"]
+[ext_resource type="Script" path="res://Scripts/UI/StoveBurnFlashingBarUI.gd" id="13_hti86"]
+[ext_resource type="Texture2D" uid="uid://2ginhfb50hym" path="res://Assets/_Assets/Textures/Warning.png" id="14_t51cc"]
+[ext_resource type="Script" path="res://Scripts/UI/StoveBurnWarningUI.gd" id="15_dwvpw"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_eldd0"]
+viewport_path = NodePath("Progress/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_als4m"]
+content_margin_top = 5.0
+bg_color = Color(0, 0, 0, 0.627451)
+corner_detail = 10
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8gyk"]
+bg_color = Color(0.882353, 0.772549, 0, 1)
+
+[sub_resource type="Theme" id="Theme_7lprl"]
+ProgressBar/font_sizes/font_size = 50
+ProgressBar/styles/background = SubResource("StyleBoxFlat_als4m")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_a8gyk")
+
+[sub_resource type="Animation" id="Animation_13u1r"]
+resource_name = "Flash"
+length = 0.333335
+loop_mode = 1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.0117647, 0.0823529, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7hfjn"]
+resource_name = "Idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3wmh0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b23bf"]
+_data = {
+"Flash": SubResource("Animation_13u1r"),
+"Idle": SubResource("Animation_7hfjn"),
+"RESET": SubResource("Animation_3wmh0")
+}
+
+[sub_resource type="Animation" id="Animation_nqgd6"]
+resource_name = "Flash"
+length = 0.333335
+loop_mode = 1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jjuxk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7juhs"]
+_data = {
+"Flash": SubResource("Animation_nqgd6"),
+"RESET": SubResource("Animation_jjuxk")
+}
+
+[node name="StoveCounter" instance=ExtResource("1_oy5k4")]
+script = ExtResource("2_mcuu5")
+fryingRecipeRESArray = Array[Resource("res://Scripts/DataResources/FryingRecipeRES.gd")]([ExtResource("3_8q5sf")])
+burningRecipeRESArray = Array[Resource("res://Scripts/DataResources/BurningRecipeRES.gd")]([ExtResource("4_pv27g")])
+
+[node name="CouterTopPoint" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0414352, 1.51767, -0.00189281)
+
+[node name="StoveCounter_Visual" parent="." index="2" node_paths=PackedStringArray("_stoveCounter") instance=ExtResource("3_t067j")]
+script = ExtResource("6_7mt8n")
+_stoveCounter = NodePath("..")
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("counter", "visualGameObjects")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("4_5fxek")
+counter = NodePath("..")
+visualGameObjects = [NodePath("Counter"), NodePath("Stove"), NodePath("Frying Pan")]
+
+[node name="Counter" type="Node3D" parent="Selected" index="0"]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+visible = false
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/Counter" index="0"]
+gi_mode = 2
+mesh = ExtResource("5_j4s8r")
+surface_material_override/0 = ExtResource("6_3endc")
+
+[node name="Stove" type="Node3D" parent="Selected" index="1"]
+transform = Transform3D(1.67, 0, 0, 0, 1.67, 0, 0, 0, 1.67, -0.043, 1.431, 0.07)
+visible = false
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/Stove" index="0"]
+gi_mode = 2
+mesh = ExtResource("7_by0s1")
+surface_material_override/0 = ExtResource("6_3endc")
+
+[node name="Frying Pan" parent="Selected" index="2" instance=ExtResource("8_xr25x")]
+transform = Transform3D(1.3793, 0, 1.44828, 0, 2, 0, -1.44828, 0, 1.3793, -0.048, 1.375, 0)
+visible = false
+
+[node name="Cylinder_003" parent="Selected/Frying Pan" index="0"]
+surface_material_override/0 = ExtResource("6_3endc")
+
+[node name="Progress" type="Node3D" parent="." index="4" node_paths=PackedStringArray("counter", "progressBar")]
+script = ExtResource("12_etdfx")
+counter = NodePath("..")
+progressBar = NodePath("SubViewport/ProgressBar")
+
+[node name="Sprite3D" type="Sprite3D" parent="Progress" index="0"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.75183, 0)
+layers = 2
+billboard = 1
+no_depth_test = true
+texture = SubResource("ViewportTexture_eldd0")
+
+[node name="SubViewport" type="SubViewport" parent="Progress" index="1"]
+transparent_bg = true
+use_occlusion_culling = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Progress/SubViewport" index="0" node_paths=PackedStringArray("stoveCounter", "animationPlayer")]
+visible = false
+anchors_preset = -1
+anchor_top = 0.429012
+anchor_right = 1.0
+anchor_bottom = 0.574074
+offset_top = -0.654327
+offset_bottom = -0.654327
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7lprl")
+step = 1.0
+value = 30.0
+show_percentage = false
+script = ExtResource("13_hti86")
+stoveCounter = NodePath("../../..")
+animationPlayer = NodePath("AnimationPlayer")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Progress/SubViewport/ProgressBar" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_b23bf")
+}
+
+[node name="AudioStreamPlayer3D" parent="." index="5"]
+attenuation_model = 0
+script = ExtResource("13_0tk5l")
+
+[node name="StoveBurnWarningUI" type="Sprite3D" parent="." index="6" node_paths=PackedStringArray("stoveCounter")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.41566, 0)
+visible = false
+pixel_size = 0.008
+billboard = 1
+texture = ExtResource("14_t51cc")
+script = ExtResource("15_dwvpw")
+stoveCounter = NodePath("..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StoveBurnWarningUI" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_7juhs")
+}
+autoplay = "Flash"
+
+[editable path="Selected/Frying Pan"]

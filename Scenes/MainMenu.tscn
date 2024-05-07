@@ -1,0 +1,310 @@
+[gd_scene load_steps=21 format=3 uid="uid://c2lbjjlr8vinw"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MainMenuUI.gd" id="1_6knb8"]
+[ext_resource type="FontFile" uid="uid://xd6qagim3b2n" path="res://Assets/Fonts/Roboto/Roboto-Bold.ttf" id="1_43ote"]
+[ext_resource type="Texture2D" uid="uid://dp65ifc0a56t7" path="res://Assets/_Assets/Textures/KitchenChaosLogo.png" id="3_auw8y"]
+[ext_resource type="Material" uid="uid://bk7hjb3lcrpk7" path="res://Assets/_Assets/Materials/Floor.material" id="3_yxi5n"]
+[ext_resource type="Script" path="res://Scripts/Custom/MainMenuCameraShake.gd" id="4_giua8"]
+[ext_resource type="AnimationLibrary" uid="uid://bptgs5nckbi6j" path="res://Assets/_Assets/Animations/Player.library.res" id="5_vfqii"]
+[ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="5_xxyll"]
+[ext_resource type="Material" uid="uid://cgycmwrhc8qj0" path="res://Assets/_Assets/Materials/PlayerBody_Blue.material" id="6_k7dea"]
+[ext_resource type="Material" uid="uid://brqj4r4va0g00" path="res://Assets/_Assets/Materials/Black.material" id="7_w1hxh"]
+[ext_resource type="Material" uid="uid://dth68pk21s7fr" path="res://Assets/_Assets/Materials/PlayerBody.material" id="8_5n587"]
+[ext_resource type="Material" uid="uid://cieegwb5w5sly" path="res://Assets/_Assets/Materials/PlayerBody_Green.material" id="9_r4t4b"]
+[ext_resource type="Material" uid="uid://dwstj0heet3i7" path="res://Assets/_Assets/Materials/PlayerBody_Red.material" id="10_enmmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bgo6"]
+bg_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="Theme" id="Theme_ke3wg"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_43ote")
+Button/styles/normal = SubResource("StyleBoxFlat_7bgo6")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ti1j0"]
+fractal_octaves = 4
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6t0d0"]
+size = Vector2(20, 20)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wg15"]
+
+[sub_resource type="Sky" id="Sky_iob4j"]
+sky_material = SubResource("ProceduralSkyMaterial_8wg15")
+
+[sub_resource type="Environment" id="Environment_kath1"]
+background_mode = 2
+sky = SubResource("Sky_iob4j")
+tonemap_mode = 1
+ssao_enabled = true
+glow_enabled = true
+glow_strength = 0.8
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_f4d1d"]
+resource_name = "Sphere"
+
+[node name="MainMenu" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenuUI" type="Control" parent="Control" node_paths=PackedStringArray("playButton", "quitButton")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6knb8")
+playButton = NodePath("VBoxContainer/PlayButton")
+quitButton = NodePath("VBoxContainer/QuitButton")
+gameScene = "res://Scenes/Main.tscn"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MainMenuUI"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -230.0
+offset_right = 340.0
+offset_bottom = -40.0
+grow_vertical = 0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="Control/MainMenuUI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 2
+theme = SubResource("Theme_ke3wg")
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="Control/MainMenuUI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = SubResource("Theme_ke3wg")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 417.0
+offset_bottom = 318.0
+texture = ExtResource("3_auw8y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="World" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(0.999297, 0.00463382, 0.0371913, 0, 0.992327, -0.123638, -0.0374788, 0.123552, 0.99163, 0.769457, 0.68588, 5.47777)
+script = ExtResource("4_giua8")
+noise = SubResource("FastNoiseLite_ti1j0")
+speed = 10.0
+rotationXMax = 10.0
+rotationYMax = 10.0
+rotationZMax = 10.0
+
+[node name="Floor" type="MeshInstance3D" parent="World"]
+material_override = ExtResource("3_yxi5n")
+mesh = SubResource("PlaneMesh_6t0d0")
+skeleton = NodePath("../..")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 4, 4, 1)
+light_color = Color(0.560784, 0.521569, 0.478431, 1)
+light_energy = 2.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_kath1")
+
+[node name="PostProcess" type="CanvasLayer" parent="World"]
+script = ExtResource("5_xxyll")
+Vignette = true
+VignetteIntensity = 0.2
+VignetteOpacity = 0.3
+
+[node name="PlayerVisuals" type="Node3D" parent="."]
+
+[node name="PlayerVisual" type="Node3D" parent="PlayerVisuals"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 2.82514, 0, 2.64758)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerVisuals/PlayerVisual"]
+libraries = {
+"": ExtResource("5_vfqii")
+}
+autoplay = "Idle"
+
+[node name="Head" type="Node3D" parent="PlayerVisuals/PlayerVisual"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.549, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual/Head"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("6_k7dea")
+
+[node name="Eye_R" type="Node3D" parent="PlayerVisuals/PlayerVisual/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, -0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual/Head/Eye_R"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Eye_L" type="Node3D" parent="PlayerVisuals/PlayerVisual/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, 0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual/Head/Eye_L"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Body" type="Node3D" parent="PlayerVisuals/PlayerVisual"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.65, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual/Body"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("6_k7dea")
+
+[node name="PlayerVisual2" type="Node3D" parent="PlayerVisuals"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1.25885, 0, 2.99926)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerVisuals/PlayerVisual2"]
+libraries = {
+"": ExtResource("5_vfqii")
+}
+autoplay = "Idle"
+
+[node name="Head" type="Node3D" parent="PlayerVisuals/PlayerVisual2"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.549, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual2/Head"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("8_5n587")
+
+[node name="Eye_R" type="Node3D" parent="PlayerVisuals/PlayerVisual2/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, -0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual2/Head/Eye_R"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Eye_L" type="Node3D" parent="PlayerVisuals/PlayerVisual2/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, 0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual2/Head/Eye_L"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Body" type="Node3D" parent="PlayerVisuals/PlayerVisual2"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.65, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual2/Body"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("8_5n587")
+
+[node name="PlayerVisual3" type="Node3D" parent="PlayerVisuals"]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.50946, 0, 1.73454)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerVisuals/PlayerVisual3"]
+libraries = {
+"": ExtResource("5_vfqii")
+}
+autoplay = "Idle"
+
+[node name="Head" type="Node3D" parent="PlayerVisuals/PlayerVisual3"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.549, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual3/Head"]
+transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, 0, 0)
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("9_r4t4b")
+
+[node name="Eye_R" type="Node3D" parent="PlayerVisuals/PlayerVisual3/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, -0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual3/Head/Eye_R"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Eye_L" type="Node3D" parent="PlayerVisuals/PlayerVisual3/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, 0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual3/Head/Eye_L"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Body" type="Node3D" parent="PlayerVisuals/PlayerVisual3"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.65, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual3/Body"]
+transform = Transform3D(1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, 1, 0, 0, 0)
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("9_r4t4b")
+
+[node name="PlayerVisual4" type="Node3D" parent="PlayerVisuals"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 2.46282, 0, 1.64702)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerVisuals/PlayerVisual4"]
+libraries = {
+"": ExtResource("5_vfqii")
+}
+autoplay = "Idle"
+
+[node name="Head" type="Node3D" parent="PlayerVisuals/PlayerVisual4"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.549, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual4/Head"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("10_enmmg")
+
+[node name="Eye_R" type="Node3D" parent="PlayerVisuals/PlayerVisual4/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, -0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual4/Head/Eye_R"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Eye_L" type="Node3D" parent="PlayerVisuals/PlayerVisual4/Head"]
+transform = Transform3D(0.111111, 0, 0, 0, 0.222222, 0, 0, 0, 0.111111, 0.160333, 0.152222, 0.402333)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual4/Head/Eye_L"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("7_w1hxh")
+
+[node name="Body" type="Node3D" parent="PlayerVisuals/PlayerVisual4"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.65, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="PlayerVisuals/PlayerVisual4/Body"]
+gi_mode = 2
+mesh = SubResource("SphereMesh_f4d1d")
+surface_material_override/0 = ExtResource("10_enmmg")

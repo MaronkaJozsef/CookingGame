@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3 uid="uid://cs3vpt6j5bene"]
+
+[ext_resource type="PackedScene" uid="uid://brjv1eeruvg0c" path="res://Prefabs/Counters/_BaseCounter.tscn" id="1_075cs"]
+[ext_resource type="Script" path="res://Scripts/Counters/PlatesCounter.gd" id="2_026v3"]
+[ext_resource type="PackedScene" uid="uid://bldlllnklwqn8" path="res://Assets/_Assets/PrefabsVisuals/CountersVisuals/PlatesCounter_Visual.prefab.scn" id="2_uwa85"]
+[ext_resource type="Script" path="res://Scripts/SelectedCounterVisual.gd" id="3_hbxyh"]
+[ext_resource type="Resource" uid="uid://cl5gi3ptcmb8g" path="res://DataResources/KitchenObjectRES/Plate.tres" id="3_ls0hg"]
+[ext_resource type="ArrayMesh" uid="uid://jra0l1xblw2d" path="res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh" id="4_blxlx"]
+[ext_resource type="Script" path="res://Scripts/Counters/PlatesCounterVisual.gd" id="5_3kiey"]
+[ext_resource type="Material" uid="uid://bsweb1ym4sko4" path="res://Assets/_Assets/Materials/CounterSelected.material" id="5_63m7t"]
+[ext_resource type="PackedScene" uid="uid://vbclenvmh5jb" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Plate_Visual.prefab.scn" id="6_es0v6"]
+[ext_resource type="Texture2D" uid="uid://bu26eph4e4my3" path="res://Assets/_Assets/Textures/CircleDashed.png" id="10_xt5xj"]
+
+[node name="PlatesCounter" instance=ExtResource("1_075cs")]
+script = ExtResource("2_026v3")
+plateKitchenObjectRES = ExtResource("3_ls0hg")
+
+[node name="PlatesCounter_Visual" parent="." index="2" node_paths=PackedStringArray("platesCounter", "counterTopPoint") instance=ExtResource("2_uwa85")]
+script = ExtResource("5_3kiey")
+platesCounter = NodePath("..")
+counterTopPoint = NodePath("../CouterTopPoint")
+plateVisualPrefab = ExtResource("6_es0v6")
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("counter", "visualGameObjects")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("3_hbxyh")
+counter = NodePath("..")
+visualGameObjects = [NodePath("KitchenCounter"), NodePath("CircleSprite")]
+
+[node name="KitchenCounter" type="Node3D" parent="Selected" index="0"]
+transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 1.7, 0, 0, 0)
+visible = false
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/KitchenCounter" index="0"]
+gi_mode = 2
+mesh = ExtResource("4_blxlx")
+surface_material_override/0 = ExtResource("5_63m7t")
+
+[node name="CircleSprite" type="Sprite3D" parent="Selected" index="1"]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 1.268, 0)
+visible = false
+texture = ExtResource("10_xt5xj")

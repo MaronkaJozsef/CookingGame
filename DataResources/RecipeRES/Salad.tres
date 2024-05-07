@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeRES" load_steps=4 format=3 uid="uid://cnts52isanc3a"]
+
+[ext_resource type="Resource" uid="uid://bg7ja7idhmwng" path="res://DataResources/KitchenObjectRES/TomatoSlices.tres" id="1_fg4k4"]
+[ext_resource type="Resource" uid="uid://blkkwmqbwjok5" path="res://DataResources/KitchenObjectRES/CabbageSlices.tres" id="2_xuvrj"]
+[ext_resource type="Script" path="res://Scripts/DataResources/RecipeRES.gd" id="3_2lcli"]
+
+[resource]
+script = ExtResource("3_2lcli")
+recipeName = "Salad"
+kitchenObjectRESArray = Array[Resource("res://Scripts/DataResources/KitchenObjectRES.gd")]([ExtResource("1_fg4k4"), ExtResource("2_xuvrj")])

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://drrcx5w04ov6"]
+
+[ext_resource type="Script" path="res://Scripts/KitchenObject.gd" id="1_368mp"]
+[ext_resource type="PackedScene" uid="uid://bj5h81f7lhnv6" path="res://Assets/_Assets/PrefabsVisuals/KitchenObjectsVisuals/Tomato_Visual.prefab.scn" id="1_e6ghb"]
+[ext_resource type="Resource" uid="uid://u5g1g3n3gsa" path="res://DataResources/KitchenObjectRES/Tomato.tres" id="2_47l7j"]
+
+[node name="Tomato" type="Node3D"]
+script = ExtResource("1_368mp")
+kitchenObjectRES = ExtResource("2_47l7j")
+
+[node name="Tomato_Visual" parent="." instance=ExtResource("1_e6ghb")]
