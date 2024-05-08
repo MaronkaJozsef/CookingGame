@@ -12,7 +12,7 @@ static var Instance: DeliveryManager:
 
 @export var recipeArrayRES: RecipeArrayRES
 
-var _waitingRecpieRESArray: Array[RecipeRES]
+var _waitingRecpieRESArray: Array[RecipeRES] = []
 var _spawnRecipeTimer: float
 var _spawnRecipeTimerMax: float = 4
 var _waitingRecipesMax: int = 4
@@ -23,9 +23,6 @@ func _init() -> void:
 		push_error("There is more than one DliveryManager instance")
 	_instance = self
 
-func _ready() -> void:
-	_waitingRecpieRESArray = []
-
 func _process(delta: float) -> void:
 	_spawnRecipeTimer -= delta
 	if (_spawnRecipeTimer <= 0):
@@ -33,7 +30,9 @@ func _process(delta: float) -> void:
 		
 		if (KitchenGameManager.Instance.IsGamePlaying() && _waitingRecpieRESArray.size() < _waitingRecipesMax):
 			var waitingRecipeRES := recipeArrayRES.recipeRESArray.pick_random() as RecipeRES
+			
 			_waitingRecpieRESArray.append(waitingRecipeRES)
+			
 			OnRecipeSpawned.emit()
 
 func _exit_tree() -> void:
@@ -42,17 +41,24 @@ func _exit_tree() -> void:
 func DeliverRecipe(plateKitchenObject: PlateKitchenObject) -> bool:
 	for waitingRecipeRES in _waitingRecpieRESArray:
 		if (waitingRecipeRES.kitchenObjectRESArray.size() == plateKitchenObject.GetKitchenObjectRESArray().size()):
+			# Has the same number of ingredients
 			var plateContentsMatchesRecipe := true
 			for recipeKitchenObjectRES in waitingRecipeRES.kitchenObjectRESArray:
+				# Cycling through all ingredients in the Plate
 				if (plateKitchenObject.GetKitchenObjectRESArray().find(recipeKitchenObjectRES) == -1):
+					# This Recipe ingredient was not found on the Plate
 					plateContentsMatchesRecipe = false
 					break
 			
 			if (plateContentsMatchesRecipe):
+				# Player delivered the correct recipe!
+
+				_successfulRecipesAmount += 1
+
 				_waitingRecpieRESArray.erase(waitingRecipeRES)
+				
 				OnRecipeCompleted.emit()
 				OnRecipeSuccess.emit()
-				_successfulRecipesAmount += 1
 				return true
 	
 	# No matches found!

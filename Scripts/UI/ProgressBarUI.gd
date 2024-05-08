@@ -4,15 +4,19 @@ extends Node3D
 @export var progressBar: ProgressBar
 
 func _ready() -> void:
-	_hide()
-	counter.OnProgressChanged.connect(onProgressChange)
+	Hide()
+	counter.OnProgressChanged.connect(_HasProgress_OnProgressChange)
 
-func onProgressChange(progressNomalized: float) -> void:
+func _HasProgress_OnProgressChange(progressNomalized: float) -> void:
 	progressBar.value = progressNomalized * 100
-	_show() if progressNomalized > 0 && progressNomalized < 1 else _hide()
+	
+	if (progressNomalized == 0.0 || progressNomalized == 1.0):
+		Hide()
+	else:
+		Show()
 
-func _show() -> void:
+func Show() -> void:
 	progressBar.visible = true
 
-func _hide() -> void:
+func Hide() -> void:
 	progressBar.visible = false

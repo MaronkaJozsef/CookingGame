@@ -2,7 +2,7 @@ extends Control
 
 const NUMBER_POPUP_ANIMATION := "NumberPopup"
 
-@export var countdownText: Label
+@export var countdownLabel: Label
 @export var animationPlayer: AnimationPlayer
 @export var gameStartCountdownUISound: GameStartCountdownUISound
 
@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var countdownNumber := ceili(KitchenGameManager.Instance.GetCountdownToStartTimer())
-	countdownText.text = str(countdownNumber)
+	countdownLabel.text = str(countdownNumber)
 	
 	if (_previousCountdownNumber != countdownNumber):
 		_previousCountdownNumber = countdownNumber
@@ -24,4 +24,4 @@ func _process(_delta: float) -> void:
 func _kitchenGameManager_OnStateChanged() -> void:
 	var isActive := KitchenGameManager.Instance.IsCountdownToStartActive()
 	process_mode = PROCESS_MODE_ALWAYS if isActive else PROCESS_MODE_DISABLED
-	countdownText.visible = isActive
+	countdownLabel.visible = isActive

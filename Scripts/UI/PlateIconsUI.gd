@@ -4,15 +4,14 @@ extends Control
 @export var iconTemplate: PlateIconsSingleUI
 
 func _ready() -> void:
-	plateKitchenObject.OnIngredientAdded.connect(onIngredientAdded)
+	plateKitchenObject.OnIngredientAdded.connect(_PlateKitchenObject_OnIngredientAdded)
 
-func onIngredientAdded(_kitchenObjectRES: KitchenObjectRES) -> void:
-	updateVisual()
+func _PlateKitchenObject_OnIngredientAdded(_kitchenObjectRES: KitchenObjectRES) -> void:
+	UpdateVisual()
 
-func updateVisual() -> void:
+func UpdateVisual() -> void:
 	for child in get_children():
-		if (child == iconTemplate):
-			continue
+		if (child == iconTemplate): continue
 		child.queue_free()
 	
 	for kitchenObjectRES in plateKitchenObject.GetKitchenObjectRESArray():

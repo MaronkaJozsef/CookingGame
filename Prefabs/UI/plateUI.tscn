@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8tia1hssnk2u"]
 
-[ext_resource type="Script" path="res://Scripts/UI/PlateUI.gd" id="1_oef1g"]
+[ext_resource type="Script" path="res://Scripts/UI/PlateIconsUI.gd" id="1_oef1g"]
 [ext_resource type="Texture2D" uid="uid://u07bkk840a20" path="res://Assets/_Assets/Textures/Icons/Bread.png" id="2_yvymq"]
 [ext_resource type="Script" path="res://Scripts/UI/PlateIconsSingleUI.gd" id="3_j7i26"]
 

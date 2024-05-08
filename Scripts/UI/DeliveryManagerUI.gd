@@ -4,11 +4,18 @@ extends Control
 @export var recipeTemplate: PackedScene
 
 func _ready() -> void:
-	updateVisual()
-	DeliveryManager.Instance.OnRecipeSpawned.connect(onRecipeSpawned)
-	DeliveryManager.Instance.OnRecipeCompleted.connect(onRecipeCompleted)
+	DeliveryManager.Instance.OnRecipeSpawned.connect(_DeliveryManager_OnRecipeSpawned)
+	DeliveryManager.Instance.OnRecipeCompleted.connect(_DeliveryManager_OnRecipeCompleted)
+	
+	UpdateVisual()
 
-func updateVisual() -> void:
+func _DeliveryManager_OnRecipeCompleted() -> void:
+	UpdateVisual()
+
+func _DeliveryManager_OnRecipeSpawned() -> void:
+	UpdateVisual()
+
+func UpdateVisual() -> void:
 	for child in container.get_children():
 		child.queue_free()
 	
@@ -17,9 +24,3 @@ func updateVisual() -> void:
 		recipe.visible = true
 		container.add_child(recipe)
 		recipe.SetRecipeRES(recipeRES)
-
-func onRecipeCompleted() -> void:
-	updateVisual()
-
-func onRecipeSpawned() -> void:
-	updateVisual()

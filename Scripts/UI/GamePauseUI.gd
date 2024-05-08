@@ -1,12 +1,12 @@
 extends Panel
 
 @export var resumeButton: Button
-@export var optionsButton: Button
 @export var mainMenuButton: Button
+@export var optionsButton: Button
 
 func _ready() -> void:
-	mainMenuButton.pressed.connect(func(): Loader.Load(Loader.Scene.MainMenuScene))
 	resumeButton.pressed.connect(func(): KitchenGameManager.Instance.TogglePauseGame())
+	mainMenuButton.pressed.connect(func(): Loader.Load(Loader.Scene.MainMenuScene))
 	optionsButton.pressed.connect(func(): 
 		hide()
 		OptionsUI.Instance.Show(Show)
@@ -23,5 +23,6 @@ func _KitchenGameManager_OnGameUnpaused() -> void:
 	hide()
 
 func Show() -> void:
-	show()
 	resumeButton.grab_focus()
+	
+	show()

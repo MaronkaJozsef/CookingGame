@@ -24,13 +24,13 @@
 [ext_resource type="Script" path="res://Scripts/KitchenGameManager.gd" id="20_xcyg4"]
 [ext_resource type="Texture2D" uid="uid://bctwxwrc480qw" path="res://Assets/Circle.png" id="21_7cg51"]
 [ext_resource type="Script" path="res://Scripts/Custom/UI/GameStartCountdownUISound.gd" id="21_8atri"]
-[ext_resource type="Script" path="res://Scripts/GameOverUI.gd" id="21_coaqy"]
-[ext_resource type="Script" path="res://Scripts/GamePlayingClockUI.gd" id="21_dwbt1"]
+[ext_resource type="Script" path="res://Scripts/UI/GameOverUI.gd" id="21_coaqy"]
+[ext_resource type="Script" path="res://Scripts/UI/GamePlayingClockUI.gd" id="21_dwbt1"]
 [ext_resource type="Resource" uid="uid://bm7ab4xlpjrnr" path="res://DataResources/AudioStreamRefsRES.tres" id="22_mfplk"]
 [ext_resource type="Texture2D" uid="uid://cmlvmpxe01vmn" path="res://Assets/_Assets/Textures/Tutorial.png" id="24_21hsy"]
-[ext_resource type="Script" path="res://Scripts/PauseMenuUI.gd" id="24_s55th"]
+[ext_resource type="Script" path="res://Scripts/UI/GamePauseUI.gd" id="24_s55th"]
 [ext_resource type="Script" path="res://Scripts/UI/TutorialUI.gd" id="24_x7ha8"]
-[ext_resource type="Script" path="res://Scripts/OptionsUI.gd" id="25_dojak"]
+[ext_resource type="Script" path="res://Scripts/UI/OptionsUI.gd" id="25_dojak"]
 [ext_resource type="Script" path="res://Scripts/MusicManager.gd" id="26_80mnl"]
 [ext_resource type="Script" path="res://Scripts/SoundManager.gd" id="28_jsqa8"]
 [ext_resource type="Material" uid="uid://b1lt0avvnlmar" path="res://Assets/_Assets/Materials/Wall.material" id="30_h3soc"]
@@ -453,7 +453,7 @@ offset_right = 260.0
 offset_bottom = 173.0
 theme_override_constants/separation = 30
 
-[node name="GameStartCountdownUI" type="Control" parent="UI" node_paths=PackedStringArray("countdownText", "animationPlayer", "gameStartCountdownUISound")]
+[node name="GameStartCountdownUI" type="Control" parent="UI" node_paths=PackedStringArray("countdownLabel", "animationPlayer", "gameStartCountdownUISound")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -461,11 +461,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("19_r782w")
-countdownText = NodePath("CountdownText")
-animationPlayer = NodePath("CountdownText/AnimationPlayer")
-gameStartCountdownUISound = NodePath("CountdownText/AudioStreamPlayer")
+countdownLabel = NodePath("CountdownLabel")
+animationPlayer = NodePath("CountdownLabel/AnimationPlayer")
+gameStartCountdownUISound = NodePath("CountdownLabel/AudioStreamPlayer")
 
-[node name="CountdownText" type="Label" parent="UI/GameStartCountdownUI"]
+[node name="CountdownLabel" type="Label" parent="UI/GameStartCountdownUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -485,12 +485,12 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/GameStartCountdownUI/CountdownText"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/GameStartCountdownUI/CountdownLabel"]
 libraries = {
 "": SubResource("AnimationLibrary_kb0ub")
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="UI/GameStartCountdownUI/CountdownText"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="UI/GameStartCountdownUI/CountdownLabel"]
 attenuation_model = 1
 script = ExtResource("21_8atri")
 audioStreamRefsRES = ExtResource("22_mfplk")
@@ -624,7 +624,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="TutorialUI" type="Panel" parent="UI" node_paths=PackedStringArray("keyMoveUpText", "keyMoveDownText", "keyMoveLeftText", "keyMoveRightText", "keyInteractText", "keyInteractAlternateText", "keyPauseText", "keyGamepadInteractText", "keyGamepadInteractAlternateText", "keyGamepadPauseText")]
+[node name="TutorialUI" type="Panel" parent="UI" node_paths=PackedStringArray("keyMoveUpLabel", "keyMoveDownLabel", "keyMoveLeftLabel", "keyMoveRightLabel", "keyInteractLabel", "keyInteractAlternateLabel", "keyPauseLabel", "keyGamepadInteractLabel", "keyGamepadInteractAlternateLabel", "keyGamepadPauseLabel")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -633,16 +633,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_aiuq6")
 script = ExtResource("24_x7ha8")
-keyMoveUpText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveUp/Background/KeyMoveUpText")
-keyMoveDownText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveDown/Background/KeyMoveDownText")
-keyMoveLeftText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveLeft/Background/KeyMoveLeftText")
-keyMoveRightText = NodePath("KeyboardKeys/HBoxContainer/KeyMoveRight/Background/KeyMoveRightText")
-keyInteractText = NodePath("KeyboardKeys/KeyInteract/Background/KeyInteractText")
-keyInteractAlternateText = NodePath("KeyboardKeys/KeyInteractAlternate/Background/KeyInteractAlternateText")
-keyPauseText = NodePath("KeyboardKeys/KeyPause/Background/KeyPauseText")
-keyGamepadInteractText = NodePath("GamepadKeys/KeyGamepadInteract/Background/KeyGamepadInteractText")
-keyGamepadInteractAlternateText = NodePath("GamepadKeys/KeyGamepadInteractAlternate/Background/KeyGamepadInteractAlternateText")
-keyGamepadPauseText = NodePath("GamepadKeys/KeyGamepadPause/Background/KeyGamepadPauseText")
+keyMoveUpLabel = NodePath("KeyboardKeys/HBoxContainer/KeyMoveUp/Background/KeyMoveUpLabel")
+keyMoveDownLabel = NodePath("KeyboardKeys/HBoxContainer/KeyMoveDown/Background/KeyMoveDownLabel")
+keyMoveLeftLabel = NodePath("KeyboardKeys/HBoxContainer/KeyMoveLeft/Background/KeyMoveLeftLabel")
+keyMoveRightLabel = NodePath("KeyboardKeys/HBoxContainer/KeyMoveRight/Background/KeyMoveRightLabel")
+keyInteractLabel = NodePath("KeyboardKeys/KeyInteract/Background/KeyInteractLabel")
+keyInteractAlternateLabel = NodePath("KeyboardKeys/KeyInteractAlternate/Background/KeyInteractAlternateLabel")
+keyPauseLabel = NodePath("KeyboardKeys/KeyPause/Background/KeyPauseLabel")
+keyGamepadInteractLabel = NodePath("GamepadKeys/KeyGamepadInteract/Background/KeyGamepadInteractLabel")
+keyGamepadInteractAlternateLabel = NodePath("GamepadKeys/KeyGamepadInteractAlternate/Background/KeyGamepadInteractAlternateLabel")
+keyGamepadPauseLabel = NodePath("GamepadKeys/KeyGamepadPause/Background/KeyGamepadPauseLabel")
 
 [node name="BackgroundImage" type="TextureRect" parent="UI/TutorialUI"]
 layout_mode = 1
@@ -706,7 +706,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyMoveUpText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp/Background"]
+[node name="KeyMoveUpLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveUp/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -761,7 +761,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyMoveDownText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown/Background"]
+[node name="KeyMoveDownLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveDown/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -816,7 +816,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyMoveLeftText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft/Background"]
+[node name="KeyMoveLeftLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveLeft/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -871,7 +871,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyMoveRightText" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight/Background"]
+[node name="KeyMoveRightLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/HBoxContainer/KeyMoveRight/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -927,7 +927,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyInteractText" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyInteract/Background"]
+[node name="KeyInteractLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyInteract/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -982,7 +982,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyInteractAlternateText" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate/Background"]
+[node name="KeyInteractAlternateLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyInteractAlternate/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1037,7 +1037,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyPauseText" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyPause/Background"]
+[node name="KeyPauseLabel" type="Label" parent="UI/TutorialUI/KeyboardKeys/KeyPause/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1093,7 +1093,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyGamepadMoveText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove/Background"]
+[node name="KeyGamepadMoveLabel" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadMove/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1142,7 +1142,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyGamepadInteractText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract/Background"]
+[node name="KeyGamepadInteractLabel" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteract/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1191,7 +1191,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyGamepadInteractAlternateText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate/Background"]
+[node name="KeyGamepadInteractAlternateLabel" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadInteractAlternate/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1240,7 +1240,7 @@ texture = ExtResource("21_7cg51")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="KeyGamepadPauseText" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause/Background"]
+[node name="KeyGamepadPauseLabel" type="Label" parent="UI/TutorialUI/GamepadKeys/KeyGamepadPause/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1255,7 +1255,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="PauseMenuUI" type="Panel" parent="UI" node_paths=PackedStringArray("resumeButton", "optionsButton", "mainMenuButton")]
+[node name="GamePauseUI" type="Panel" parent="UI" node_paths=PackedStringArray("resumeButton", "mainMenuButton", "optionsButton")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1266,10 +1266,10 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1rj3j")
 script = ExtResource("24_s55th")
 resumeButton = NodePath("ResumeButton")
-optionsButton = NodePath("OptionsButton")
 mainMenuButton = NodePath("MainMenuButton")
+optionsButton = NodePath("OptionsButton")
 
-[node name="PauseText" type="Label" parent="UI/PauseMenuUI"]
+[node name="PauseText" type="Label" parent="UI/GamePauseUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1288,7 +1288,7 @@ theme_override_font_sizes/font_size = 70
 text = "Paused"
 uppercase = true
 
-[node name="MainMenuButton" type="Button" parent="UI/PauseMenuUI"]
+[node name="MainMenuButton" type="Button" parent="UI/GamePauseUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1308,7 +1308,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
 text = "MAIN MENU"
 
-[node name="OptionsButton" type="Button" parent="UI/PauseMenuUI"]
+[node name="OptionsButton" type="Button" parent="UI/GamePauseUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1328,7 +1328,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
 text = "OPTIONS"
 
-[node name="ResumeButton" type="Button" parent="UI/PauseMenuUI"]
+[node name="ResumeButton" type="Button" parent="UI/GamePauseUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1348,7 +1348,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
 text = "RESUME"
 
-[node name="OptionsUI" type="Panel" parent="UI" node_paths=PackedStringArray("soundFXButton", "musciButton", "closeButton", "pressToRebindKeyPanel", "moveUpButton", "moveDownButton", "moveLeftButton", "moveRightButton", "interactButton", "interactAltButton", "pauseButton", "gamepadInteractButton", "gamepadInteractAltButton", "gamepadPauseButton")]
+[node name="OptionsUI" type="Panel" parent="UI" node_paths=PackedStringArray("soundEffectsButton", "musicButton", "closeButton", "moveUpButton", "moveDownButton", "moveLeftButton", "moveRightButton", "interactButton", "interactAlternateButton", "pauseButton", "gamepadInteractButton", "gamepadInteractAlternateButton", "gamepadPauseButton", "pressToRebindKeyPanel")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1358,20 +1358,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6dxon")
 script = ExtResource("25_dojak")
-soundFXButton = NodePath("Content/SoundFXButton")
-musciButton = NodePath("Content/MusciButton")
+soundEffectsButton = NodePath("Content/SoundEffectsButton")
+musicButton = NodePath("Content/MusicButton")
 closeButton = NodePath("Content/CloseButton")
-pressToRebindKeyPanel = NodePath("PressToRebindKey")
 moveUpButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveUpButton")
 moveDownButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveDownButton")
 moveLeftButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveLeftButton")
 moveRightButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/MoveRightButton")
 interactButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/InteractButton")
-interactAltButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/InteractAltButton")
+interactAlternateButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/InteractAlternateButton")
 pauseButton = NodePath("Content/InputMap/HBoxContainer/Buttons/KeyboardButtons/PauseButton")
 gamepadInteractButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadInteractButton")
-gamepadInteractAltButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadInteractAltButton")
+gamepadInteractAlternateButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadInteractAlternateButton")
 gamepadPauseButton = NodePath("Content/InputMap/HBoxContainer/Buttons/GamepadButtons/GamepadPauseButton")
+pressToRebindKeyPanel = NodePath("PressToRebindKey")
 
 [node name="Content" type="VBoxContainer" parent="UI/OptionsUI"]
 layout_mode = 1
@@ -1380,13 +1380,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.0
-offset_top = -110.5
-offset_right = 127.0
-offset_bottom = 110.5
+offset_left = -142.5
+offset_top = -322.5
+offset_right = 142.5
+offset_bottom = 322.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 6
 alignment = 1
 
 [node name="OptionsText" type="Label" parent="UI/OptionsUI/Content"]
@@ -1395,11 +1395,7 @@ theme_override_fonts/font = ExtResource("19_l6un6")
 theme_override_font_sizes/font_size = 60
 text = "OPTIONS"
 
-[node name="Spacer" type="Control" parent="UI/OptionsUI/Content"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="SoundFXButton" type="Button" parent="UI/OptionsUI/Content"]
+[node name="SoundEffectsButton" type="Button" parent="UI/OptionsUI/Content"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("19_l6un6")
@@ -1409,7 +1405,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
 text = "Sound Effects: 5"
 
-[node name="MusciButton" type="Button" parent="UI/OptionsUI/Content"]
+[node name="MusicButton" type="Button" parent="UI/OptionsUI/Content"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("19_l6un6")
@@ -1422,9 +1418,9 @@ text = "Music: 5"
 [node name="InputMap" type="MarginContainer" parent="UI/OptionsUI/Content"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_bottom = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/OptionsUI/Content/InputMap"]
 layout_mode = 2
@@ -1550,7 +1546,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
 text = "W"
 
-[node name="InteractAltButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
+[node name="InteractAlternateButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/KeyboardButtons"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -1589,7 +1585,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n35yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05dud")
 text = "W"
 
-[node name="GamepadInteractAltButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/GamepadButtons"]
+[node name="GamepadInteractAlternateButton" type="Button" parent="UI/OptionsUI/Content/InputMap/HBoxContainer/Buttons/GamepadButtons"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("19_l6un6")
