@@ -1,3 +1,4 @@
+MeshInstance3D
 Node3D
 AnimationPlayer
 MarginContainer
@@ -12,4 +13,3 @@ AudioStreamPlayer
 Control
 VBoxContainer
 CenterContainer
-GPUParticles3D

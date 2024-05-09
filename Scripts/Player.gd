@@ -30,12 +30,41 @@ func _exit_tree() -> void:
 	_instance = null
 
 func _ready() -> void:
-	input.OnInteractAction.connect(onInteractAction)
-	input.OnInteractAlternateAction.connect(onInteractAlternateAction)
+	input.OnInteractAction.connect(_GameInput_OnInteractAction)
+	input.OnInteractAlternateAction.connect(_GameInput_OnInteractAlternateAction)
+
+func _GameInput_OnInteractAction():
+	if (!KitchenGameManager.Instance.IsGamePlaying()): return
+	
+	if (_selectedCounter):
+		_selectedCounter.Interact(self)
+
+func _GameInput_OnInteractAlternateAction():
+	if (!KitchenGameManager.Instance.IsGamePlaying()): return
+	
+	if (_selectedCounter):
+		_selectedCounter.InteractAlternate(self)
 
 func _process(delta: float) -> void:
-	handleMovement(delta)
-	handleInteractions()
+	HandleMovement(delta)
+	HandleInteractions()
+
+func HandleInteractions() -> void:
+	SetSelectedCounter(interactRay.get_collider())
+
+func HandleMovement(delta: float) -> void:
+	var inputVector := input.NormalizedMovementVector
+	_isWalking = inputVector.length()
+	
+	if inputVector.length_squared() == 0: return
+	
+	inputVector = inputVector.normalized()
+	var direction := Vector3(inputVector.x, 0, inputVector.y)
+	velocity = direction * MOVEMENT_SPEED * delta
+
+	move_and_slide()
+	var angle = direction.signed_angle_to(transform.basis.z, Vector3.DOWN) * ROTATION_SPEED * delta
+	transform.basis = Basis(Vector3.UP, angle) * transform.basis
 
 func GetKitchenObjectFollowPosition() -> Vector3:
 	return kitchenObjectHoldPoint.position
@@ -56,35 +85,6 @@ func ClearKitchenObject() -> void:
 func HasKitchenObject() -> bool:
 	return _kitchenObject != null
 
-func handleMovement(delta: float) -> void:
-	var inputVector := input.NormalizedMovementVector
-	_isWalking = inputVector.length()
-	
-	if inputVector.length_squared() == 0: return
-	
-	inputVector = inputVector.normalized()
-	var direction := Vector3(inputVector.x, 0, inputVector.y)
-	velocity = direction * MOVEMENT_SPEED * delta
-
-	move_and_slide()
-	var angle = direction.signed_angle_to(transform.basis.z, Vector3.DOWN) * ROTATION_SPEED * delta
-	transform.basis = Basis(Vector3.UP, angle) * transform.basis
-
-func onInteractAction():
-	if (!KitchenGameManager.Instance.IsGamePlaying()): return
-	
-	if (_selectedCounter):
-		_selectedCounter.Interact(self)
-
-func onInteractAlternateAction():
-	if (!KitchenGameManager.Instance.IsGamePlaying()): return
-	
-	if (_selectedCounter):
-		_selectedCounter.InteractAlternate(self)
-
-func handleInteractions() -> void:
-	setSelectedCounter(interactRay.get_collider())
-
-func setSelectedCounter(selectedCounter: BaseCounter) -> void:
+func SetSelectedCounter(selectedCounter: BaseCounter) -> void:
 	_selectedCounter = selectedCounter;
 	OnSelectedCounterChanged.emit(_selectedCounter)

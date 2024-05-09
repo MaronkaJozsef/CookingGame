@@ -8,14 +8,14 @@ func _ready():
 	
 func Player_OnSelectedCounterChanged(selectedCounter: BaseCounter):
 	if (selectedCounter == counter):
-		show()
+		Show()
 	else:
-		hide()
+		Hide()
 
-func show():
+func Show():
 	for obj in visualGameObjects:
 		obj.visible = true
 
-func hide():
+func Hide():
 	for obj in visualGameObjects:
 		obj.visible = false

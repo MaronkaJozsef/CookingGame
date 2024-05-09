@@ -6,7 +6,7 @@ var _footstepTimer: float
 var _footstepTimerMax := 0.1
 
 func _ready() -> void:
-	player.OnPickedSomething.connect(_player_OnPickedSomething)
+	player.OnPickedSomething.connect(_Player_OnPickedSomething)
 
 func _process(delta: float) -> void:
 	_footstepTimer -= delta
@@ -16,5 +16,5 @@ func _process(delta: float) -> void:
 		if (player.IsWalking):
 			PlaySoundFromArray(audioStreamRefsRES.footstep, 1.5)
 
-func _player_OnPickedSomething() -> void:
+func _Player_OnPickedSomething() -> void:
 	PlaySoundFromArray(audioStreamRefsRES.objectPickup)

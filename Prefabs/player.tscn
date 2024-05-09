@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bww8dfuhi4lx6"]
+[gd_scene load_steps=21 format=3 uid="uid://bww8dfuhi4lx6"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_klwmk"]
 [ext_resource type="Script" path="res://Scripts/PlayerAnimator.gd" id="2_g5hul"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://Scripts/PlayerSound.gd" id="6_rx7q6"]
 [ext_resource type="Resource" uid="uid://bm7ab4xlpjrnr" path="res://DataResources/AudioStreamRefsRES.tres" id="7_k6ap7"]
 [ext_resource type="Script" path="res://Scripts/Custom/EmitOnMove.gd" id="9_d1v75"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jra1j"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_umqf5"]
 animation = &"Walk"
@@ -70,6 +72,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.713677, 0)
 target_position = Vector3(0, 0, 1.5)
 collision_mask = 2
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InteractRay"]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-08, -0.1, 0, 1, -4.37114e-09, 0, 0, 1.08571)
+mesh = SubResource("CylinderMesh_jra1j")
+
 [node name="Animator" type="Node" parent="." node_paths=PackedStringArray("player", "animationTree")]
 script = ExtResource("2_g5hul")
 player = NodePath("..")
@@ -94,7 +100,7 @@ parameters/Walking/blend_amount = 0.0
 autoplay = ""
 
 [node name="Head" parent="PlayerVisual" index="1"]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.59276, 0)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.57348, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994195, 0)
