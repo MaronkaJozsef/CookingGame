@@ -1,8 +1,4 @@
-res://Scripts/MusicManager.gd
-res://Scripts/PlateCompleteVisual.gd
-res://Scripts/PlateKitchenObject.gd
-res://Scripts/Player.gd
-res://Scenes/Game.tscn
+res://Scenes/MainMenu.tscn
 res://Scripts/Counters/ContainerCounterVisua.gd
 res://Scripts/SelectedCounterVisual.gd
 res://Assets/_Assets/Materials/Floor.material
@@ -16,10 +12,5 @@ res://DataResources/RecipeRES/Megaburger.tres
 res://DataResources/RecipeRES/Salad.tres
 res://DataResources/RecipeRES/RecipeArrayRES.tres
 res://Assets/_Assets/Materials/Wall.material
-res://Scenes/MainMenu.tscn
-res://Prefabs/Counters/StoveCounter.tscn
-res://Prefabs/UI/recipeTemplate.tscn
-res://Scripts/PlayerAnimator.gd
-res://Scripts/PlayerSound.gd
-res://Scripts/SoundManager.gd
+res://Scenes/Game.tscn
 res://Prefabs/player.tscn

@@ -3,6 +3,19 @@
 ## Introduction
 This game is the recreation of Code Monkey's Kitchen Chaos Unity tutorial in Godot 4.2. I created this project to make myself familiar with the engine. I tried to implement everything in Godot as closely as possible to how it was made in Unity; however, it was necessary to deviate from the original from time to time, mostly in the UI and because GDScript does not support interfaces.
 
+## Preview
+![Burn Meat](readmeAssets/BurnMeat.gif)
+
+![Cut Cabbage](readmeAssets/CutCabbage.gif)
+
+![Delivery Fail](readmeAssets/DeliveryFail.gif)
+
+![Delivery Success](readmeAssets/DeliverySuccess.gif)
+
+![Run Around](readmeAssets/RunAround.gif)
+
+![Cut Tomato](readmeAssets/CutTomato.gif)
+
 ## Acknowledgments
 - The original tutorial and the creators channle can be found in the links below:
 - [Unity Tutorial for Kitchen Chaos](https://youtu.be/AmGSEH7QcDg?si=kNedQswsWct8rkBC)
